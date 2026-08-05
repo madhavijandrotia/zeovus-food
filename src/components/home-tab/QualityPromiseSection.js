@@ -39,7 +39,35 @@ const certifications = [
   },
 ];
 
-const repeatedCertifications = [...certifications, ...certifications];
+function CertificationItems({ duplicate = false }) {
+  return (
+    <div
+      className="certification-marquee__group"
+      aria-hidden={duplicate ? "true" : undefined}
+    >
+      {certifications.map((certification) => (
+        <div
+          key={`${duplicate ? "duplicate" : "primary"}-${certification.name}`}
+          className="flex h-[66px] min-w-[190px] shrink-0 items-center gap-3 rounded-full border border-[#26331c]/45 bg-[#fffbe5] px-4 shadow-[0_8px_25px_rgba(43,45,24,0.08)] sm:h-[72px] sm:min-w-[220px] sm:px-5"
+        >
+          <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#edf1d3] sm:h-12 sm:w-12">
+            <Image
+              src={certification.image}
+              alt={duplicate ? "" : `${certification.name} certification`}
+              fill
+              sizes="48px"
+              className="object-contain p-2"
+            />
+          </span>
+
+          <span className="font-heading text-[19px] font-bold uppercase tracking-[0.01em] text-[#1d2117] sm:text-[22px]">
+            {certification.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function QualityPromiseSection() {
   return (
@@ -132,8 +160,8 @@ export default function QualityPromiseSection() {
             >
               <p className="font-heading text-[18px] font-bold uppercase leading-[1.28] tracking-[0.02em] text-[#fff9df] sm:text-[22px] lg:text-[30px]">
                 Every product is verified through our proprietary ZQA framework
-                with 12 steps, 825 tested parameters, and triple-layer checks from
-                raw material to finished goods.
+                with 12 steps, 825 tested parameters and triple-layer checks
+                from raw material to finished goods.
               </p>
             </motion.div>
 
@@ -168,7 +196,7 @@ export default function QualityPromiseSection() {
                 src="/seal1.png"
                 alt="Zeovus quality approved seal"
                 fill
-                sizes="120px"
+                sizes="160px"
                 className="object-contain opacity-90"
               />
             </motion.div>
@@ -182,38 +210,12 @@ export default function QualityPromiseSection() {
 
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-[#eeddbc] to-transparent sm:w-32" />
 
-        <motion.div
-          animate={{
-            x: ["0%", "-50%"],
-          }}
-          transition={{
-            duration: 28,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-          className="flex w-max gap-3 will-change-transform sm:gap-4"
-        >
-          {repeatedCertifications.map((certification, index) => (
-            <div
-              key={`${certification.name}-${index}`}
-              className="flex h-[66px] min-w-[190px] shrink-0 items-center gap-3 rounded-full border border-[#26331c]/45 bg-[#fffbe5] px-4 shadow-[0_8px_25px_rgba(43,45,24,0.08)] sm:h-[72px] sm:min-w-[220px] sm:px-5"
-            >
-              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#edf1d3] sm:h-12 sm:w-12">
-                <Image
-                  src={certification.image}
-                  alt=""
-                  fill
-                  sizes="48px"
-                  className="object-contain p-2"
-                />
-              </span>
-
-              <span className="font-heading text-[19px] font-bold uppercase tracking-[0.01em] text-[#1d2117] sm:text-[22px]">
-                {certification.name}
-              </span>
-            </div>
-          ))}
-        </motion.div>
+        <div className="certification-marquee">
+          <div className="certification-marquee__track">
+            <CertificationItems />
+            <CertificationItems duplicate />
+          </div>
+        </div>
       </div>
 
       {/* Bottom content */}
@@ -236,8 +238,8 @@ export default function QualityPromiseSection() {
         className="relative z-10 mx-auto flex max-w-[580px] flex-col items-center px-6 pb-16 pt-8 text-center sm:pb-20 sm:pt-10"
       >
         <p className="max-w-[430px] text-sm leading-6 tracking-[0.03em] text-[#4e5b41] sm:text-base">
-          From flours and pulses to spices and ready-to-eat, every range
-          carries the same standard.
+          From flours and pulses to spices and ready-to-eat, every range carries
+          the same standard.
         </p>
 
         <Link
@@ -247,6 +249,57 @@ export default function QualityPromiseSection() {
           View our Products
         </Link>
       </motion.div>
+
+      <style jsx global>{`
+        .certification-marquee {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .certification-marquee__track {
+          --marquee-gap: 0.75rem;
+
+          display: flex;
+          width: max-content;
+          min-width: max-content;
+
+          animation: certification-marquee-scroll 28s linear infinite;
+
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+          will-change: transform;
+        }
+
+        .certification-marquee__group {
+          display: flex;
+          flex-shrink: 0;
+          gap: var(--marquee-gap);
+          padding-right: var(--marquee-gap);
+        }
+
+        @keyframes certification-marquee-scroll {
+          from {
+            transform: translate3d(0, 0, 0);
+          }
+
+          to {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+
+        @media (min-width: 640px) {
+          .certification-marquee__track {
+            --marquee-gap: 1rem;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .certification-marquee__track {
+            animation-duration: 60s;
+          }
+        }
+      `}</style>
     </section>
   );
 }

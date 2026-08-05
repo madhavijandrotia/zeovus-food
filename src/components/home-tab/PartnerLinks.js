@@ -17,7 +17,13 @@ const PAGES = [
   },
   {
     key: "private-label",
-    label: "Private Label & White Label",
+    label: (
+      <>
+        Private Label &
+        <br />
+        White Label
+      </>
+    ),
     description:
       "Launch under your name, built on our formulation and manufacturing standard from the first batch to the last.",
     photo: "#b2bd77",
@@ -151,22 +157,13 @@ export default function PartnerLinks() {
                 </div>
 
                 <div className="partner-links__body">
-                  <span className="partner-links__index">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <h3 className="partner-links__label">
-                    {page.label}
-                  </h3>
+                  <h3 className="partner-links__label">{page.label}</h3>
 
                   <p className="partner-links__description">
                     {page.description}
                   </p>
 
-                  <span
-                    className="partner-links__arrow"
-                    aria-hidden="true"
-                  >
+                  <span className="partner-links__arrow" aria-hidden="true">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
