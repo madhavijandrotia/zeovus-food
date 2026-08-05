@@ -31,13 +31,13 @@ export const HEALTHY_SNACKING_SECTIONS = [
   },
 
   {
-    id: "vinegars-snacks",
-    label: "Vinegars & Snacks",
-    image: "/products/healthy-snacking/snacks-vinegars.webp",
+    id: "vinegars",
+    label: "Vinegars",
+    image: "/products/healthy-snacking/vinegars.webp",
     imagePosition: "left",
     groups: [
       {
-        title: "Vinegars",
+        title: null,
         items: [
           "Lemongrass Vinegar",
           "Pomegranate Vinegar",
@@ -46,8 +46,17 @@ export const HEALTHY_SNACKING_SECTIONS = [
           "Apple Cider Vinegar",
         ],
       },
+    ],
+  },
+
+  {
+    id: "healthy-snacks",
+    label: "Healthy Snacks",
+    image: "/products/healthy-snacking/snacks.webp",
+    imagePosition: "right",
+    groups: [
       {
-        title: "Healthy Snacks",
+        title: null,
         items: [
           "Bhujiya",
           "Aloo Bhujiya",
@@ -70,7 +79,7 @@ export const HEALTHY_SNACKING_SECTIONS = [
     id: "freeze-dried",
     label: "Freeze Dried Fruits",
     image: "/products/healthy-snacking/freeze-dried.webp",
-    imagePosition: "right",
+    imagePosition: "left",
     groups: [
       {
         title: null,
