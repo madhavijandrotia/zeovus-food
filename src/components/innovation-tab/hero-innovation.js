@@ -31,7 +31,7 @@ export default function HeroInnovation() {
           <h1 className="font-heading text-[42px] font-black uppercase leading-[0.92] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
             The Unthinkable,
             <br />
-            <span className="text-[#f89b21]">Made Edible..</span>
+            <span className="text-[#f89b21]">Made Edible.</span>
           </h1>
 
           {/* Description */}
