@@ -6,9 +6,7 @@ export default function CondimentsSection() {
   return (
     <div className="condiments">
       <header className="condiments__intro">
-        <p className="condiments__eyebrow">
-          Condiments &amp; Sauces
-        </p>
+        <p className="condiments__eyebrow">Condiments &amp; Sauces</p>
 
         <h1 className="condiments__heading">
           The finishing touch
@@ -18,7 +16,7 @@ export default function CondimentsSection() {
 
         <p className="condiments__description">
           Jams, spreads, pickles, chutneys and curry pastes developed with
-        ingredients, bold flavour and consistent performance.
+          ingredients, bold flavour and consistent performance.
         </p>
       </header>
 
@@ -36,9 +34,19 @@ export default function CondimentsSection() {
             <div className="condiments__media">
               <Image
                 src={section.image}
+                alt=""
+                fill
+                sizes="(max-width: 960px) 100vw, 50vw"
+                className="condiments__image-background"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={section.image}
                 alt={section.label}
                 fill
                 priority={index === 0}
+                quality={90}
                 sizes="(max-width: 960px) 100vw, 50vw"
                 className="condiments__image"
               />

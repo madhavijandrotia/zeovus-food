@@ -2,7 +2,7 @@ export const CONDIMENTS_SECTIONS = [
   {
     id: "exotic-jams",
     label: "Exotic Jams",
-    image: "/products/condiments/jams.webp",
+    image: "/products/condiments/jams.png",
     imagePosition: "right",
     groups: [
       {
@@ -27,7 +27,7 @@ export const CONDIMENTS_SECTIONS = [
   {
     id: "spreads",
     label: "Spreads",
-    image: "/products/condiments/spreads.webp",
+    image: "/products/condiments/spreads.png",
     imagePosition: "left",
     groups: [
       {
@@ -55,7 +55,7 @@ export const CONDIMENTS_SECTIONS = [
   {
     id: "pickles-chutneys",
     label: "Pickles & Chutneys",
-    image: "/products/condiments/pickles.webp",
+    image: "/products/condiments/pickles.png",
     imagePosition: "right",
     groups: [
       {
@@ -94,7 +94,7 @@ export const CONDIMENTS_SECTIONS = [
   {
     id: "curry-pastes",
     label: "Curry Pastes",
-    image: "/products/condiments/curry-paste.webp",
+    image: "/products/condiments/curry-paste.png",
     imagePosition: "left",
     groups: [
       {
