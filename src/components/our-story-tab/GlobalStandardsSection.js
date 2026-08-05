@@ -50,7 +50,7 @@ const cardVariants = {
 
 export default function GlobalStandardsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#151812] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#171914] via-[#2c3128] to-[#48503f] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
       <div className="pointer-events-none absolute left-[-120px] top-[-80px] h-[340px] w-[340px] rounded-full bg-[#c35531]/10 blur-[110px]" />
 
       <div className="pointer-events-none absolute bottom-[-140px] right-[-80px] h-[380px] w-[380px] rounded-full bg-[#789444]/10 blur-[130px]" />
@@ -226,13 +226,6 @@ export default function GlobalStandardsSection() {
                 }}
                 className="group relative min-h-[330px] overflow-hidden rounded-[28px] border border-[#fff9df]/15 bg-[#fff9df]/[0.045] p-6 sm:p-8"
               >
-                <div className="flex items-start justify-between gap-5">
-                  <span className="text-[11px] font-bold tracking-[0.18em] text-[#c35531]">
-                    {item.number}
-                  </span>
-
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#c35531]" />
-                </div>
 
                 <div className="mt-16">
                   <h4 className="font-heading text-[34px] font-bold uppercase leading-none text-[#fff9df]">
