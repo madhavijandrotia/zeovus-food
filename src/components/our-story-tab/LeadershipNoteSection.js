@@ -27,25 +27,18 @@ export default function LeadershipNoteSection() {
           <p className="text-center text-[22px] italic leading-10 text-[#30402a] sm:text-[26px]">
             “Every business says quality matters. Ours was built by people who
             couldn't stop chasing it, first in a single sack of grain from the
-            right region, now in every batch that leaves our lines.
-          </p>
-
-          <p className="mt-8 text-center text-[18px] leading-9 text-[#30402a]/85">
-            We didn't set out to become manufacturers. We set out to protect
-            what we sourced, and manufacturing was simply the only way to
-            guarantee it stayed protected all the way to someone else's shelf.
-            That's still the whole point.”
+            right region, now in every batch that leaves our lines.We didn't set
+            out to become manufacturers. We set out to protect what we sourced,
+            and manufacturing was simply the only way to guarantee it stayed
+            protected all the way to someone else's shelf. That's still the
+            whole point.”
           </p>
         </div>
 
         <div className="mx-auto mt-14 h-px w-28 bg-[#c35531]/40" />
 
         <p className="mt-8 text-center font-heading text-[30px] font-bold text-[#294526]">
-          — The Zeovus Food Team
-        </p>
-
-        <p className="mt-2 text-center text-sm uppercase tracking-[0.25em] text-[#789444]">
-          Quality. By Design.
+          - The Zeovus Food Team
         </p>
       </motion.div>
     </section>
