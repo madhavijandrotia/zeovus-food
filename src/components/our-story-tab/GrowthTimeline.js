@@ -7,7 +7,7 @@ const STAGES = [
     stage: "Stage One",
     title: "The Sourcing Instinct",
     description:
-      "It began with a simple obsession: find the ingredient that's genuinely the best of its kind, wherever it comes from, and refuse to settle for a substitute.",
+      "It began with a simple obsession: find the ingredient that's the best of its kind, wherever it comes from, and refuse to settle for a substitute.",
   },
   {
     stage: "Stage Two",

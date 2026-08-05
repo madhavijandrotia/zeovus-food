@@ -32,6 +32,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+p,
+li,
+blockquote {
+  line-height: 1.75;
+}
+
+.uppercase {
+  letter-spacing: 0.06em;
+  word-spacing: 0.08em;
 }
 
 a {

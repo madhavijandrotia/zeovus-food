@@ -52,10 +52,10 @@ export default function Footer() {
         <div className="site-footer__brand">
           <Link href="/" className="site-footer__logo-link">
             <Image
-              src="/logo.webp"
+              src="/logo.png"
               alt="Zeovus Food"
-              width={150}
-              height={70}
+              width={180}
+              height={90}
               className="site-footer__logo"
             />
           </Link>

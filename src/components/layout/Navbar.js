@@ -35,10 +35,10 @@ export default function Navbar() {
           className="flex shrink-0 items-center"
         >
           <Image
-            src="/logo.webp"
+            src="/logo.png"
             alt="Zeovus Food"
-            width={135}
-            height={60}
+            width={185}
+            height={90}
             priority
             className="h-auto w-[120px] lg:w-[135px]"
           />

@@ -23,10 +23,6 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
         <div className="max-w-[900px]">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[4px] text-[#d2dc9b]">
-            Thoughtfully Produced. Globally Inspired.
-          </p>
-
           <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
             <span className="block">Bringing</span>
 

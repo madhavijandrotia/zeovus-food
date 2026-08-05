@@ -26,8 +26,8 @@ export default function HeroWorking() {
         <div className="max-w-[980px]">  
 
           {/* Headline */}
-          <h1 className="font-heading text-[42px] font-black uppercase leading-[0.92] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
-           Bring the Brief. 
+          <h1 className="max-w-[920px] font-heading text-[42px] font-black uppercase leading-[1.02] tracking-[-0.02em] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
+           Bring the Brief.
             <br />
             <span className="text-[#f89b21]">We'll Bring the Batch.</span>
           </h1>
