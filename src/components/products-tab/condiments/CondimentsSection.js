@@ -18,7 +18,7 @@ export default function CondimentsSection() {
 
         <p className="condiments__description">
           Jams, spreads, pickles, chutneys and curry pastes developed with
-          dependable ingredients, bold flavour and consistent performance.
+        ingredients, bold flavour and consistent performance.
         </p>
       </header>
 

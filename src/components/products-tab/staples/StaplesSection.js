@@ -15,7 +15,7 @@ export default function StaplesSection() {
         </h1>
 
         <p className="staples__description">
-          Flours, rice, millets, lentils and pulses selected for dependable
+          Flours, rice, millets, lentils and pulses selected for
           quality, consistent performance and everyday use.
         </p>
       </header>
@@ -42,6 +42,8 @@ export default function StaplesSection() {
               />
 
               <div className="staples__media-overlay" />
+
+
             </div>
 
             <div className="staples__content">

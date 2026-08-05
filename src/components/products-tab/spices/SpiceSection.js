@@ -16,7 +16,7 @@ export default function SpicesSection() {
 
         <p className="spices__description">
           Whole spices, ground spices, blended masalas and specialist
-          seasonings developed for dependable flavour, colour and consistency.
+          seasonings developed for flavour, colour and consistency.
         </p>
       </header>
 
