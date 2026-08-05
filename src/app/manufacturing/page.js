@@ -12,7 +12,7 @@ const ManufacturingPage = () => {
         <ManufacturingSystemSection />
         <QualityCertificationSection />
         <CertificationWall />
-        <ClosingCTA />
+        {/* <ClosingCTA /> */}
         <Footer />
         </>
     )
