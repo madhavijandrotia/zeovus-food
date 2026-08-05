@@ -27,7 +27,7 @@ const steps = [
   {
     number: "03",
     label: "Ingredient Selection",
-    title: "Choosing What Goes In",
+    title: "Choosing Where Goes In",
     image: "/images/ingredient-selection.png",
     description:
       "This step is about deciding what enters the formula, and who it comes from, before anything is ordered.",
@@ -37,7 +37,7 @@ const steps = [
   {
     number: "04",
     label: "PO & Kickoff",
-    title: "Confirmation Starts The System",
+    title: "Production begins once the order is confirmed",
     image: "/images/kickoff.png",
     description:
       "Nothing moves until the brand owner confirms the order.",
@@ -77,12 +77,12 @@ const steps = [
   {
     number: "08",
     label: "Packaging & Delivery",
-    title: "Ready For Shelf, Commerce Or Export",
+    title: "Ready For Shelf, Ecommerce Or Export",
     image: "/images/delivery.png",
     description:
-      "The final step covers labelling, packaging and shipping the completed product.",
+      "The final step is labelling, packaging and shipping the finished product, ready for shelf, ready for e-commerce, ready for export, wherever the brand needs it to go next.",
     details:
-      "Each product leaves ready for the channel it was designed for retail shelf, e-commerce fulfilment, food service or international export.",
+      "Each product leaves ready for the channel it was designed for retail shelf, e-commerce fulfilment, food service or finished product.",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function ProcessFlowSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Desktop centre line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#294526]/15 lg:block" />
+          <div className="absolute bottom-0 left-1/2 top-7 hidden w-px -translate-x-1/2 bg-[#294526]/15 lg:block" />
 
           <div className="space-y-14 lg:space-y-24">
             {steps.map((step, index) => {
@@ -165,10 +165,10 @@ export default function ProcessFlowSection() {
                     once: true,
                     amount: 0.12,
                   }}
-                  className="relative grid grid-cols-1 gap-5 lg:grid-cols-[1fr_84px_1fr] lg:items-stretch"
+                  className="relative grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_84px_minmax(0,1fr)] lg:items-stretch"
                 >
                   {/* Mobile timeline */}
-                  <div className="absolute bottom-0 left-[17px] top-0 w-px bg-[#294526]/15 lg:hidden" />
+                  <div className="absolute bottom-0 left-[17px] top-7 w-px bg-[#294526]/15 lg:hidden" />
 
                   <div className="absolute left-0 top-7 z-20 flex h-9 w-9 items-center justify-center rounded-full border-[6px] border-[#f3ead8] bg-[#c35531] text-[9px] font-bold text-[#fff9df] lg:hidden">
                     {step.number}
@@ -184,8 +184,8 @@ export default function ProcessFlowSection() {
                     }}
                     className={`group relative ml-12 min-h-[340px] overflow-hidden rounded-[28px] border border-[#294526]/10 shadow-[0_22px_55px_rgba(37,45,29,0.1)] sm:min-h-[440px] lg:ml-0 ${
                       imageOnLeft
-                        ? "lg:col-start-1"
-                        : "lg:col-start-3"
+                        ? "lg:col-start-1 lg:row-start-1"
+                        : "lg:col-start-3 lg:row-start-1"
                     }`}
                   >
                     <Image
@@ -196,7 +196,7 @@ export default function ProcessFlowSection() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
                     <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/65">
@@ -210,8 +210,8 @@ export default function ProcessFlowSection() {
                   </motion.div>
 
                   {/* Desktop timeline marker */}
-                  <div className="relative hidden items-start justify-center lg:col-start-2 lg:flex">
-                    <div className="sticky top-[45vh] z-20 flex h-14 w-14 items-center justify-center rounded-full border-[8px] border-[#f3ead8] bg-[#294526] shadow-[0_8px_24px_rgba(41,69,38,0.18)]">
+                  <div className="relative hidden items-start justify-center lg:col-start-2 lg:row-start-1 lg:flex">
+                    <div className="relative z-20 mt-7 flex h-14 w-14 items-center justify-center rounded-full border-[8px] border-[#f3ead8] bg-[#294526] shadow-[0_8px_24px_rgba(41,69,38,0.18)]">
                       <span className="text-[11px] font-bold tracking-[0.1em] text-[#fff9df]">
                         {step.number}
                       </span>
@@ -220,14 +220,14 @@ export default function ProcessFlowSection() {
 
                   {/* Content */}
                   <div
-                    className={`ml-12 flex min-h-[340px] flex-col justify-center rounded-[28px] border border-[#294526]/10 bg-[#fffaf0] p-6 shadow-[0_22px_55px_rgba(37,45,29,0.07)] sm:min-h-[440px] sm:p-9 lg:ml-0 lg:p-11 ${
+                    className={`ml-12 flex min-h-[340px] flex-col justify-start rounded-[28px] border border-[#294526]/10 bg-[#fffaf0] p-6 shadow-[0_22px_55px_rgba(37,45,29,0.07)] sm:min-h-[440px] sm:p-9 lg:ml-0 lg:p-11 ${
                       imageOnLeft
-                        ? "lg:col-start-3"
+                        ? "lg:col-start-3 lg:row-start-1"
                         : "lg:col-start-1 lg:row-start-1"
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <span className="h-px w-10 bg-[#c35531]" />
+                      <span className="h-px w-10 shrink-0 bg-[#c35531]" />
 
                       <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#c35531]">
                         {step.label}
@@ -246,16 +246,6 @@ export default function ProcessFlowSection() {
                       <p className="text-[14px] leading-7 text-[#34422e]/68 sm:text-[15px]">
                         {step.details}
                       </p>
-                    </div>
-
-                    <div className="mt-7 flex items-center justify-between gap-4">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#789444]">
-                        Zeovus Process
-                      </span>
-
-                      <span className="font-heading text-[48px] font-bold leading-none text-[#294526]/[0.07]">
-                        {step.number}
-                      </span>
                     </div>
                   </div>
                 </motion.article>
