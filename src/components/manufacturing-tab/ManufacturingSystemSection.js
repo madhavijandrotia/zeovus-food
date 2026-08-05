@@ -7,7 +7,7 @@ const sections = [
   {
     key: "sourcing",
     eyebrow: "Sourcing",
-    title: "Sourcing & Origin Systems",
+    title: "Sourcing",
     description:
       "The system starts long before a product reaches the manufacturing line. We verify where ingredients come from, how they perform and whether they can hold up to the standard the final product requires.",
     image: "/images/sourcing-system.webp",
@@ -170,7 +170,7 @@ const itemVariants = {
 
 export default function ManufacturingSystemSection() {
   return (
-    <section className="relative overflow-hidden bg-[#5a3624] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+    <section className="relative overflow-hidden bg-[#5a3624] px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-10 xl:px-12 xl:py-24 2xl:px-14 2xl:py-28">
       {/* Background decoration */}
       <div className="pointer-events-none absolute left-[-180px] top-[180px] h-[420px] w-[420px] rounded-full bg-[#d28b55]/10 blur-[130px]" />
 
@@ -195,48 +195,20 @@ export default function ManufacturingSystemSection() {
             duration: 0.75,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mb-16 grid grid-cols-1 gap-8 border-b border-[#fff5df]/15 pb-12 lg:mb-24 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20 lg:pb-16"
+          className="mb-14 border-b border-[#fff5df]/15 pb-10 sm:mb-16 sm:pb-12 xl:mb-20 xl:pb-14 2xl:mb-24 2xl:pb-16"
         >
-          <div>
-            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.34em] text-[#e4ad79] sm:text-[12px]">
-              How It&apos;s Built
-            </p>
+          <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-[#e4ad79] sm:text-[11px]">
+            How It&apos;s Built
+          </p>
 
-            <h2 className="font-heading text-[46px] font-bold uppercase leading-[0.9] tracking-[-0.035em] text-[#fff5df] sm:text-[60px] lg:text-[76px]">
-              Sourcing To
-              <br />
-              Shipment,
-              <br />
-              One System.
-            </h2>
-          </div>
-
-          <div className="max-w-[690px] lg:justify-self-end">
-            <p className="text-[16px] leading-8 text-[#fff5df]/70 sm:text-[18px]">
-              One connected system controls what enters the facility, how it is
-              processed, how it is protected and how it reaches the market.
-            </p>
-
-            <div className="mt-7 flex flex-wrap gap-3">
-              {["Source", "Process", "Pack", "Verify", "Ship"].map(
-                (label, index) => (
-                  <span
-                    key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#fff5df]/15 bg-[#fff5df]/[0.05] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fff5df]/78 backdrop-blur-sm"
-                  >
-                    <span className="text-[#e4ad79]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-
-                    {label}
-                  </span>
-                ),
-              )}
-            </div>
-          </div>
+          <h2 className="max-w-[900px] font-heading text-[38px] font-bold uppercase leading-[0.92] tracking-[-0.035em] text-[#fff5df] sm:text-[48px] md:text-[56px] xl:text-[64px] 2xl:text-[76px]">
+            Sourcing To
+            <br />
+            Shipment, One System.
+          </h2>
         </motion.div>
 
-        <div className="space-y-20 lg:space-y-32">
+        <div className="space-y-16 sm:space-y-20 xl:space-y-24 2xl:space-y-32">
           {sections.map((section, sectionIndex) => {
             const imageOnLeft = sectionIndex % 2 === 0;
             const dark = section.theme === "dark";
@@ -255,13 +227,18 @@ export default function ManufacturingSystemSection() {
                 }}
                 viewport={{
                   once: true,
-                  amount: 0.1,
+                  amount: 0.08,
                 }}
                 transition={{
                   duration: 0.8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="relative grid grid-cols-1 gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch"
+                className="
+                  relative grid min-w-0 grid-cols-1 gap-5
+                  xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]
+                  xl:items-stretch
+                  2xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]
+                "
               >
                 {/* Image panel */}
                 <motion.div
@@ -271,85 +248,63 @@ export default function ManufacturingSystemSection() {
                   transition={{
                     duration: 0.3,
                   }}
-                  className={`group relative min-h-[440px] overflow-hidden rounded-[34px] border border-white/10 shadow-[0_30px_80px_rgba(22,10,4,0.3)] sm:min-h-[560px] lg:min-h-full ${
-                    imageOnLeft ? "lg:order-1" : "lg:order-2"
-                  }`}
+                  className={`
+                    group relative min-h-[340px] min-w-0 overflow-hidden
+                    rounded-[24px] border border-white/10
+                    shadow-[0_24px_60px_rgba(22,10,4,0.26)]
+                    sm:min-h-[440px] sm:rounded-[30px]
+                    md:min-h-[520px]
+                    xl:min-h-full xl:rounded-[34px]
+                    ${imageOnLeft ? "xl:order-1" : "xl:order-2"}
+                  `}
                 >
                   <Image
                     src={section.image}
                     alt={section.title}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 44vw"
+                    sizes="(max-width: 1279px) 100vw, 43vw"
                     className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.045]"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-black/10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-black/10" />
 
-                  <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8">
-                    <div className="flex items-end justify-between gap-5">
-                      <div>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/65">
-                          Phase {sectionNumber}
-                        </p>
+                  <div className="absolute inset-x-0 top-0 z-10 p-5 sm:p-7 xl:p-6 2xl:p-8">
+                    <div className="max-w-[480px]">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-white/70 sm:text-[10px]">
+                        Phase {sectionNumber}
+                      </p>
 
-                        <h3 className="mt-2 max-w-[480px] font-heading text-[28px] font-bold uppercase leading-[0.98] text-[#fff5df] sm:text-[38px]">
-                          {section.eyebrow}
-                        </h3>
-                      </div>
-
-                      <span className="font-heading text-[54px] font-bold leading-none text-white/15 sm:text-[74px]">
-                        {sectionNumber}
-                      </span>
+                      <h3 className="mt-2 font-heading text-[26px] font-bold uppercase leading-[0.98] text-[#fff5df] sm:text-[34px] 2xl:text-[38px]">
+                        {section.eyebrow}
+                      </h3>
                     </div>
-                  </div>
-
-                  <div className="absolute left-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-black/20 text-[11px] font-bold text-white backdrop-blur-md">
-                    {sectionNumber}
                   </div>
                 </motion.div>
 
                 {/* Information panel */}
                 <div
-                  className={`relative overflow-hidden rounded-[34px] border p-6 shadow-[0_30px_80px_rgba(22,10,4,0.2)] sm:p-9 lg:p-11 ${
-                    imageOnLeft ? "lg:order-2" : "lg:order-1"
-                  } ${
-                    dark
-                      ? "border-[#fff5df]/10 bg-[#182015] text-[#fff5df]"
-                      : "border-[#704229]/10 bg-[#f0ddba] text-[#294526]"
-                  }`}
+                  className={`
+                    relative min-w-0 overflow-hidden rounded-[24px] border
+                    p-5 shadow-[0_24px_60px_rgba(22,10,4,0.18)]
+                    sm:rounded-[30px] sm:p-7
+                    md:p-9
+                    xl:rounded-[34px] xl:p-7
+                    2xl:p-11
+                    ${imageOnLeft ? "xl:order-2" : "xl:order-1"}
+                    ${
+                      dark
+                        ? "border-[#fff5df]/10 bg-[#182015] text-[#fff5df]"
+                        : "border-[#704229]/10 bg-[#f0ddba] text-[#294526]"
+                    }
+                  `}
                 >
-                  {/* Decorative large number */}
-                  <span
-                    className={`pointer-events-none absolute -right-4 -top-10 font-heading text-[150px] font-black leading-none sm:text-[210px] ${
-                      dark ? "text-white/[0.035]" : "text-[#704229]/[0.045]"
-                    }`}
-                  >
-                    {sectionNumber}
-                  </span>
-
                   <div className="relative z-10">
-                    <div className="flex items-center gap-3">
-                      <span
-                        className={`h-px w-10 ${
-                          dark ? "bg-[#d7ad78]" : "bg-[#a3633b]"
-                        }`}
-                      />
-
-                      <p
-                        className={`text-[11px] font-bold uppercase tracking-[0.28em] ${
-                          dark ? "text-[#d7ad78]" : "text-[#985a35]"
-                        }`}
-                      >
-                        {section.eyebrow}
-                      </p>
-                    </div>
-
-                    <h3 className="mt-5 max-w-[700px] font-heading text-[36px] font-bold uppercase leading-[0.94] tracking-[-0.025em] sm:text-[46px] lg:text-[54px]">
+                    <h3 className="max-w-[700px] font-heading text-[32px] font-bold uppercase leading-[0.96] tracking-[-0.025em] sm:text-[40px] md:text-[46px] xl:text-[44px] 2xl:text-[54px]">
                       {section.title}
                     </h3>
 
                     <p
-                      className={`mt-6 max-w-[720px] text-[15px] leading-7 sm:text-[17px] ${
+                      className={`mt-5 max-w-[720px] text-[14px] leading-7 sm:text-[16px] 2xl:mt-6 2xl:text-[17px] ${
                         dark ? "text-[#fff5df]/68" : "text-[#294526]/70"
                       }`}
                     >
@@ -367,38 +322,49 @@ export default function ManufacturingSystemSection() {
                       transition={{
                         staggerChildren: 0.06,
                       }}
-                      className="mt-9 grid grid-cols-1 gap-3"
+                      className="mt-7 grid grid-cols-1 gap-3 2xl:mt-9"
                     >
                       {section.items.map((item, itemIndex) => (
                         <motion.div
                           key={item.title}
                           variants={itemVariants}
                           whileHover={{
-                            x: 5,
+                            x: 4,
                           }}
                           transition={{
                             duration: 0.22,
                           }}
-                          className={`group/item relative overflow-hidden rounded-[20px] border px-4 py-5 sm:grid sm:grid-cols-[44px_220px_1fr] sm:items-start sm:gap-5 sm:px-5 ${
-                            dark
-                              ? "border-[#fff5df]/10 bg-[#fff5df]/[0.035]"
-                              : "border-[#294526]/10 bg-white/25"
-                          }`}
+                          className={`
+                            group/item relative grid min-w-0 grid-cols-[32px_minmax(0,1fr)]
+                            gap-x-3 gap-y-2 overflow-hidden rounded-[18px] border
+                            px-4 py-4
+                            sm:grid-cols-[36px_minmax(180px,0.8fr)_minmax(0,1.2fr)]
+                            sm:items-start sm:gap-4 sm:px-5 sm:py-5
+                            xl:grid-cols-[32px_minmax(145px,0.75fr)_minmax(0,1.25fr)]
+                            xl:gap-3 xl:px-4
+                            2xl:grid-cols-[44px_minmax(190px,0.85fr)_minmax(0,1.15fr)]
+                            2xl:gap-5 2xl:px-5
+                            ${
+                              dark
+                                ? "border-[#fff5df]/10 bg-[#fff5df]/[0.035]"
+                                : "border-[#294526]/10 bg-white/25"
+                            }
+                          `}
                         >
                           <span
-                            className={`text-[10px] font-bold tracking-[0.18em] ${
+                            className={`pt-0.5 text-[9px] font-bold tracking-[0.16em] sm:text-[10px] ${
                               dark ? "text-[#d7ad78]" : "text-[#985a35]"
                             }`}
                           >
                             {String(itemIndex + 1).padStart(2, "0")}
                           </span>
 
-                          <h4 className="mt-2 font-heading text-[18px] font-bold leading-tight sm:mt-0 sm:text-[20px]">
+                          <h4 className="min-w-0 font-heading text-[17px] font-bold leading-[1.2] sm:text-[18px] xl:text-[16px] 2xl:text-[20px]">
                             {item.title}
                           </h4>
 
                           <p
-                            className={`mt-3 text-[14px] leading-6 sm:mt-0 sm:text-[15px] ${
+                            className={`col-start-2 min-w-0 text-[13px] leading-6 sm:col-start-3 sm:text-[14px] xl:text-[13px] xl:leading-[1.65] 2xl:text-[15px] 2xl:leading-6 ${
                               dark ? "text-[#fff5df]/62" : "text-[#294526]/66"
                             }`}
                           >
