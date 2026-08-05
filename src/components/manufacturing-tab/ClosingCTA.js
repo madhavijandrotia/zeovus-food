@@ -77,16 +77,6 @@ export default function ClosingCTA() {
               className="transition group-hover:translate-x-1"
             />
           </Link>
-
-          <a
-            href="/Capability-Overview.pdf"
-            download
-            className="group inline-flex items-center justify-center gap-3 rounded-full border border-[#294526]/12 bg-[#ebe6d8] px-8 py-4 font-heading text-[18px] font-bold uppercase tracking-[0.08em] text-[#6b742d] transition hover:bg-[#e3ddcd]"
-          >
-            <Download size={18} />
-
-            Download Capability Overview
-          </a>
         </motion.div>
       </div>
     </section>

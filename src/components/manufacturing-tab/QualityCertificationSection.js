@@ -79,56 +79,9 @@ export default function QualityCertificationSection() {
             }}
             className="relative overflow-hidden rounded-[32px] border border-[#294526]/10 bg-[#fffce8] p-6 shadow-[0_24px_65px_rgba(49,55,37,0.08)] sm:p-9 lg:p-11"
           >
-            <span className="absolute right-7 top-5 font-heading text-[110px] font-black leading-none text-[#789444]/[0.055] sm:text-[150px]">
+            <span className="pointer-events-none absolute right-7 top-5 font-heading text-[110px] font-black leading-none text-[#789444]/[0.055] sm:text-[150px]">
               ZQA
             </span>
-
-            {/* Stamped seal */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 2.8,
-                rotate: -28,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-                rotate: -10,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.1,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 320,
-                damping: 14,
-                mass: 0.7,
-                delay: 0.45,
-              }}
-              className="pointer-events-none absolute bottom-5 right-5 z-30 h-[120px] w-[120px] sm:bottom-7 sm:right-7 sm:h-[145px] sm:w-[145px] lg:h-[165px] lg:w-[165px]"
-            >
-              <motion.div
-                animate={{
-                  scale: [1, 0.94, 1],
-                }}
-                transition={{
-                  duration: 0.28,
-                  delay: 0.85,
-                  ease: "easeOut",
-                }}
-                className="relative h-full w-full"
-              >
-                <Image
-                  src="/seal1.png"
-                  alt="Zeovus quality approved seal"
-                  fill
-                  priority
-                  sizes="165px"
-                  className="object-contain opacity-100 drop-shadow-[0_8px_16px_rgba(41,69,38,0.18)]"
-                />
-              </motion.div>
-            </motion.div>
 
             <div className="relative z-10">
               <div className="inline-flex items-center gap-3 rounded-full border border-[#789444]/20 bg-[#789444]/[0.08] px-4 py-2">
@@ -160,9 +113,9 @@ export default function QualityCertificationSection() {
                 transition={{
                   staggerChildren: 0.055,
                 }}
-                className="mt-8 grid grid-cols-1 gap-3 pb-16 sm:grid-cols-2 sm:pb-20 lg:grid-cols-1 xl:grid-cols-2"
+                className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"
               >
-                {checks.map((check, index) => (
+                {checks.map((check) => (
                   <motion.div
                     key={check}
                     variants={itemVariants}
@@ -185,10 +138,6 @@ export default function QualityCertificationSection() {
 
                     <span className="text-[14px] font-medium leading-6 text-[#293522] sm:text-[15px]">
                       {check}
-                    </span>
-
-                    <span className="ml-auto pt-1 text-[10px] font-bold tracking-[0.14em] text-[#789444]/45">
-                      {String(index + 1).padStart(2, "0")}
                     </span>
                   </motion.div>
                 ))}
@@ -219,7 +168,54 @@ export default function QualityCertificationSection() {
           >
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[#fff9df]/20 blur-[75px]" />
 
-            <div className="relative z-10">
+            {/* Stamped seal */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 2.8,
+                rotate: -28,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                rotate: -10,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.1,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 320,
+                damping: 14,
+                mass: 0.7,
+                delay: 0.45,
+              }}
+              className="pointer-events-none absolute right-5 top-5 z-30 h-[110px] w-[110px] sm:right-7 sm:top-7 sm:h-[140px] sm:w-[140px] lg:right-8 lg:top-8 lg:h-[155px] lg:w-[155px]"
+            >
+              <motion.div
+                animate={{
+                  scale: [1, 0.94, 1],
+                }}
+                transition={{
+                  duration: 0.28,
+                  delay: 0.85,
+                  ease: "easeOut",
+                }}
+                className="relative h-full w-full"
+              >
+                <Image
+                  src="/seal1.png"
+                  alt="Zeovus Quality Assurance approved seal"
+                  fill
+                  priority
+                  sizes="155px"
+                  className="object-contain opacity-100 drop-shadow-[0_8px_16px_rgba(41,69,38,0.18)]"
+                />
+              </motion.div>
+            </motion.div>
+
+            <div className="relative z-10 pt-28 sm:pt-32 lg:pt-0 lg:pr-40">
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#c35531]">
                 Excellence Through Verification
               </p>
@@ -248,7 +244,7 @@ export default function QualityCertificationSection() {
               </div>
 
               {/* Stats */}
-              <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:mr-[-160px]">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.value}
@@ -276,10 +272,6 @@ export default function QualityCertificationSection() {
                     <p className="mt-3 max-w-[150px] text-[11px] font-bold uppercase leading-5 tracking-[0.12em] text-[#294526]/68">
                       {stat.label}
                     </p>
-
-                    <span className="absolute right-4 top-4 text-[10px] font-bold tracking-[0.16em] text-[#789444]/45">
-                      0{index + 1}
-                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -302,7 +294,7 @@ export default function QualityCertificationSection() {
                   duration: 0.6,
                   delay: 0.25,
                 }}
-                className="relative mt-8 overflow-hidden rounded-[24px] border border-[#789444]/20 bg-[#fff9df]/50 px-6 py-6 sm:px-7"
+                className="relative mt-8 overflow-hidden rounded-[24px] border border-[#789444]/20 bg-[#fff9df]/50 px-6 py-6 sm:px-7 lg:mr-[-160px]"
               >
                 <div className="absolute inset-y-0 left-0 w-[6px] bg-[#789444]" />
 
@@ -313,26 +305,6 @@ export default function QualityCertificationSection() {
                   standards, you&apos;re holding one that defines them.
                 </p>
               </motion.div>
-
-              {/* Certification tags */}
-              <div className="mt-7 flex flex-wrap gap-2.5">
-                {[
-                  "FSSAI",
-                  "HACCP",
-                  "ISO 22000",
-                  "US FDA",
-                  "BRCGS",
-                  "Halal",
-                  "Kosher",
-                ].map((certification) => (
-                  <span
-                    key={certification}
-                    className="rounded-full border border-[#294526]/12 bg-[#fff9df]/45 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#294526]/72"
-                  >
-                    {certification}
-                  </span>
-                ))}
-              </div>
             </div>
           </motion.article>
         </div>
