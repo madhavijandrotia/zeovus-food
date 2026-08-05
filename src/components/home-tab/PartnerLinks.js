@@ -32,7 +32,13 @@ const PAGES = [
   },
   {
     key: "distribution",
-    label: "Distribution & Regional Partnership",
+    label: (
+      <>
+        Distribution &
+        <br />
+        Regional Partnership
+      </>
+    ),
     description:
       "Take Zeovus Food formulations into markets we haven't reached yet, together.",
     photo: "#2a3c22",
@@ -41,7 +47,13 @@ const PAGES = [
   },
   {
     key: "bulk-supply",
-    label: "Bulk Ingredient & Raw Material Supply",
+    label: (
+      <>
+        Bulk Ingredient &
+        <br />
+        Raw Material Supply
+      </>
+    ),
     description:
       "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line needs.",
     photo: "#f69520",
