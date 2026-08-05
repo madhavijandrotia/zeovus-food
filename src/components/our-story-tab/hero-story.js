@@ -27,7 +27,7 @@ export default function HeroStory() {
             <span className="block">Delivering</span>
 
             <span className="block text-[#b8c77d]">
-              Nature's best
+              Natures best
             </span>
 
             <span className="block">
