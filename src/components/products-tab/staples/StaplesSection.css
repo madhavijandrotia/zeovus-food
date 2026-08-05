@@ -1,6 +1,6 @@
 .staples {
-  background: #f3efe7;
   color: #273321;
+  background: #f3efe7;
 }
 
 .staples__intro {
@@ -16,7 +16,6 @@
 
   font-size: 0.75rem;
   font-weight: 700;
-
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
@@ -30,7 +29,8 @@
   font-family: var(--font-oswald);
   font-size: clamp(3rem, 6vw, 6.5rem);
   font-weight: 700;
-    line-height: 1;
+
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
@@ -51,11 +51,15 @@
 
 .staples__section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
 
-  min-height: 720px;
+  min-height: 760px;
 
   border-bottom: 1px solid rgba(41, 69, 38, 0.12);
+}
+
+.staples__section--reverse {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
 }
 
 .staples__section--reverse .staples__media {
@@ -66,19 +70,10 @@
   order: 1;
 }
 
-.staples__image {
-  object-fit: cover;
-
-  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.staples__section:hover .staples__image {
-  transform: scale(1.035);
-}
-
 .staples__media {
   position: relative;
-  min-height: 620px;
+
+  min-height: 660px;
   overflow: hidden;
 
   background: #d9d0c3;
@@ -117,24 +112,23 @@
 
   pointer-events: none;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15, 18, 12, 0.02),
-      rgba(15, 18, 12, 0.12)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(15, 18, 12, 0.02),
+    rgba(15, 18, 12, 0.12)
+  );
 }
 
 .staples__section-number {
   position: absolute;
   top: 1.5rem;
   right: 1.75rem;
+  z-index: 3;
 
   color: rgba(255, 255, 255, 0.85);
 
   font-size: 0.7rem;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 }
 
@@ -151,6 +145,7 @@
 .staples__title-row {
   display: flex;
   align-items: center;
+
   gap: 1rem;
 
   margin-bottom: 2.5rem;
@@ -159,6 +154,8 @@
 .staples__title-line {
   width: 42px;
   height: 4px;
+
+  flex-shrink: 0;
 
   border-radius: 999px;
 
@@ -192,7 +189,6 @@
 
   font-size: 1rem;
   font-weight: 700;
-
   line-height: 1.4;
 }
 
@@ -235,7 +231,8 @@
 }
 
 @media (max-width: 1000px) {
-  .staples__section {
+  .staples__section,
+  .staples__section--reverse {
     grid-template-columns: 1fr;
   }
 
@@ -256,6 +253,10 @@
 
   .staples__media {
     min-height: 420px;
+  }
+
+  .staples__image {
+    padding: 1rem;
   }
 
   .staples__content {
