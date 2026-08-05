@@ -85,31 +85,6 @@ const products = [
 export default function ProductInnovationShowcase() {
   return (
     <section className="bg-[#f7f5ef] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 28,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.45,
-        }}
-        transition={{
-          duration: 0.7,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="mx-auto mb-14 max-w-[980px] text-center lg:mb-20"
-      >
-        <p className="font-heading text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-[#294526] sm:text-[36px] lg:text-[46px]">
-          “Every one of these started as a formulation brief, not a recipe, a
-          problem our research team was handed, and built the answer to, from
-          the ground up.”
-        </p>
-      </motion.div>
       <div className="mx-auto max-w-[1500px] space-y-14 lg:space-y-20">
         {products.map((product, index) => {
           const imageOnLeft = index % 2 === 0;
@@ -141,10 +116,6 @@ export default function ProductInnovationShowcase() {
                 />
 
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
-
-                <span className="absolute right-5 top-5 rounded-full border border-white/30 bg-black/20 px-3 py-1 text-[11px] font-bold tracking-[0.18em] text-white backdrop-blur-md">
-                  {product.number}
-                </span>
               </div>
 
               {/* Information panel */}
@@ -157,11 +128,6 @@ export default function ProductInnovationShowcase() {
                   color: product.textColor,
                 }}
               >
-                {/* Background number */}
-                <span className="pointer-events-none absolute -right-3 -top-10 font-heading text-[150px] font-black leading-none opacity-[0.045] sm:text-[210px]">
-                  {product.number}
-                </span>
-
                 {/* Tags */}
                 <div className="relative z-10 flex flex-wrap gap-2">
                   {product.tags.map((tag) => (
@@ -176,10 +142,6 @@ export default function ProductInnovationShowcase() {
 
                 {/* Main content */}
                 <div className="relative z-10 mt-10 max-w-[650px]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.28em] opacity-65">
-                    Product Innovation
-                  </p>
-
                   <h3 className="mt-4 max-w-[620px] font-heading text-[34px] font-bold uppercase leading-[0.96] tracking-[-0.025em] sm:text-[46px] lg:text-[54px]">
                     {product.title}
                   </h3>
@@ -204,17 +166,7 @@ export default function ProductInnovationShowcase() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="relative z-10 mt-auto flex items-end justify-between gap-5 pt-10">
-                  <div>
-                    <p className="text-[11px] uppercase tracking-[0.22em] opacity-55">
-                      Built by Zeovus R&amp;D
-                    </p>
-
-                    <p className="mt-2 max-w-[360px] text-sm leading-6 opacity-72">
-                      From formulation bench to production line.
-                    </p>
-                  </div>
-
+                <div className="relative z-10 mt-auto flex items-end justify-end gap-5 pt-2">
                   <Link
                     href={product.href}
                     aria-label={`View ${product.title}`}
@@ -242,6 +194,32 @@ export default function ProductInnovationShowcase() {
             </motion.article>
           );
         })}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 28,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.45,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mx-auto mb-14 max-w-[980px] text-center lg:mb-20"
+        >
+          <p className="font-heading text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-[#294526] sm:text-[36px] lg:text-[46px]">
+            “Every one of these started as a formulation brief, not a recipe — a
+            problem our research team was handed, and built the answer to, from
+            the ground up.”
+          </p>
+        </motion.div>
       </div>
     </section>
   );

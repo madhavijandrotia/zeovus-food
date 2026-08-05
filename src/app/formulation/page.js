@@ -10,7 +10,6 @@ const FormulationPage = () => {
         <HeroInnovation />
         <CapabilitiesSection /> 
         <ProductInnovationShowcase />
-        <FormulationBriefSection />
         <Footer />
         </>
     )
