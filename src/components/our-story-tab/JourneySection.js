@@ -82,7 +82,7 @@ export default function JourneySection() {
                 delay: 0.3,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-8 max-w-[720px] space-y-6 text-[16px] leading-[1.85] text-[#34422e]/90 sm:text-[18px]"
+              className="mt-8 max-w-[720px] text-justify space-y-6 text-[16px] leading-[1.85] text-[#34422e]/90 sm:text-[18px]"
             >
               <p>
                 We started as sourcing specialists, chasing the raw materials

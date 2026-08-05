@@ -35,7 +35,7 @@ export default function HeroInnovation() {
           </h1>
 
           {/* Description */}
-          <p className="mt-8 max-w-[760px] text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
+          <p className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
             Zeovus Food doesn&apos;t start by asking what format you want, it
             starts by asking what problem you&apos;re solving, then builds
             toward that goal in whatever format it takes. Flour or freeze-dried,

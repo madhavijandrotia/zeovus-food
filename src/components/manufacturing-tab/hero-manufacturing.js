@@ -32,7 +32,7 @@ export default function HeroManufacturing() {
               BUILT FOR <span className="text-[#F69520]">SCALE</span>
             </span>
           </h1>
-          <p className="mt-8 max-w-[760px] text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
+          <p className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
             Zeovus Food manufactures plant-based staples and functional foods
             across every major format on the market today, from atta and
             protein flour blends to high-protein pasta, spaghetti and

@@ -24,7 +24,7 @@ export default function LeadershipNoteSection() {
         </h2>
 
         <div className="mx-auto mt-12 max-w-3xl">
-          <p className="text-center text-[22px] italic leading-10 text-[#30402a] sm:text-[26px]">
+          <p className="text-center text-justify text-[22px] italic leading-10 text-[#30402a] sm:text-[26px]">
             “Every business says quality matters. Ours was built by people who
             couldn't stop chasing it, first in a single sack of grain from the
             right region, now in every batch that leaves our lines.We didn't set

@@ -300,7 +300,7 @@ export default function ManufacturingSystemSection() {
                 >
                   <div className="relative z-10">
                     <p
-                      className={`mt-5 max-w-[720px] text-[14px] leading-7 sm:text-[16px] 2xl:mt-6 2xl:text-[17px] ${
+                      className={`mt-5 text-justify max-w-[720px] text-[14px] leading-7 sm:text-[16px] 2xl:mt-6 2xl:text-[17px] ${
                         dark ? "text-[#fff5df]/68" : "text-[#294526]/70"
                       }`}
                     >
@@ -360,7 +360,7 @@ export default function ManufacturingSystemSection() {
                           </h4>
 
                           <p
-                            className={`col-start-2 min-w-0 text-[13px] leading-6 sm:col-start-3 sm:text-[14px] xl:text-[13px] xl:leading-[1.65] 2xl:text-[15px] 2xl:leading-6 ${
+                            className={`col-start-2 text-justify min-w-0 text-[13px] leading-6 sm:col-start-3 sm:text-[14px] xl:text-[13px] xl:leading-[1.65] 2xl:text-[15px] 2xl:leading-6 ${
                               dark ? "text-[#fff5df]/62" : "text-[#294526]/66"
                             }`}
                           >

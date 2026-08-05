@@ -150,7 +150,7 @@ export default function GlobalStandardsSection() {
             }}
             className="lg:pt-8 lg:pr-40"
           >
-            <p className="max-w-[820px] text-[16px] leading-[1.9] text-[#fff9df]/78 sm:text-[18px]">
+            <p className="max-w-[820px] text-[16px] text-justify leading-[1.9] text-[#fff9df]/78 sm:text-[18px]">
               We manufacture and export FMCG-grade staples, spices, and
               ready-to-eat foods built to meet the standards of the world&apos;s
               most demanding retailers, distributors, and kitchens. Every batch
@@ -232,7 +232,7 @@ export default function GlobalStandardsSection() {
                     {item.title}
                   </h4>
 
-                  <p className="mt-6 text-[15px] leading-7 text-[#fff9df]/72 sm:text-[16px]">
+                  <p className="mt-6 text-[15px] text-justify leading-7 text-[#fff9df]/72 sm:text-[16px]">
                     {item.text}
                   </p>
                 </div>

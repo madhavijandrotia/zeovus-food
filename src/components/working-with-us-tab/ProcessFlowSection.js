@@ -238,12 +238,12 @@ export default function ProcessFlowSection() {
                       {step.title}
                     </h3>
 
-                    <p className="mt-6 text-[15px] font-medium leading-7 text-[#293522]/82 sm:text-[17px] sm:leading-8">
+                    <p className="text-justify mt-6 text-[15px] font-medium leading-7 text-[#293522]/82 sm:text-[17px] sm:leading-8">
                       {step.description}
                     </p>
 
                     <div className="mt-6 border-t border-[#294526]/10 pt-6">
-                      <p className="text-[14px] leading-7 text-[#34422e]/68 sm:text-[15px]">
+                      <p className="text-justify text-[14px] leading-7 text-[#34422e]/68 sm:text-[15px]">
                         {step.details}
                       </p>
                     </div>

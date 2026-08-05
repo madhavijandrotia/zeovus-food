@@ -98,7 +98,7 @@ export default function QualityCertificationSection() {
                 Made Tangible
               </h2>
 
-              <p className="mt-5 max-w-[540px] text-[15px] leading-7 text-[#34422e]/72 sm:text-[16px]">
+              <p className="mt-5 max-w-[540px] text-justify text-[15px] leading-7 text-[#34422e]/72 sm:text-[16px]">
                 Every Zeovus product undergoes a rigorous quality-control
                 process before it is approved for release.
               </p>
@@ -226,8 +226,8 @@ export default function QualityCertificationSection() {
                 Certifications
               </h2>
 
-              <div className="mt-7 max-w-[780px] space-y-5 text-[15px] leading-7 text-[#34422e]/76 sm:text-[17px] sm:leading-8">
-                <p>
+              <div className="mt-7 text-justify max-w-[780px] space-y-5 text-[15px] leading-7 text-[#34422e]/76 sm:text-[17px] sm:leading-8">
+                <p className="text-justify">
                   Every product we create earns the Zeovus Quality Assurance
                   Seal only after passing our proprietary 12-step quality
                   architecture built on 825 verified and validated testing
@@ -235,7 +235,7 @@ export default function QualityCertificationSection() {
                   authentication, every stage is verified, validated and proven.
                 </p>
 
-                <p>
+                <p className="text-justify">
                   Our triple-layer testing protocol, covering incoming
                   materials, in-process monitoring and in-house certified
                   finished goods, ensures unmatched safety, purity and
@@ -298,7 +298,7 @@ export default function QualityCertificationSection() {
               >
                 <div className="absolute inset-y-0 left-0 w-[6px] bg-[#789444]" />
 
-                <p className="pl-2 font-heading text-[20px] font-semibold leading-8 text-[#294526] sm:text-[23px]">
+                <p className="pl-2 font-heading text-justify text-[20px] font-semibold leading-8 text-[#294526] sm:text-[23px]">
                   When you see the{" "}
                   <span className="font-bold text-[#c35531]">ZQA mark</span>,
                   you&apos;re not just holding a product that meets global

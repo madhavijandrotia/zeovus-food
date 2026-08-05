@@ -148,7 +148,7 @@ export default function WhyZeovusSection() {
                   {benefit.title}
                 </h3>
 
-                <p className="mt-5 text-[15px] leading-7 text-[#34422e]/72 sm:text-[16px]">
+                <p className="mt-5 text-justify text-[15px] leading-7 text-[#34422e]/72 sm:text-[16px]">
                   {benefit.description}
                 </p>
 
