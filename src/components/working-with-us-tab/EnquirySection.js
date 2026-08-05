@@ -422,7 +422,7 @@ export default function EnquirySection() {
               type="submit"
               className="group mt-7 inline-flex min-h-[50px] items-center justify-center gap-3 rounded-full bg-[#151812] px-7 py-3.5 font-heading text-[14px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition duration-300 hover:-translate-y-1 hover:bg-[#294526] focus:outline-none focus:ring-4 focus:ring-[#294526]/20"
             >
-              Send Enquiry
+              Get Your Quote
 
               <svg
                 viewBox="0 0 24 24"

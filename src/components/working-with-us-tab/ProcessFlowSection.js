@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     label: "Consultation",
     title: "Goal, Format & Market Fit",
-    image: "/images/process/consultation.webp",
+    image: "/images/consultation.png",
     description:
       "We start by understanding what the product needs to do, who it's for, and where it's going — a high-protein atta and an instant hummus sachet both start here, even though everything that follows looks completely different for each.",
     details:
@@ -18,7 +18,7 @@ const steps = [
     number: "02",
     label: "Formulation",
     title: "Nutrition-First Product Development",
-    image: "/images/process/formulation.webp",
+    image: "/images/formulation.png",
     description:
       "Once we know what we're building, our in-house R&D team turns it into a real formula — the right ingredients, in the right ratios, built around a nutritional target, not just a recipe.",
     details:
@@ -28,7 +28,7 @@ const steps = [
     number: "03",
     label: "Ingredient Selection",
     title: "Choosing What Goes In",
-    image: "/images/process/ingredient-selection.webp",
+    image: "/images/ingredient-selection.png",
     description:
       "This step is about deciding what enters the formula, and who it comes from, before anything is ordered.",
     details:
@@ -38,7 +38,7 @@ const steps = [
     number: "04",
     label: "PO & Kickoff",
     title: "Confirmation Starts The System",
-    image: "/images/process/kickoff.webp",
+    image: "/images/kickoff.png",
     description:
       "Nothing moves until the brand owner confirms the order.",
     details:
@@ -48,7 +48,7 @@ const steps = [
     number: "05",
     label: "Procurement",
     title: "Sourcing The Approved Ingredients",
-    image: "/images/process/procurement.webp",
+    image: "/images/procurement.png",
     description:
       "Once the order is confirmed, the selected ingredients are sourced, shipped and stored for production.",
     details:
@@ -58,7 +58,7 @@ const steps = [
     number: "06",
     label: "Manufacturing",
     title: "From Formula To Production Line",
-    image: "/images/process/manufacturing.webp",
+    image: "/images/manufacturing.png",
     description:
       "This is where the approved formula becomes a finished product.",
     details:
@@ -68,7 +68,7 @@ const steps = [
     number: "07",
     label: "QC & Testing",
     title: "Proof At Batch Level",
-    image: "/images/process/testing.webp",
+    image: "/images/testing.png",
     description:
       "Every batch is tested against the approved formula and evaluated for stability, safety and consistency.",
     details:
@@ -78,7 +78,7 @@ const steps = [
     number: "08",
     label: "Packaging & Delivery",
     title: "Ready For Shelf, Commerce Or Export",
-    image: "/images/process/delivery.webp",
+    image: "/images/delivery.png",
     description:
       "The final step covers labelling, packaging and shipping the completed product.",
     details:
