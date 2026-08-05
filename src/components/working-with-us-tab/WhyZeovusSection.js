@@ -136,10 +136,6 @@ export default function WhyZeovusSection() {
                 />
 
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/5" />
-
-                <span className="absolute right-5 top-5 rounded-full border border-white/25 bg-black/20 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-white backdrop-blur-md">
-                  {benefit.number}
-                </span>
               </div>
 
               {/* Content */}
