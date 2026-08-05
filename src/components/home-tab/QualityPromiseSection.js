@@ -132,7 +132,7 @@ export default function QualityPromiseSection() {
             >
               <p className="font-heading text-[18px] font-bold uppercase leading-[1.28] tracking-[0.02em] text-[#fff9df] sm:text-[22px] lg:text-[30px]">
                 Every product is verified through our proprietary ZQA framework
-                — 12 steps, 825 tested parameters, and triple-layer checks from
+                with 12 steps, 825 tested parameters, and triple-layer checks from
                 raw material to finished goods.
               </p>
             </motion.div>
@@ -236,7 +236,7 @@ export default function QualityPromiseSection() {
         className="relative z-10 mx-auto flex max-w-[580px] flex-col items-center px-6 pb-16 pt-8 text-center sm:pb-20 sm:pt-10"
       >
         <p className="max-w-[430px] text-sm leading-6 tracking-[0.03em] text-[#4e5b41] sm:text-base">
-          From flours and pulses to spices and ready-to-eat — every range
+          From flours and pulses to spices and ready-to-eat, every range
           carries the same standard.
         </p>
 

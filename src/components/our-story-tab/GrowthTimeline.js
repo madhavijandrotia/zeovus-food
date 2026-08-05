@@ -13,7 +13,7 @@ const STAGES = [
     stage: "Stage Two",
     title: "Building the Infrastructure",
     description:
-      "Sourcing well wasn't enough. We built manufacturing capability around it — milling, extrusion, freeze-drying, retort — so the quality we found at origin didn't get lost on the way to a shelf.",
+      "Sourcing well wasn't enough. We built manufacturing capability around it, milling, extrusion, freeze-drying, retort, so the quality we found at origin didn't get lost on the way to a shelf.",
   },
   {
     stage: "Stage Three",
@@ -25,7 +25,7 @@ const STAGES = [
     stage: "Stage Four",
     title: "Becoming a Manufacturing Partner",
     description:
-      "What started as sourcing raw material for ourselves became building finished products for others — private label, co-development, and formulations built from someone else's brief, not just our own.",
+      "What started as sourcing raw material for ourselves became building finished products for others, private label, co-development, and formulations built from someone else's brief, not just our own.",
   },
 ];
 

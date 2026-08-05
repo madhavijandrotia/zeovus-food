@@ -28,7 +28,7 @@ const PAGES = [
     key: "distribution",
     label: "Distribution & Regional Partnership",
     description:
-      "Take Zeovus Food formulations into markets we haven't reached yet — together.",
+      "Take Zeovus Food formulations into markets we haven't reached yet, together.",
     photo: "#2a3c22",
     src: "/images/DistributionPartnershipsLong.webp",
     href: "/working-together",

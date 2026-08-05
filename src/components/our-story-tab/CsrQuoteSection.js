@@ -36,7 +36,7 @@ export default function CsrQuoteSection() {
           to programs that support{" "}
           <span className="text-[#789444]">child nutrition</span>,{" "}
           <span className="text-[#789444]">education</span>, and{" "}
-          <span className="text-[#789444]">stronger communities</span> —
+          <span className="text-[#789444]">stronger communities</span>
           because the places we source from and the world we manufacture for
           have always been the same world.”
         </blockquote>

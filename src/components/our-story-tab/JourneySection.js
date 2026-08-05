@@ -86,15 +86,15 @@ export default function JourneySection() {
             >
               <p>
                 We started as sourcing specialists, chasing the raw materials
-                that define a region — the heat in a chilli, the fragrance in a
+                that define a region, the heat in a chilli, the fragrance in a
                 grain, the character a place gives an ingredient that nowhere
                 else can copy. That instinct hasn&apos;t changed. What&apos;s
                 grown around it has.
               </p>
 
               <p>
-                Behind that instinct now sits a full manufacturing ecosystem —
-                stone mills, cold-grind lines, IQF tunnels and retort kitchens —
+                Behind that instinct now sits a full manufacturing ecosystem,
+                stone mills, cold-grind lines, IQF tunnels and retort kitchens
                 built not to replace the sourcing, but to protect it. Because
                 the best ingredient in the world is only as good as what happens
                 to it next.

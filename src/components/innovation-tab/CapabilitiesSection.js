@@ -9,7 +9,7 @@ const capabilities = [
     description:
       "Our in-house R&D team works from food science and nutrition literature to build products from first principles.",
     points: [
-      "Process science across extrusion, freeze-drying and fermentation — chosen product by product.",
+      "Process science across extrusion, freeze-drying and fermentation, chosen product by product.",
       "Nutrient bioavailability and functional-ingredient research, from protein complementation to prebiotic and postbiotic systems.",
       "Sensory and texture science to hold taste and mouthfeel constant, whatever is re-engineered underneath.",
     ],
@@ -107,7 +107,7 @@ export default function CapabilitiesSection() {
 
           <p className="max-w-[760px] text-[17px] leading-8 text-[#34422e]/75 sm:text-[19px]">
             New formats. New functions. The kind of product that makes
-            competitors ask how — because we didn&apos;t start from what already
+            competitors ask how because we didn&apos;t start from what already
             exists, we started from what should.
           </p>
         </motion.div>

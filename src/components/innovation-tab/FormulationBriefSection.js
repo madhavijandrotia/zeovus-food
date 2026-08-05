@@ -34,9 +34,9 @@ export default function FormulationBriefSection() {
           <span className="text-[#9aa66a]">“</span>
           Every one of these started as a{" "}
           <span className="text-[#718139]">
-            formulation brief, not a recipe
+            formulation brief, not a recipe,
           </span>{" "}
-          — innovation and manufacturing sit in the same building here, so
+           innovation and manufacturing sit in the same building here, so
           neither one is ever the side project.
           <span className="text-[#9aa66a]">”</span>
         </blockquote>

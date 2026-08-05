@@ -36,7 +36,7 @@ const products = [
     number: "03",
     title: "High-Protein Pasta (Seed-Based)",
     description:
-      "Pasta built from seeds, not refined flour — for the low-carb, clean-label shelf.",
+      "Pasta built from seeds, not refined flour, for the low-carb, clean-label shelf.",
     image: "/products/high-protein-pasta.webp",
     background: "#c9552f",
     textColor: "#fff4db",
@@ -105,7 +105,7 @@ export default function ProductInnovationShowcase() {
         className="mx-auto mb-14 max-w-[980px] text-center lg:mb-20"
       >
         <p className="font-heading text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-[#294526] sm:text-[36px] lg:text-[46px]">
-          “Every one of these started as a formulation brief, not a recipe — a
+          “Every one of these started as a formulation brief, not a recipe, a
           problem our research team was handed, and built the answer to, from
           the ground up.”
         </p>

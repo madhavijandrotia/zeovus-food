@@ -156,9 +156,9 @@ export default function GlobalStandardsSection() {
               most demanding retailers, distributors, and kitchens. Every batch
               is manufactured in facilities compliant with FSSAI, GMP, HACCP,
               ISO 22000, US FDA and BRCGS standards, and verified against Zeovus
-              Quality Assurance (ZQA) — our 12-step, 825-parameter quality
+              Quality Assurance (ZQA), our 12-step, 825-parameter quality
               architecture. Backed by an active in-house R&amp;D pipeline, we
-              continuously re-engineer our offering — so the same trust that
+              continuously re-engineer our offering, so the same trust that
               defines what we source extends to what we invent.
             </p>
 

@@ -53,7 +53,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`rounded-md px-5 py-3 text-[13px] font-medium tracking-[1px] transition-all duration-300 ${
+                className={`cursor-pointer rounded-md px-5 py-3 font-heading text-[13px] font-medium uppercase tracking-[1px] transition-all duration-300 ${
                   active
                     ? "bg-[#f6f2d5] text-[#1a1a1a]"
                     : "text-white hover:bg-white/10"
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Mobile Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex h-11 w-11 items-center justify-center text-white xl:hidden"
+          className="flex h-11 w-11 cursor-pointer items-center justify-center text-white xl:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`mx-4 my-1 rounded-md px-5 py-4 text-sm transition ${
+                className={`mx-4 my-1 cursor-pointer rounded-md px-5 py-4 font-heading text-[13px] font-medium uppercase tracking-[1px] transition ${
                   active
                     ? "bg-[#f6f2d5] text-[#1a1a1a]"
                     : "text-white hover:bg-white/10"

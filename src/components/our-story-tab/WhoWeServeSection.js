@@ -31,7 +31,7 @@ const audiences = [
     number: "05",
     title: "Purpose-Led Founders",
     description:
-      "Turned a personal problem into a brand — because the product they needed didn't exist yet, and they weren't willing to wait for someone else to build it.",
+      "Turned a personal problem into a brand because the product they needed didn't exist yet, and they weren't willing to wait for someone else to build it.",
   },
 ];
 
