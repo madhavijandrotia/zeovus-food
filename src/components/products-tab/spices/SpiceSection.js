@@ -42,10 +42,6 @@ export default function SpicesSection() {
               />
 
               <div className="spices__media-overlay" />
-
-              <span className="spices__number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
 
             <div className="spices__content">

@@ -42,10 +42,6 @@ export default function StaplesSection() {
               />
 
               <div className="staples__media-overlay" />
-
-              <span className="staples__section-number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
 
             <div className="staples__content">

@@ -44,10 +44,6 @@ export default function BeveragesSection() {
               />
 
               <div className="beverages__media-overlay" />
-
-              <span className="beverages__number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
 
             <div className="beverages__content">

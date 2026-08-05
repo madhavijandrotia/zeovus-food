@@ -45,10 +45,6 @@ export default function HealthySnackingSection() {
               />
 
               <div className="condiments__media-overlay" />
-
-              <span className="condiments__number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
 
             <div className="condiments__content">

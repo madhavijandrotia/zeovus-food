@@ -45,10 +45,6 @@ export default function InstantFoodsSection() {
               />
 
               <div className="instant-foods__overlay" />
-
-              <span className="instant-foods__number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
 
             <div className="instant-foods__content">
