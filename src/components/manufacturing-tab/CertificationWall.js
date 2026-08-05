@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const certifications = [
   {
@@ -125,6 +127,25 @@ export default function CertificationWall() {
               </h3>
             </motion.article>
           ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: .2 }}
+          className="mt-12 flex justify-center"
+        >
+          <Link
+            href="/working-together#enquiry"
+            className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#294526] px-8 py-4 font-heading text-[18px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition hover:bg-[#3b5b33]"
+          >
+            Partner With Us
+
+            <ArrowRight
+              size={18}
+              className="transition group-hover:translate-x-1"
+            />
+          </Link>
         </motion.div>
       </div>
     </section>
