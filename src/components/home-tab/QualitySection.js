@@ -59,8 +59,6 @@ const products = [
   },
 ];
 
-
-
 const containerVariants = {
   hidden: {},
   visible: {
@@ -116,7 +114,6 @@ export default function QualitySection() {
           }}
           className="mx-auto mb-12 max-w-[760px] text-center lg:mb-16"
         >
-
           <h2 className="font-heading text-[44px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[68px]">
             Food That Does More
           </h2>
@@ -124,101 +121,92 @@ export default function QualitySection() {
 
         {/* Editorial product layout */}
         <motion.div
-  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{
-    once: true,
-    amount: 0.12,
-  }}
-  className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4"
->
-  {products.map((product, index) => {
-    const isFeatured = index === 0 || index === 1;
-
-    return (
-      <motion.article
-        key={product.id}
-        variants={cardVariants}
-        whileHover={{
-          y: -8,
-          transition: {
-            duration: 0.28,
-            ease: "easeOut",
-          },
-        }}
-        className={`group relative overflow-hidden rounded-[26px] shadow-[0_20px_55px_rgba(40,35,25,0.1)] ${
-          isFeatured
-            ? "min-h-[380px] sm:col-span-2 xl:min-h-[430px]"
-            : "min-h-[310px] sm:min-h-[340px]"
-        }`}
-        style={{
-          backgroundColor: product.background,
-        }}
-      >
-        <Image
-          src={product.image}
-          alt={product.title}
-          fill
-          sizes={
-            isFeatured
-              ? "(max-width: 640px) 100vw, 50vw"
-              : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-          }
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-
-        <span
-          className="absolute right-5 top-5 z-10 text-[11px] font-semibold tracking-[0.2em]"
-          style={{
-            color: product.accent,
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.12,
           }}
+          className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4"
         >
-          {String(index + 1).padStart(2, "0")}
-        </span>
+          {products.map((product, index) => {
+            const isFeatured = index === 0 || index === 1;
 
-        <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6">
-          <span
-            className="block text-[10px] font-semibold uppercase tracking-[0.25em] opacity-80"
-            style={{
-              color: product.accent,
-            }}
-          >
-            Zeovus Food
-          </span>
+            return (
+              <motion.article
+                key={product.id}
+                variants={cardVariants}
+                whileHover={{
+                  y: -8,
+                  transition: {
+                    duration: 0.28,
+                    ease: "easeOut",
+                  },
+                }}
+                className={`group relative overflow-hidden rounded-[26px] shadow-[0_20px_55px_rgba(40,35,25,0.1)] ${
+                  isFeatured
+                    ? "min-h-[380px] sm:col-span-2 xl:min-h-[430px]"
+                    : "min-h-[310px] sm:min-h-[340px]"
+                }`}
+                style={{
+                  backgroundColor: product.background,
+                }}
+              >
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  sizes={
+                    isFeatured
+                      ? "(max-width: 640px) 100vw, 50vw"
+                      : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  }
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                />
 
-          <h3
-            className={`mt-2 max-w-[480px] font-heading font-bold leading-[1.02] ${
-              isFeatured
-                ? "text-[30px] sm:text-[36px] lg:text-[42px]"
-                : "text-[23px] sm:text-[26px]"
-            }`}
-            style={{
-              color: product.accent,
-            }}
-          >
-            {product.title}
-          </h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-          {isFeatured && (
-            <p
-              className="mt-3 hidden max-w-[430px] translate-y-3 text-sm leading-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-80 sm:block"
-              style={{
-                color: product.accent,
-              }}
-            >
-              {product.description}
-            </p>
-          )}
-        </div>
+                <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6">
+                  <span
+                    className="block text-[10px] font-semibold uppercase tracking-[0.25em] opacity-80"
+                    style={{
+                      color: product.accent,
+                    }}
+                  >
+                    Zeovus Food
+                  </span>
 
-        <div className="pointer-events-none absolute inset-0 rounded-[26px] border border-white/15 transition-colors duration-300 group-hover:border-white/35" />
-      </motion.article>
-    );
-  })}
-</motion.div>
+                  <h3
+                    className={`mt-2 max-w-[480px] font-heading font-bold leading-[1.02] ${
+                      isFeatured
+                        ? "text-[30px] sm:text-[36px] lg:text-[42px]"
+                        : "text-[23px] sm:text-[26px]"
+                    }`}
+                    style={{
+                      color: product.accent,
+                    }}
+                  >
+                    {product.title}
+                  </h3>
+
+                  {isFeatured && (
+                    <p
+                      className="mt-3 hidden max-w-[430px] translate-y-3 text-sm leading-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-80 sm:block"
+                      style={{
+                        color: product.accent,
+                      }}
+                    >
+                      {product.description}
+                    </p>
+                  )}
+                </div>
+
+                <div className="pointer-events-none absolute inset-0 rounded-[26px] border border-white/15 transition-colors duration-300 group-hover:border-white/35" />
+              </motion.article>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
