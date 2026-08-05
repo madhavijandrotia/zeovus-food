@@ -17,7 +17,7 @@ const steps = [
   {
     number: "02",
     label: "Formulation",
-    title: "Nutrition-First Product Development",
+    title: "Nutrition First Product Development",
     image: "/images/formulation.png",
     description:
       "Once we know what we're building, our in-house R&D team turns it into a real formula, the right ingredients, in the right ratios, built around a nutritional target, not just a recipe.",
