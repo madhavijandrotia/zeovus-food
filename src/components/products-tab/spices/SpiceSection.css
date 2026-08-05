@@ -74,30 +74,48 @@
   position: relative;
 
   min-height: 660px;
-
   overflow: hidden;
 
   background: #d8d0c4;
+  isolation: isolate;
+}
+
+.spices__image-background {
+  z-index: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: blur(28px) brightness(0.8) saturate(0.85);
+  transform: scale(1.12);
 }
 
 .spices__image {
-  object-fit: cover;
+  z-index: 1;
 
-  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  object-fit: contain;
+  object-position: center;
+
+  padding: clamp(1rem, 2vw, 2rem);
+
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .spices__section:hover .spices__image {
-  transform: scale(1.035);
+  transform: scale(1.015);
 }
 
 .spices__media-overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
+
+  pointer-events: none;
 
   background: linear-gradient(
     180deg,
     rgba(12, 15, 9, 0.02),
-    rgba(12, 15, 9, 0.18)
+    rgba(12, 15, 9, 0.12)
   );
 }
 

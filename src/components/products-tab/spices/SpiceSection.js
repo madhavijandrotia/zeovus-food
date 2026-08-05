@@ -15,8 +15,8 @@ export default function SpicesSection() {
         </h1>
 
         <p className="spices__description">
-          Whole spices, ground spices, blended masalas and specialist
-          seasonings developed for flavour, colour and consistency.
+          Whole spices, ground spices, blended masalas and specialist seasonings
+          developed for flavour, colour and consistency.
         </p>
       </header>
 
@@ -34,9 +34,19 @@ export default function SpicesSection() {
             <div className="spices__media">
               <Image
                 src={section.image}
+                alt=""
+                fill
+                sizes="(max-width: 960px) 100vw, 50vw"
+                className="spices__image-background"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={section.image}
                 alt={section.label}
                 fill
                 priority={index === 0}
+                quality={90}
                 sizes="(max-width: 960px) 100vw, 50vw"
                 className="spices__image"
               />

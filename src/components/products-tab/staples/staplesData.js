@@ -2,7 +2,7 @@ export const STAPLES_SECTIONS = [
   {
     id: "flour",
     label: "Flour",
-    image: "/products-page/staples/flour.webp",
+    image: "/products/staples/flour.png",
     imagePosition: "left",
     groups: [
       {
@@ -31,7 +31,7 @@ export const STAPLES_SECTIONS = [
   {
     id: "rice",
     label: "Rice",
-    image: "/products-page/staples/rice.webp",
+    image: "/products/staples/rice.png",
     imagePosition: "right",
     groups: [
       {
@@ -100,7 +100,7 @@ export const STAPLES_SECTIONS = [
   {
     id: "millets",
     label: "Millets",
-    image: "/products-page/staples/millets.webp",
+    image: "/products/staples/millets.png",
     imagePosition: "left",
     groups: [
       {
@@ -131,7 +131,7 @@ export const STAPLES_SECTIONS = [
   {
     id: "lentils-pulses",
     label: "Lentils & Pulses",
-    image: "/products-page/staples/lentils-pulses.webp",
+    image: "/products/staples/lentils-pulses.png",
     imagePosition: "right",
     groups: [
       {

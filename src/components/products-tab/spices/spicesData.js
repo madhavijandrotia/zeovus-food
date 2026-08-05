@@ -2,7 +2,7 @@ export const SPICES_SECTIONS = [
   {
     id: "whole-spices",
     label: "Whole Spices",
-    image: "/products-page/spices/whole-spices.webp",
+    image: "/products/spices/whole-spices.png",
     imagePosition: "right",
     groups: [
       {
@@ -40,7 +40,7 @@ export const SPICES_SECTIONS = [
   {
     id: "ground-spices",
     label: "Ground Spices",
-    image: "/products-page/spices/ground-spices.webp",
+    image: "/products/spices/ground-spices.png",
     imagePosition: "left",
     groups: [
       {
@@ -66,7 +66,7 @@ export const SPICES_SECTIONS = [
   {
     id: "blended-spices",
     label: "Blended Spices",
-    image: "/products-page/spices/blended-spices.webp",
+    image: "/products/spices/blended-spices.png",
     imagePosition: "right",
     groups: [
       {
@@ -114,7 +114,7 @@ export const SPICES_SECTIONS = [
   {
     id: "special-seasonings",
     label: "Special Seasonings",
-    image: "/products-page/spices/special-seasonings.webp",
+    image: "/products/spices/special-seasonings.png",
     imagePosition: "left",
     groups: [
       {
