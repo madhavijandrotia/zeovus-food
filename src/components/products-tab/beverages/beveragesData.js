@@ -2,7 +2,7 @@ export const BEVERAGE_SECTIONS = [
   {
     id: "alphanso-mango",
     label: "Alphanso Mango",
-    image: "/products/beverages/mango.webp",
+    image: "/products/beverages/mango.png",
     imagePosition: "right",
     groups: [
       {
@@ -33,7 +33,7 @@ export const BEVERAGE_SECTIONS = [
   {
     id: "strawberry",
     label: "Strawberry",
-    image: "/products/beverages/strawberry.webp",
+    image: "/products/beverages/strawberry.png",
     imagePosition: "left",
     groups: [
       {
@@ -64,7 +64,7 @@ export const BEVERAGE_SECTIONS = [
   {
     id: "apple-cinnamon",
     label: "Apple Cinnamon",
-    image: "/products/beverages/apple-cinnamon.webp",
+    image: "/products/beverages/apple-cinnamon.png",
     imagePosition: "right",
     groups: [
       {
@@ -101,7 +101,7 @@ export const BEVERAGE_SECTIONS = [
   {
     id: "banana-choco",
     label: "Banana Choco",
-    image: "/products/beverages/banana-choco.webp",
+    image: "/products/beverages/banana-choco.png",
     imagePosition: "left",
     groups: [
       {
@@ -137,7 +137,7 @@ export const BEVERAGE_SECTIONS = [
   {
     id: "chickoo",
     label: "Chickoo",
-    image: "/products/beverages/chickoo.webp",
+    image: "/products/beverages/chickoo.png",
     imagePosition: "right",
     groups: [
       {

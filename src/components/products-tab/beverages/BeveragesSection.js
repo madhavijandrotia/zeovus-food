@@ -6,9 +6,7 @@ export default function BeveragesSection() {
   return (
     <div className="beverages">
       <header className="beverages__intro">
-        <p className="beverages__eyebrow">
-          Beverages &amp; Drinks
-        </p>
+        <p className="beverages__eyebrow">Beverages &amp; Drinks</p>
 
         <h1 className="beverages__heading">
           Nutrition made
@@ -36,9 +34,19 @@ export default function BeveragesSection() {
             <div className="beverages__media">
               <Image
                 src={section.image}
+                alt=""
+                fill
+                sizes="(max-width: 960px) 100vw, 50vw"
+                className="beverages__image-background"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={section.image}
                 alt={section.label}
                 fill
                 priority={index === 0}
+                quality={90}
                 sizes="(max-width: 960px) 100vw, 50vw"
                 className="beverages__image"
               />
