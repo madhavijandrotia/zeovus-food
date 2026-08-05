@@ -123,14 +123,8 @@ export default function WhoWeServeSection() {
                   ease: "easeOut",
                 },
               }}
-              className="group relative overflow-hidden rounded-[24px] border border-[#294526]/15 border-l-[8px] border-l-[#789444] bg-[#fffaf0] transition-all duration-300 hover:border-l-[#c35531 px-6 py-8 shadow-[0_14px_38px_rgba(45,55,34,0.055)] sm:px-10 sm:py-9 lg:grid lg:grid-cols-[90px_300px_1fr] lg:items-center lg:gap-8 lg:px-12 lg:py-10"
+              className="group relative overflow-hidden rounded-[24px] border border-[#294526]/15 border-l-[8px] border-l-[#789444] bg-[#fffaf0] transition-all duration-300 hover:border-l-[#c35531 px-6 py-8 shadow-[0_14px_38px_rgba(45,55,34,0.055)] sm:px-10 sm:py-9 lg:grid lg:grid-cols-[320px_1fr] lg:items-center lg:gap-8 lg:px-12 lg:py-10"
             >
-              {/* Left accent */}
-              {/* <div className="absolute left-0 top-0 bottom-0 w-[6px] rounded-l-[24px] bg-[#789444] transition-all duration-300 group-hover:w-[9px] group-hover:bg-[#c35531]" /> */}
-
-              <span className="block text-[11px] font-bold tracking-[0.2em] text-[#c35531]">
-                {audience.number}
-              </span>
 
               <h3 className="mt-3 font-heading text-[24px] font-bold uppercase leading-tight text-[#627333] sm:text-[28px] lg:mt-0">
                 {audience.title}
