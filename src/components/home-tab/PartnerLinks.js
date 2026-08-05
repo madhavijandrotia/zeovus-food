@@ -159,7 +159,7 @@ export default function PartnerLinks() {
                 <div className="partner-links__body">
                   <h3 className="partner-links__label">{page.label}</h3>
 
-                  <p className="partner-links__description">
+                  <p className="partner-links__description text-justify">
                     {page.description}
                   </p>
 
