@@ -27,10 +27,10 @@ const steps = [
   {
     number: "03",
     label: "Ingredient Selection",
-    title: "Choosing Where Goes In",
+    title: "Choosing What Goes In",
     image: "/images/ingredient-selection.png",
     description:
-      "This step is about deciding what enters the formula, and who it comes from, before anything is ordered.",
+      "This step is about deciding what enters the formula, and where it comes from, before anything is ordered.",
     details:
       "That means choosing clean, functional ingredients over cheaper fillers: pea and rice protein isolates for absorption, psyllium husk for texture and fullness, and real fruits and vegetables over concentrates. No added sugar, no preservatives and no artificial flavours, decided here, not fixed later.",
   },
