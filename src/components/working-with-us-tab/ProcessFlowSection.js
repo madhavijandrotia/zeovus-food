@@ -10,7 +10,7 @@ const steps = [
     title: "Goal, Format & Market Fit",
     image: "/images/consultation.png",
     description:
-      "We start by understanding what the product needs to do, who it's for, and where it's going — a high-protein atta and an instant hummus sachet both start here, even though everything that follows looks completely different for each.",
+      "We start by understanding what the product needs to do, who it's for, and where it's going, a high-protein atta and an instant hummus sachet both start here, even though everything that follows looks completely different for each.",
     details:
       "This step decides the format, and the format decides a lot of what comes next: moisture content and shelf life for a flour blend, rehydration behaviour for an instant sachet, and retort stability for a ready-to-eat curry. Getting this right early means less rework later.",
   },
@@ -20,7 +20,7 @@ const steps = [
     title: "Nutrition-First Product Development",
     image: "/images/formulation.png",
     description:
-      "Once we know what we're building, our in-house R&D team turns it into a real formula — the right ingredients, in the right ratios, built around a nutritional target, not just a recipe.",
+      "Once we know what we're building, our in-house R&D team turns it into a real formula, the right ingredients, in the right ratios, built around a nutritional target, not just a recipe.",
     details:
       "This covers everyday staples, such as reaching a specific protein-per-100g claim in an atta blend, and functional formats, such as balancing texture and cook time in a chickpea pasta. If an ingredient clumps, turns bitter or fails to perform, we adjust the blend until it works. Before production, the formula and taste return to the client for approval.",
   },
@@ -32,7 +32,7 @@ const steps = [
     description:
       "This step is about deciding what enters the formula, and who it comes from, before anything is ordered.",
     details:
-      "That means choosing clean, functional ingredients over cheaper fillers: pea and rice protein isolates for absorption, psyllium husk for texture and fullness, and real fruits and vegetables over concentrates. No added sugar, no preservatives and no artificial flavours — decided here, not fixed later.",
+      "That means choosing clean, functional ingredients over cheaper fillers: pea and rice protein isolates for absorption, psyllium husk for texture and fullness, and real fruits and vegetables over concentrates. No added sugar, no preservatives and no artificial flavours, decided here, not fixed later.",
   },
   {
     number: "04",
@@ -62,7 +62,7 @@ const steps = [
     description:
       "This is where the approved formula becomes a finished product.",
     details:
-      "That means milling and blending for atta and flour products, extrusion for pasta and noodles, precision dosing for instant sachets, and retort processing for shelf-stable meals. Every line operates inside FSSAI-licensed, GMP- and HACCP-certified, allergen-controlled facilities, with checks throughout the run.",
+      "That means milling and blending for atta and flour products, extrusion for pasta and noodles, precision dosing for instant sachets, and retort processing for shelf-stable meals. Every line operates inside FSSAI-licensed, GMP and HACCP-certified, allergen-controlled facilities, with checks throughout the run.",
   },
   {
     number: "07",
@@ -72,7 +72,7 @@ const steps = [
     description:
       "Every batch is tested against the approved formula and evaluated for stability, safety and consistency.",
     details:
-      "It also passes through Zeovus Quality Assurance: 12 steps and 825 verified testing parameters across incoming materials, in-process monitoring and finished goods. Independent laboratories verify it further. The final output includes a certificate of analysis and a documented batch record — proof, not a claim.",
+      "It also passes through Zeovus Quality Assurance: 12 steps and 825 verified testing parameters across incoming materials, in-process monitoring and finished goods. Independent laboratories verify it further. The final output includes a certificate of analysis and a documented batch record, proof, not a claim.",
   },
   {
     number: "08",
@@ -82,7 +82,7 @@ const steps = [
     description:
       "The final step covers labelling, packaging and shipping the completed product.",
     details:
-      "Each product leaves ready for the channel it was designed for — retail shelf, e-commerce fulfilment, food service or international export.",
+      "Each product leaves ready for the channel it was designed for retail shelf, e-commerce fulfilment, food service or international export.",
   },
 ];
 

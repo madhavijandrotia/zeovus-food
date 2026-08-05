@@ -25,7 +25,7 @@ const options = [
     number: "03",
     title: "Distribution & Regional Partnership",
     description:
-      "Take Zeovus Food formulations into markets we haven't reached yet — together.",
+      "Take Zeovus Food formulations into markets we haven't reached yet, together.",
     image: "/images/DistributionPartnershipsLong.webp",
     accent: "#294526",
   },

@@ -19,7 +19,7 @@ const sections = [
       },
       {
         title: "Direct & Origin-Based Sourcing",
-        text: "Grains, pulses and speciality flours are sourced from the regions known for them — not the cheapest available lot, but the right one for the job.",
+        text: "Grains, pulses and speciality flours are sourced from the regions known for them, not the cheapest available lot, but the right one for the job.",
       },
       {
         title: "Ingredient Traceability",
@@ -36,7 +36,7 @@ const sections = [
     eyebrow: "Processing Capabilities",
     title: "Built Around The Product",
     description:
-      "Every process is selected around what the product needs to preserve, improve or become — from stone milling and extrusion to freeze-drying, retort and cryogenic freezing.",
+      "Every process is selected around what the product needs to preserve, improve or become, from stone milling and extrusion to freeze-drying, retort and cryogenic freezing.",
     image: "/images/processing-system.webp",
     theme: "dark",
     items: [
@@ -66,7 +66,7 @@ const sections = [
       },
       {
         title: "Retort & Shelf-Stable Processing",
-        text: "Ready-to-eat curries, rice and combos are processed for ambient shelf life — no refrigeration, no compromise.",
+        text: "Ready-to-eat curries, rice and combos are processed for ambient shelf life, no refrigeration, no compromise.",
       },
     ],
   },
@@ -120,7 +120,7 @@ const sections = [
       },
       {
         title: "Batch-Level Traceability",
-        text: "Every batch is tracked from source to shipment — the lot-level visibility global retailers and distributors expect as standard.",
+        text: "Every batch is tracked from source to shipment, the lot-level visibility global retailers and distributors expect as standard.",
       },
       {
         title: "Allergen-Controlled Production",
@@ -133,7 +133,7 @@ const sections = [
     eyebrow: "Scale & Export",
     title: "Ready To Grow With You",
     description:
-      "The same system supports trial orders, commercial scale-up and international retail — without forcing brands to change partners as they grow.",
+      "The same system supports trial orders, commercial scale-up and international retail, without forcing brands to change partners as they grow.",
     image: "/images/export-system.webp",
     theme: "cream",
     items: [

@@ -27,12 +27,12 @@ export default function ClosingCTA() {
 
           <h2 className="mx-auto max-w-[900px] font-heading text-[30px] font-black uppercase leading-[1.15] tracking-[-0.02em] text-[#294526] sm:text-[40px] lg:text-[52px]">
             Every batch that leaves our lines
-            answers to the same standard —
+            answers to the same standard,
             the{" "}
             <span className="text-[#789444]">
               ZQA standard
             </span>{" "}
-            — whether it's ten kilos or ten
+            , whether it's ten kilos or ten
             thousand, because{" "}
             <span className="text-[#789444]">
               consistency at scale

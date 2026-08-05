@@ -148,7 +148,7 @@ export default function EnquirySection() {
           </p>
 
           <h2 className="max-w-[650px] font-heading text-[42px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[56px] lg:text-[66px]">
-            Tell Us What You&apos;re Building — We&apos;ll Tell You How Fast We
+            Tell Us What You&apos;re Building, We&apos;ll Tell You How Fast We
             Can Manufacture It.
           </h2>
 

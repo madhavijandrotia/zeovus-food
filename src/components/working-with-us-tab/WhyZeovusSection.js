@@ -18,7 +18,7 @@ const benefits = [
     eyebrow: "Verified At Every Stage",
     title: "Quality You Can Trust",
     description:
-      "Every batch is tested and supported with complete quality documentation, backed by Zeovus Quality Assurance (ZQA) — our 12-step, 825-parameter quality architecture.",
+      "Every batch is tested and supported with complete quality documentation, backed by Zeovus Quality Assurance (ZQA), our 12-step, 825-parameter quality architecture.",
     image: "/images/quality-system.webp",
     tags: ["12-Step ZQA", "825 Parameters", "Batch Records", "COA"],
   },
@@ -27,7 +27,7 @@ const benefits = [
     eyebrow: "Built For International Markets",
     title: "Global Compliance Standards",
     description:
-      "Manufactured in facilities compliant with US FDA, GMP, ISO 22000, HACCP, FSSC 22000, Halal and Kosher standards — the certifications trusted by global brands and buyers.",
+      "Manufactured in facilities compliant with US FDA, GMP, ISO 22000, HACCP, FSSC 22000, Halal and Kosher standards, the certifications trusted by global brands and buyers.",
     image: "/images/global-compliance.png",
     tags: ["US FDA", "GMP", "ISO 22000", "HACCP"],
   },

@@ -240,9 +240,9 @@ export default function QualityCertificationSection() {
                 </p>
 
                 <p>
-                  Our triple-layer testing protocol — covering incoming
+                  Our triple-layer testing protocol, covering incoming
                   materials, in-process monitoring and in-house certified
-                  finished goods — ensures unmatched safety, purity and
+                  finished goods, ensures unmatched safety, purity and
                   consistency.
                 </p>
               </div>
@@ -310,7 +310,7 @@ export default function QualityCertificationSection() {
                   When you see the{" "}
                   <span className="font-bold text-[#c35531]">ZQA mark</span>,
                   you&apos;re not just holding a product that meets global
-                  standards — you&apos;re holding one that defines them.
+                  standards, you&apos;re holding one that defines them.
                 </p>
               </motion.div>
 
