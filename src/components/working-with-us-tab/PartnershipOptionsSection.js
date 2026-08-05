@@ -165,7 +165,7 @@ export default function PartnershipOptionsSection() {
                 </p>
 
                 <Link
-                  href="/working-together"
+                href="/working-together#enquiry"
                   aria-label={`Learn more about ${option.title}`}
                   className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#fff9df]/35 text-[#fff9df] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#fff9df] group-hover:text-[#151812]"
                 >

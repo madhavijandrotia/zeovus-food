@@ -115,7 +115,10 @@ export default function EnquirySection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#efe0c3] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
+    <section
+      id="enquiry"
+      className="relative overflow-hidden bg-[#efe0c3] px-5 py-20 sm:px-8 lg:px-14 lg:py-28"
+    >
       <div className="pointer-events-none absolute left-[-130px] top-[-100px] h-[360px] w-[360px] rounded-full bg-[#fff9df]/40 blur-[120px]" />
 
       <div className="pointer-events-none absolute bottom-[-140px] right-[-90px] h-[400px] w-[400px] rounded-full bg-[#789444]/10 blur-[130px]" />
