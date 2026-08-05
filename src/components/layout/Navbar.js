@@ -12,6 +12,7 @@ const navItems = [
   { label: "FORMULATION", href: "/formulation" },
   { label: "MANUFACTURING", href: "/manufacturing" },
   { label: "PRODUCTS", href: "/products" },
+  { label: "BLOGS", href: "/blogs" },
   { label: "WORKING TOGETHER", href: "/working-together" },
 ];
 
@@ -44,7 +45,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-2 xl:flex">
+        <nav className="hidden items-center gap-2 lg:flex">
           {navItems.map((item) => {
             const active = isActive(item.href);
 
@@ -67,7 +68,7 @@ export default function Navbar() {
         {/* Mobile Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex h-11 w-11 cursor-pointer items-center justify-center text-white xl:hidden"
+          className="flex h-11 w-11 cursor-pointer items-center justify-center text-white lg:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -76,7 +77,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden bg-[#181917]/95 transition-all duration-300 xl:hidden ${
+        className={`overflow-hidden bg-[#181917]/95 transition-all duration-300 lg:hidden ${
           isMenuOpen ? "max-h-[600px]" : "max-h-0"
         }`}
       >
