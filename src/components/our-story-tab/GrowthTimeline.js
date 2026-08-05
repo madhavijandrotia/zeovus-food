@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const STAGES = [
@@ -8,24 +9,32 @@ const STAGES = [
     title: "The Sourcing Instinct",
     description:
       "It began with a simple obsession: find the ingredient that's the best of its kind, wherever it comes from, and refuse to settle for a substitute.",
+    image: "/images/sourcing.png",
+    imageAlt: "Fresh ingredients being sourced at origin",
   },
   {
     stage: "Stage Two",
     title: "Building the Infrastructure",
     description:
       "Sourcing well wasn't enough. We built manufacturing capability around it, milling, extrusion, freeze-drying, retort, so the quality we found at origin didn't get lost on the way to a shelf.",
+    image: "/images/infrastructure.png",
+    imageAlt: "Modern food manufacturing infrastructure",
   },
   {
     stage: "Stage Three",
     title: "Engineering the Standard",
     description:
       'We formalised what "trust" actually means in practice: a quality architecture built to catch what a visual check never would, applied to everything we touch, without exception.',
+    image: "/images/quality.png",
+    imageAlt: "Quality testing and inspection process",
   },
   {
     stage: "Stage Four",
     title: "Becoming a Manufacturing Partner",
     description:
       "What started as sourcing raw material for ourselves became building finished products for others, private label, co-development, and formulations built from someone else's brief, not just our own.",
+    image: "/images/partnership.png",
+    imageAlt: "Manufacturing partners working together",
   },
 ];
 
@@ -48,7 +57,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] ,
     },
   },
 };
@@ -62,18 +71,9 @@ export default function GrowthTimeline() {
 
       <div className="relative mx-auto max-w-[1280px]">
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 28,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.45,
-          }}
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.45 }}
           transition={{
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
@@ -93,16 +93,16 @@ export default function GrowthTimeline() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{
-            once: true,
-            amount: 0.1,
-          }}
+          viewport={{ once: true, amount: 0.1 }}
           className="relative"
         >
-          {/* Desktop center line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#294526]/15 lg:block" />
+          {/* Desktop timeline line */}
+          <div className="absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 bg-[#294526]/15 lg:block" />
 
-          <div className="space-y-12 lg:space-y-20">
+          {/* Mobile timeline line */}
+          <div className="absolute bottom-0 left-[7px] top-0 w-px bg-[#294526]/15 lg:hidden" />
+
+          <div className="space-y-14 lg:space-y-24">
             {STAGES.map((item, index) => {
               const isLeft = index % 2 === 0;
 
@@ -110,15 +110,18 @@ export default function GrowthTimeline() {
                 <motion.article
                   key={item.stage}
                   variants={itemVariants}
-                  className="relative grid grid-cols-1 gap-6 lg:grid-cols-[1fr_80px_1fr] lg:items-center"
+                  className="relative pl-10 lg:grid lg:grid-cols-[minmax(0,1fr)_80px_minmax(0,1fr)] lg:items-start lg:pl-0"
                 >
-                  {/* Left side */}
+                  {/* Mobile marker */}
+                  <span className="absolute left-0 top-2 z-10 h-4 w-4 rounded-full border-4 border-[#f5f1e7] bg-[#c35531] lg:hidden" />
+
+                  {/* Content */}
                   <div
-                    className={`${
+                    className={
                       isLeft
-                        ? "lg:col-start-1 lg:text-right"
-                        : "lg:col-start-3 lg:text-left"
-                    }`}
+                        ? "lg:col-start-1 lg:row-start-1 lg:text-right"
+                        : "lg:col-start-3 lg:row-start-1 lg:text-left"
+                    }
                   >
                     <div
                       className={`max-w-[520px] ${
@@ -139,40 +142,61 @@ export default function GrowthTimeline() {
                     </div>
                   </div>
 
-                  {/* Center marker */}
-                  <div className="relative hidden h-full items-center justify-center lg:col-start-2 lg:flex">
+                  {/* Center marker aligned with stage label */}
+                  <div className="relative hidden lg:col-start-2 lg:row-start-1 lg:flex lg:justify-center">
                     <motion.span
-                      initial={{
-                        scale: 0,
-                      }}
-                      whileInView={{
-                        scale: 1,
-                      }}
-                      viewport={{
-                        once: true,
-                        amount: 0.7,
-                      }}
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, amount: 0.7 }}
                       transition={{
                         type: "spring",
                         stiffness: 260,
                         damping: 18,
                         delay: index * 0.08,
                       }}
-                      className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full border-[6px] border-[#f5f1e7] bg-[#c35531] shadow-[0_0_0_1px_rgba(195,85,49,0.15)]"
+                      className="relative z-10 mt-[5px] h-7 w-7 rounded-full border-[6px] border-[#f5f1e7] bg-[#c35531] shadow-[0_0_0_1px_rgba(195,85,49,0.15)]"
                     />
                   </div>
 
-                  {/* Empty opposite side on desktop */}
-                  <div
-                    className={`hidden lg:block ${
+                  {/* Image */}
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      x: isLeft ? 30 : -30,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                      amount: 0.3,
+                    }}
+                    transition={{
+                      duration: 0.75,
+                      delay: 0.12,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className={`mt-7 lg:row-start-1 lg:mt-0 ${
                       isLeft ? "lg:col-start-3" : "lg:col-start-1"
                     }`}
-                  />
+                  >
+                    <div
+                      className={`relative aspect-[4/3] max-w-[520px] overflow-hidden rounded-[28px] bg-[#e4ddcc] shadow-[0_20px_60px_rgba(41,69,38,0.12)] ${
+                        isLeft ? "lg:mr-auto" : "lg:ml-auto"
+                      }`}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.imageAlt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        className="object-cover transition-transform duration-700 hover:scale-[1.04]"
+                      />
 
-                  {/* Mobile timeline marker */}
-                  <div className="absolute left-0 top-0 h-full w-px bg-[#294526]/15 lg:hidden" />
-
-                  <span className="absolute left-[-7px] top-2 h-4 w-4 rounded-full border-4 border-[#f5f1e7] bg-[#c35531] lg:hidden" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#294526]/20 via-transparent to-transparent" />
+                    </div>
+                  </motion.div>
                 </motion.article>
               );
             })}
@@ -180,18 +204,9 @@ export default function GrowthTimeline() {
         </motion.div>
 
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 22,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.5,
-          }}
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{
             duration: 0.65,
             delay: 0.2,
