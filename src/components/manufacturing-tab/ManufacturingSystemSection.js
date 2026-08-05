@@ -299,10 +299,6 @@ export default function ManufacturingSystemSection() {
                   `}
                 >
                   <div className="relative z-10">
-                    <h3 className="max-w-[700px] font-heading text-[32px] font-bold uppercase leading-[0.96] tracking-[-0.025em] sm:text-[40px] md:text-[46px] xl:text-[44px] 2xl:text-[54px]">
-                      {section.title}
-                    </h3>
-
                     <p
                       className={`mt-5 max-w-[720px] text-[14px] leading-7 sm:text-[16px] 2xl:mt-6 2xl:text-[17px] ${
                         dark ? "text-[#fff5df]/68" : "text-[#294526]/70"
