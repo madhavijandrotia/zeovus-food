@@ -7,7 +7,7 @@ const products = [
   {
     id: 1,
     title: "Chickpea & Soybean Spaghetti",
-    image: "/products/chickpea-pasta.webp",
+    image: "/products/chickpea-pasta1.png",
     background: "#d6dfa2",
     accent: "#f7ead0    ",
     description: "Protein-rich pasta made for balanced, everyday meals.",
@@ -15,7 +15,7 @@ const products = [
   {
     id: 2,
     title: "Green Dal & Edamame Spaghetti",
-    image: "/products/green-dal-pasta.webp",
+    image: "/products/green-dal-pasta.png",
     background: "#cb5a32",
     accent: "#fff2d2",
     description:
@@ -24,7 +24,7 @@ const products = [
   {
     id: 3,
     title: "High-Protein Pasta",
-    image: "/products/high-protein-pasta.webp",
+    image: "/products/high-protein-pasta1.png",
     background: "#f69a20",
     accent: "#f7ead0",
     description:
@@ -33,7 +33,7 @@ const products = [
   {
     id: 4,
     title: "Protein Whole Wheat Flour",
-    image: "/products/whole-wheat-flour.webp",
+    image: "/products/whole-wheat-flour.png",
     background: "#263f22",
     accent: "#f5e8c9",
     description:
@@ -42,7 +42,7 @@ const products = [
   {
     id: 5,
     title: "Protein Flour Concentrate",
-    image: "/products/protein-concentrate.webp",
+    image: "/products/protein-concentrate.png",
     background: "#bb9473",
     accent: "#f7ead0",
     description:
@@ -51,7 +51,7 @@ const products = [
   {
     id: 6,
     title: "Instant Smoothies",
-    image: "/products/instant-smoothie.webp",
+    image: "/products/instant-smoothie.png",
     background: "#71963d",
     accent: "#f7ead0",
     description:
