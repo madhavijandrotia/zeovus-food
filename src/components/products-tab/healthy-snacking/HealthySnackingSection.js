@@ -6,9 +6,7 @@ export default function HealthySnackingSection() {
   return (
     <div className="condiments">
       <header className="condiments__intro">
-        <p className="condiments__eyebrow">
-          Healthy Snacking
-        </p>
+        <p className="condiments__eyebrow">Healthy Snacking</p>
 
         <h1 className="condiments__heading">
           Better snacks.
@@ -37,10 +35,20 @@ export default function HealthySnackingSection() {
             <div className="condiments__media">
               <Image
                 src={section.image}
+                alt=""
+                fill
+                sizes="(max-width: 960px) 100vw, 50vw"
+                className="condiments__image-background"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={section.image}
                 alt={section.label}
                 fill
                 priority={index === 0}
-                sizes="(max-width:960px) 100vw, 50vw"
+                quality={90}
+                sizes="(max-width: 960px) 100vw, 50vw"
                 className="condiments__image"
               />
 

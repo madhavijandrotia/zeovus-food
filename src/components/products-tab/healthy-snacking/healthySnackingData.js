@@ -2,7 +2,7 @@ export const HEALTHY_SNACKING_SECTIONS = [
   {
     id: "dry-fruits",
     label: "Dry Fruits",
-    image: "/products/healthy-snacking/dry-fruits.webp",
+    image: "/products/healthy-snacking/dry-fruits.png",
     imagePosition: "right",
     groups: [
       {
@@ -33,7 +33,7 @@ export const HEALTHY_SNACKING_SECTIONS = [
   {
     id: "vinegars",
     label: "Vinegars",
-    image: "/products/healthy-snacking/vinegars.webp",
+    image: "/products/healthy-snacking/vinegars.png",
     imagePosition: "left",
     groups: [
       {
@@ -52,7 +52,7 @@ export const HEALTHY_SNACKING_SECTIONS = [
   {
     id: "healthy-snacks",
     label: "Healthy Snacks",
-    image: "/products/healthy-snacking/snacks.webp",
+    image: "/products/healthy-snacking/snacks.jpg",
     imagePosition: "right",
     groups: [
       {
@@ -78,7 +78,7 @@ export const HEALTHY_SNACKING_SECTIONS = [
   {
     id: "freeze-dried",
     label: "Freeze Dried Fruits",
-    image: "/products/healthy-snacking/freeze-dried.webp",
+    image: "/products/healthy-snacking/freeze-dried.png",
     imagePosition: "left",
     groups: [
       {
