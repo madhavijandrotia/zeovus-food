@@ -12,7 +12,6 @@ const navItems = [
   { label: "FORMULATION", href: "/formulation" },
   { label: "MANUFACTURING", href: "/manufacturing" },
   { label: "PRODUCTS", href: "/products" },
-  { label: "BLOGS", href: "/blogs" },
   { label: "WORKING TOGETHER", href: "/working-together" },
 ];
 

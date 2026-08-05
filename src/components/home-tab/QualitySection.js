@@ -51,7 +51,7 @@ const products = [
   {
     id: 6,
     title: "Instant Smoothies",
-    image: "/products/instant-smoothie.png",
+    image: "/products/instant-smoothies.png",
     background: "#71963d",
     accent: "#f7ead0",
     description:
