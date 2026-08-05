@@ -131,7 +131,7 @@ export default function JourneySection() {
           className="relative min-h-[520px] overflow-hidden lg:min-h-screen"
         >
           <Image
-            src="/images/our-journey.webp"
+            src="/images/our-journey.png"
             alt="Zeovus Food manufacturing journey"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
