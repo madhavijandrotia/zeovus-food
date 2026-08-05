@@ -1,0 +1,166 @@
+export const STAPLES_SECTIONS = [
+  {
+    id: "flour",
+    label: "Flour",
+    image: "/products-page/staples/flour.webp",
+    imagePosition: "left",
+    groups: [
+      {
+        title: null,
+        items: [
+          "Chakki Whole Wheat Atta",
+          "Maida (Refined Whole Wheat Flour)",
+          "Chakki Besan (Gram Flour)",
+          "Multigrain Atta",
+          "Chakki Jowar (Sorghum Flour)",
+          "Chakki Bajra (Pearl Millet Flour)",
+          "Chakki Makki (Maize Flour)",
+        ],
+      },
+      {
+        title: null,
+        items: [
+          "Chakki Ragi (Finger Millet Flour)",
+          "Chakki Rajgira (Amaranth Flour)",
+          "Chakki Kuttu (Buckwheat Flour)",
+          "Chakki Sattu (Roasted Gram Flour)",
+        ],
+      },
+    ],
+  },
+  {
+    id: "rice",
+    label: "Rice",
+    image: "/products-page/staples/rice.webp",
+    imagePosition: "right",
+    groups: [
+      {
+        title: "Basmati & Long-Grain Aromatic Rice",
+        items: [
+          "Basmati Rice (White / Brown)",
+          "1121 Basmati",
+          "Pusa Basmati",
+          "PR11 / PR14",
+          "Jasmine Rice",
+          "Texmati",
+          "Sona Masoori",
+          "Ponni Rice",
+        ],
+      },
+      {
+        title: "Short & Medium Grain Rice",
+        items: [
+          "Sushi Rice",
+          "Arborio Rice",
+          "Calrose Rice",
+          "Valencia Rice (Bomba)",
+          "Japonica Rice",
+        ],
+      },
+      {
+        title: "Indian Regional Rice Varieties",
+        items: [
+          "Kolam Rice",
+          "Wada Kolam",
+          "Ambemohar",
+          "Indrayani",
+          "Jeera Samba",
+          "Gobindobhog",
+          "Matta Rice (Kerala Red Rice)",
+          "Idli Rice",
+          "Kalanamak Rice",
+          "Mappillai Samba",
+          "Black Rice (Chakhao)",
+        ],
+      },
+      {
+        title: "Specialty & Traditional Rice",
+        items: [
+          "Red Rice",
+          "Brown Rice",
+          "Black Rice",
+          "Wild Rice",
+          "Parboiled Rice",
+          "Broken Rice",
+          "Sticky/Glutinous Rice",
+        ],
+      },
+      {
+        title: "Long-Grain Non-Basmati",
+        items: [
+          "IR64",
+          "IR36",
+          "Long Grain White Rice",
+          "Long Grain Brown Rice",
+          "Poha (Flattened Rice)",
+        ],
+      },
+    ],
+  },
+  {
+    id: "millets",
+    label: "Millets",
+    image: "/products-page/staples/millets.webp",
+    imagePosition: "left",
+    groups: [
+      {
+        title: null,
+        items: [
+          "Pearl Millet (Bajra)",
+          "Foxtail Millet (Kangni)",
+          "Proso Millet (Cheena)",
+          "Kodo Millet (Kodon)",
+          "Fonio Millet",
+          "Job's Tears (Adlay Millet)",
+        ],
+      },
+      {
+        title: null,
+        items: [
+          "Sorghum (Jowar)",
+          "Finger Millet (Ragi)",
+          "Barnyard Millet (Sawan)",
+          "Little Millet (Kutki)",
+          "Browntop Millet (Choti Kangni)",
+          "Amaranth (Rajgira)",
+          "Buckwheat (Kuttu)",
+        ],
+      },
+    ],
+  },
+  {
+    id: "lentils-pulses",
+    label: "Lentils & Pulses",
+    image: "/products-page/staples/lentils-pulses.webp",
+    imagePosition: "right",
+    groups: [
+      {
+        title: null,
+        items: [
+          "Masoor Dal (Whole Red Lentils)",
+          "Masoor Malka (Split Red Lentils)",
+          "Urad Sabut (Whole Black Gram)",
+          "Urad Dal (Split Black Gram)",
+          "Urad Chilka (Split Black Gram with Skin)",
+          "Moong Sabut (Whole Green Gram)",
+          "Moong Dal (Split Yellow Lentil)",
+          "Moong Chilka Dal (Split Green Gram)",
+        ],
+      },
+      {
+        title: null,
+        items: [
+          "Toor Dal (Arhar – Split Pigeon Pea)",
+          "Chana Dal (Split Bengal Gram)",
+          "Rajma Red (Red Kidney Beans)",
+          "Ragi (Finger Millet)",
+          "Jowar (Sorghum)",
+          "Safed Matar (White Peas)",
+          "Kabuli Chana (White Chickpea)",
+          "Kala Chana (Brown Chickpea)",
+          "Lobia (Chawli – Black Eyed Beans)",
+        ],
+      },
+    ],
+  },
+];
