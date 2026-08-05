@@ -87,14 +87,10 @@ export default function WhyZeovusSection() {
           className="mb-12 grid grid-cols-1 gap-7 border-b border-[#294526]/15 pb-12 lg:mb-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20"
         >
           <div>
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.32em] text-[#c35531] sm:text-[12px]">
-              What You Get
-            </p>
-
             <h2 className="font-heading text-[42px] font-bold uppercase leading-[0.94] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[64px]">
-              Why Brands Build
+              Why Choose 
               <br />
-              With Zeovus
+              Zeovus Food
             </h2>
           </div>
 
@@ -161,7 +157,7 @@ export default function WhyZeovusSection() {
                 </p>
 
                 {/* Tags */}
-                <div className="mt-7 flex flex-wrap gap-2">
+                {/* <div className="mt-7 flex flex-wrap gap-2">
                   {benefit.tags.map((tag) => (
                     <span
                       key={tag}
@@ -170,19 +166,10 @@ export default function WhyZeovusSection() {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Bottom detail */}
-                <div className="mt-auto flex items-end justify-between gap-5 border-t border-[#294526]/10 pt-7">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#789444]">
-                      Zeovus Food
-                    </p>
-
-                    <p className="mt-1 text-[13px] leading-5 text-[#34422e]/55">
-                      One system. One accountable partner.
-                    </p>
-                  </div>
+                <div className="mt-auto flex items-end justify-end gap-5 border-t border-[#294526]/10 pt-7">
 
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#294526]/15 text-[#294526] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#294526] group-hover:text-[#fff9df]">
                     <svg
