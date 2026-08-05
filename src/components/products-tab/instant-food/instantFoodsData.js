@@ -2,7 +2,7 @@ export const INSTANT_FOOD_SECTIONS = [
   {
     id: "retort",
     label: "Retort",
-    image: "/products-page/instant-foods/retort.webp",
+    image: "/products/instant-foods/retort.jpg",
     imagePosition: "right",
     groups: [
       {
@@ -50,7 +50,7 @@ export const INSTANT_FOOD_SECTIONS = [
   {
     id: "noodles-pasta",
     label: "Noodles & Pasta",
-    image: "/products-page/instant-foods/noodles-pasta.webp",
+    image: "/products/instant-foods/noodles-pasta.jpg",
     imagePosition: "left",
     groups: [
       {

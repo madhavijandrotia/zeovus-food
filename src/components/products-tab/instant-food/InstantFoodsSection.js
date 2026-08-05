@@ -6,9 +6,7 @@ export default function InstantFoodsSection() {
   return (
     <div className="instant-foods">
       <header className="instant-foods__intro">
-        <p className="instant-foods__eyebrow">
-          Ready-to-Eat & Instant Foods
-        </p>
+        <p className="instant-foods__eyebrow">Ready-to-Eat & Instant Foods</p>
 
         <h1 className="instant-foods__heading">
           Built for speed.
@@ -37,9 +35,19 @@ export default function InstantFoodsSection() {
             <div className="instant-foods__media">
               <Image
                 src={section.image}
+                alt=""
+                fill
+                sizes="(max-width: 960px) 100vw, 50vw"
+                className="instant-foods__image-background"
+                aria-hidden="true"
+              />
+
+              <Image
+                src={section.image}
                 alt={section.label}
                 fill
                 priority={index === 0}
+                quality={90}
                 sizes="(max-width: 960px) 100vw, 50vw"
                 className="instant-foods__image"
               />
