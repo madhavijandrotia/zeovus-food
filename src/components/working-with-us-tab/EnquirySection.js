@@ -55,8 +55,7 @@ export default function EnquirySection() {
     if (!trimmedCompany) {
       newErrors.company = "Please enter your company name.";
     } else if (trimmedCompany.length < 2) {
-      newErrors.company =
-        "Company name must contain at least 2 characters.";
+      newErrors.company = "Company name must contain at least 2 characters.";
     }
 
     if (!trimmedCountry) {
@@ -77,8 +76,7 @@ export default function EnquirySection() {
       newErrors.message =
         "Please provide at least 20 characters so we can understand your enquiry.";
     } else if (trimmedMessage.length > 1000) {
-      newErrors.message =
-        "Message cannot contain more than 1000 characters.";
+      newErrors.message = "Message cannot contain more than 1000 characters.";
     }
 
     setErrors(newErrors);
@@ -122,7 +120,7 @@ export default function EnquirySection() {
 
       <div className="pointer-events-none absolute bottom-[-140px] right-[-90px] h-[400px] w-[400px] rounded-full bg-[#789444]/10 blur-[130px]" />
 
-      <div className="relative mx-auto grid max-w-[1380px] grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-20">
+      <div className="relative mx-auto grid max-w-[1380px] grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-16 xl:gap-20">
         {/* Heading */}
         <motion.div
           initial={{
@@ -141,36 +139,17 @@ export default function EnquirySection() {
             duration: 0.75,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="lg:sticky lg:top-28"
+          className="min-w-0 self-start"
         >
-          <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.32em] text-[#c35531] sm:text-[12px]">
-            Get In Touch
-          </p>
+          <div className="max-w-[560px]">
+            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.32em] text-[#c35531] sm:text-[12px]">
+              Get In Touch
+            </p>
 
-          <h2 className="max-w-[650px] font-heading text-[42px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[56px] lg:text-[66px]">
-            Tell Us What You&apos;re Building, We&apos;ll Tell You How Fast We
-            Can Manufacture It.
-          </h2>
-
-          <p className="mt-7 max-w-[560px] text-[16px] leading-8 text-[#34422e]/72 sm:text-[18px]">
-            Share the format, market and production goal. Our team will review
-            the brief and respond with the most suitable route forward.
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-3">
-            {[
-              "Formulation",
-              "Private Label",
-              "Bulk Supply",
-              "Distribution",
-            ].map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-[#294526]/12 bg-[#fff9df]/45 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#294526]/70"
-              >
-                {item}
-              </span>
-            ))}
+            <h2 className="font-heading text-[38px] font-bold uppercase leading-[1.02] tracking-[-0.025em] text-[#294526] sm:text-[48px] lg:text-[52px] xl:text-[58px]">
+              Tell us what you&apos;re building. Fill out the enquiry form, and
+              we&apos;ll discuss the best path to bring your project to life.
+            </h2>
           </div>
         </motion.div>
 
@@ -193,7 +172,7 @@ export default function EnquirySection() {
             delay: 0.08,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="rounded-[32px] border border-[#294526]/10 bg-[#fff9df]/55 p-6 shadow-[0_24px_65px_rgba(49,55,37,0.08)] backdrop-blur-sm sm:p-9 lg:p-11"
+          className="min-w-0 self-start rounded-[32px] border border-[#294526]/10 bg-[#fff9df]/55 p-6 shadow-[0_24px_65px_rgba(49,55,37,0.08)] backdrop-blur-sm sm:p-9 lg:p-11"
         >
           <form onSubmit={handleSubmit} noValidate>
             <div className="grid grid-cols-1 gap-x-5 gap-y-6 md:grid-cols-2">
@@ -215,9 +194,7 @@ export default function EnquirySection() {
                   placeholder="Your name"
                   autoComplete="name"
                   aria-invalid={Boolean(errors.name)}
-                  aria-describedby={
-                    errors.name ? "name-error" : undefined
-                  }
+                  aria-describedby={errors.name ? "name-error" : undefined}
                   className={inputClass("name")}
                 />
 
@@ -315,9 +292,7 @@ export default function EnquirySection() {
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.enquiryType)}
                   aria-describedby={
-                    errors.enquiryType
-                      ? "enquiry-type-error"
-                      : undefined
+                    errors.enquiryType ? "enquiry-type-error" : undefined
                   }
                   className={inputClass("enquiryType")}
                 >
@@ -423,7 +398,6 @@ export default function EnquirySection() {
               className="group mt-7 inline-flex min-h-[50px] items-center justify-center gap-3 rounded-full bg-[#151812] px-7 py-3.5 font-heading text-[14px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition duration-300 hover:-translate-y-1 hover:bg-[#294526] focus:outline-none focus:ring-4 focus:ring-[#294526]/20"
             >
               Get Your Quote
-
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
