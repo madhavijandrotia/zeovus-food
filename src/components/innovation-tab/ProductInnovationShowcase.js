@@ -10,12 +10,16 @@ const products = [
     number: "01",
     title: "Chickpea & Soybean Spaghetti / Fettuccine",
     description:
-      "Same 7-minute cook. Three times the protein, in one of the fastest-growing pasta categories.",
+      "Made with 100% chickpea and soybean. Delivers 42g protein per 100g and 18g dietary fibre per 100g. Gluten free, made with no wheat or maida and easy to cook.",
     image: "/products/chickpea-pasta2.png",
     background: "#ead8b6",
     textColor: "#294526",
-    tags: ["42g protein / 100g", "Gluten-free"],
-    highlights: ["Fast cook", "Plant protein", "Retail-ready"],
+    tags: ["42g Protein / 100g", "18g Fibre / 100g", "Gluten Free"],
+    highlights: [
+      "100% Chickpea & Soybean",
+      "No Wheat / No Maida",
+      "Easy to Cook",
+    ],
     href: "/products/chickpea-soybean-spaghetti",
   },
   {
@@ -23,12 +27,16 @@ const products = [
     number: "02",
     title: "Green Dal & Edamame Spaghetti",
     description:
-      "The highest-protein noodle in our range, built in the same legume-pasta format buyers already understand.",
+      "Made with 100% green dal and edamame. Delivers 51g protein per 100g and 16g dietary fibre per 100g. Gluten free, made with no wheat or maida and easy to cook.",
     image: "/products/green-dal-pasta2.png",
     background: "#294526",
     textColor: "#f5e8c9",
-    tags: ["51g protein / 100g"],
-    highlights: ["High protein", "Legume based", "Clean label"],
+    tags: ["51g Protein / 100g", "16g Fibre / 100g", "Gluten Free"],
+    highlights: [
+      "100% Green Dal & Edamame",
+      "No Wheat / No Maida",
+      "Easy to Cook",
+    ],
     href: "/products/green-dal-edamame-spaghetti",
   },
   {
@@ -36,48 +44,59 @@ const products = [
     number: "03",
     title: "High-Protein Pasta (Seed-Based)",
     description:
-      "Pasta built from seeds, not refined flour, for the low-carb, clean-label shelf.",
+      "High-protein pasta made with real ingredients including almond flour, psyllium husk, flaxseeds, sunflower seeds, coconut flour, sesame seeds, pumpkin seeds and watermelon seeds. Made with no maida, gluten free and delivers 32g protein per 100g.",
     image: "/products/high-protein-pasta1.png",
     background: "#c9552f",
     textColor: "#fff4db",
-    tags: ["31g protein / 100g", "Gluten-free"],
-    highlights: ["Seed based", "Low carb", "Shelf ready"],
+    tags: ["32g Protein / 100g", "Gluten Free", "No Maida"],
+    highlights: ["Real Ingredients", "No Preservatives", "Seed Based"],
     href: "/products/high-protein-pasta",
   },
   {
     id: 4,
     number: "04",
     title: "Protein Whole Wheat Flour",
-    description: "A wheat flour re-engineered for muscle, not just meals.",
+    description:
+      "Made with whole wheat and brown rice protein, delivering complete protein (all amino acids) with 32g protein per 100g. High in fibre, naturally sourced and designed to support muscle health while remaining light and easy to digest.",
     image: "/products/whole-wheat-flour11.png",
     background: "#ead8b6",
     textColor: "#294526",
-    tags: ["32g protein / 100g"],
-    highlights: ["Everyday use", "Higher protein", "Familiar format"],
+    tags: ["32g Protein / 100g", "Complete Protein", "High Fibre"],
+    highlights: [
+      "Whole Wheat + Brown Rice Protein",
+      "Light & Easy to Digest",
+      "No Added Sugar",
+    ],
     href: "/products/protein-whole-wheat-flour",
   },
   {
     id: 5,
     number: "05",
     title: "Protein Flour Concentrate",
-    description: "One scoop, any flour, no change in taste.",
+    description:
+      "A carefully formulated plant-based, high-protein + high-fibre blend designed to upgrade your favourite food. Simply mix it with any flour of your choice to add protein and fibre with no change in taste, texture or cooking method.",
     image: "/products/protein-concentrate1.png",
     background: "#294526",
     textColor: "#f5e8c9",
-    tags: ["54g protein / 100g"],
-    highlights: ["Neutral taste", "Flexible dosage", "B2B ready"],
+    tags: ["54g Protein / 100g", "12g Fibre / 100g", "Plant Based"],
+    highlights: [
+      "No Preservatives",
+      "No Artificial Flavors",
+      "Mix with any flour",
+    ],
     href: "/products/protein-flour-concentrate",
   },
   {
     id: 6,
     number: "06",
-    title: "Instant Smoothies",
-    description: "Just add milk or yoghurt. No blender, no compromise.",
-    image: "/products/instant-smoothie1.webp",
+    title: "High-Protein Smoothies",
+    description:
+      "High-Protein Smoothies made with real fruit. Delivers 9–10g protein and 5–8g fibre per serving. Just add 1 sachet (35g) to 150ml milk, shake well—no blender needed and enjoy in under 30 seconds. Available in Alphonso Mango, Strawberry, Apple Cinnamon, Banana Choco and Chickoo.",
+    image: "/products/instant-smoothie1.png",
     background: "#c9552f",
     textColor: "#fff4db",
-    tags: ["Zero prep equipment"],
-    highlights: ["Single serve", "High protein", "Instant format"],
+    tags: ["9–10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
+    highlights: ["Real fruit", "No blender needed", "5 flavours"],
     href: "/products/instant-smoothies",
   },
 ];
@@ -166,7 +185,7 @@ export default function ProductInnovationShowcase() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="relative z-10 mt-auto flex items-end justify-end gap-5 pt-2">
+                {/* <div className="relative z-10 mt-auto flex items-end justify-end gap-5 pt-2">
                   <Link
                     href={product.href}
                     aria-label={`View ${product.title}`}
@@ -186,7 +205,7 @@ export default function ProductInnovationShowcase() {
                       <path d="m13 5 7 7-7 7" />
                     </svg>
                   </Link>
-                </div>
+                </div> */}
 
                 {/* Decorative glow */}
                 <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-white/[0.08] blur-[70px] transition-transform duration-700 group-hover:scale-125" />
