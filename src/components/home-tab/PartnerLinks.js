@@ -43,7 +43,7 @@ const PAGES = [
     key: "bulk-supply",
     label: "Bulk Ingredient & Raw Material Supply",
     description:
-      "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line actually needs.",
+      "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line needs.",
     photo: "#f69520",
     src: "/images/NewCategoryLong.webp",
     href: "/working-together",

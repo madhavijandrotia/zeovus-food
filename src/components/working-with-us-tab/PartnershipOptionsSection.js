@@ -33,7 +33,7 @@ const options = [
     number: "04",
     title: "Bulk Ingredient & Raw Material Supply",
     description:
-      "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line actually needs.",
+      "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line needs.",
     image: "/images/NewCategoryLong.webp",
     accent: "#f39a22",
   },
@@ -139,7 +139,7 @@ export default function PartnershipOptionsSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#151812]/90 via-[#151812]/28 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#151812]/95 via-[#151812]/65 via-45% to-[#151812]/20" />
               </div>
 
               {/* Number */}
