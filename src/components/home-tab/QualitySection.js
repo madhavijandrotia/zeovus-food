@@ -120,11 +120,6 @@ export default function QualitySection() {
           <h2 className="font-heading text-[44px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[68px]">
             Food That Does More
           </h2>
-
-          <p className="mx-auto mt-5 max-w-[620px] text-sm leading-7 text-[#294526]/70 sm:text-base">
-            Thoughtfully developed products, dependable ingredients and quality
-            standards designed for everyday confidence.
-          </p>
         </motion.div>
 
         {/* Editorial product layout */}
