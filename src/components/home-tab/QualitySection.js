@@ -116,9 +116,6 @@ export default function QualitySection() {
           }}
           className="mx-auto mb-12 max-w-[760px] text-center lg:mb-16"
         >
-          <span className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.35em] text-[#c35531]">
-            Better Everyday Food
-          </span>
 
           <h2 className="font-heading text-[44px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[68px]">
             Food That Does More
