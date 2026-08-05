@@ -67,7 +67,7 @@ export default function ClosingCTA() {
           className="flex flex-col gap-4 sm:flex-row"
         >
           <Link
-            href="/working-together"
+            href="/working-together#enquiry"
             className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#294526] px-8 py-4 font-heading text-[18px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition hover:bg-[#3b5b33]"
           >
             Partner With Us
