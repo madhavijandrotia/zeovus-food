@@ -188,26 +188,6 @@ export default function QualitySection() {
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-[760px] overflow-hidden text-center md:mb-12 lg:mb-16">
           <motion.div variants={headingVariants}>
-            <motion.span
-              initial={{
-                opacity: 0,
-                letterSpacing: "0.7em",
-              }}
-              whileInView={{
-                opacity: 0.65,
-                letterSpacing: "0.35em",
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1,
-                delay: 0.35,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mb-3 block text-[8px] font-semibold uppercase text-[#52643a] sm:text-[10px] lg:mb-4 lg:text-xs"
-            >
-              Better nutrition, beautifully made
-            </motion.span>
-
             <h2 className="font-heading text-[38px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[46px] md:text-[52px] lg:text-[60px] xl:text-[68px]">
               Food That Does More
             </h2>
