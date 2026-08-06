@@ -6,7 +6,7 @@ export default function BeveragesSection() {
   return (
     <div className="beverages">
       <header className="beverages__intro">
-        <p className="beverages__eyebrow">Beverages &amp; Drinks</p>
+        <p className="beverages__eyebrow">Beverages &amp; Smoothies</p>
 
         <h1 className="beverages__heading">
           Nutrition made

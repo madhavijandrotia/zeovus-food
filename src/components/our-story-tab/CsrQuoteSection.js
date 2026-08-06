@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
 
 export default function CsrQuoteSection() {
@@ -59,7 +58,7 @@ export default function CsrQuoteSection() {
               programs supporting{" "}
               <span className="text-[#789444]">
                 child nutrition, education,
-                and stronger communities.
+                and stronger communities <span className="text-[#294526]">because the places we source from and the world we manufacture for have always been the same world.</span>
               </span>
             </blockquote>
 

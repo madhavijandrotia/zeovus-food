@@ -57,7 +57,7 @@ const CATEGORIES = [
   },
   {
     key: "beverages",
-    name: "Beverages & Drinks",
+    name: "Beverages & Smoothies",
     src: "/categories/beverages.webp",
     packshotSrc: "/categories/Juicesub.webp",
     tagline: "Brews, blends & refreshers worth pouring.",

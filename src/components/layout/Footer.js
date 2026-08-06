@@ -1,27 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import "./Footer.css";
-
 const COMPANY_LINKS = [
   { label: "Our Story", href: "/our-story" },
   { label: "Innovation", href: "/innovation" },
-  {
-    label: "Manufacturing & Capabilities",
-    href: "/manufacturing",
-  },
+  { label: "Manufacturing & Capabilities", href: "/manufacturing" },
   { label: "Partner With Us", href: "/working-together" },
   { label: "Contact Us", href: "/contact" },
 ];
-
 const PRODUCT_LINKS = [
   "Staples & Dry Groceries",
   "Spices & Seasonings",
   "Ready-to-Eat & Instant Foods",
   "Condiments & Sauces",
   "Healthy Snacking",
-  "Bevereges"
+  "Bevereges & Smoothies",
 ];
-
 const SOCIALS = [
   {
     name: "Facebook",
@@ -44,92 +38,91 @@ const SOCIALS = [
     path: "M6.94 8.5H4.56V19h2.38V8.5ZM5.75 4.5a1.38 1.38 0 1 0 0 2.76 1.38 1.38 0 0 0 0-2.76ZM19.5 12.9c0-2.6-1.4-3.8-3.26-3.8-1.5 0-2.17.83-2.55 1.4V8.5H11.3c.03.7 0 10.5 0 10.5h2.4v-5.87c0-.31.02-.62.12-.85.24-.62.8-1.26 1.75-1.26 1.24 0 1.73.94 1.73 2.32V19h2.4v-6.1Z",
   },
 ];
-
 export default function Footer() {
   return (
     <footer className="site-footer">
+      {" "}
       <div className="site-footer__container site-footer__grid">
+        {" "}
         <div className="site-footer__brand">
+          {" "}
           <Link href="/" className="site-footer__logo-link">
+            {" "}
             <Image
               src="/logo.png"
               alt="Zeovus Food"
               width={180}
               height={90}
               className="site-footer__logo"
-            />
-          </Link>
-
+            />{" "}
+          </Link>{" "}
           <p>
-            Zeovus Food (India) Pvt. Ltd.
-            <br />
-            India 
-          </p>
-
-          <a href="mailto:connect@zeovus.com">
-            connect@zeovus.com
-          </a>
-        </div>
-
+            {" "}
+            Zeovus Food (India) Pvt. Ltd. <br /> India{" "}
+          </p>{" "}
+          <a href="mailto:connect@zeovus.com"> connect@zeovus.com </a>{" "}
+        </div>{" "}
         <nav className="site-footer__col" aria-label="Company">
-          <h4>Company</h4>
-
+          {" "}
+          <h4>Company</h4>{" "}
           <ul>
+            {" "}
             {COMPANY_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
+                {" "}
+                <Link href={link.href}>{link.label}</Link>{" "}
               </li>
-            ))}
-          </ul>
-        </nav>
-
+            ))}{" "}
+          </ul>{" "}
+        </nav>{" "}
         <nav className="site-footer__col" aria-label="Products">
-          <h4>Products</h4>
-
+          {" "}
+          <h4>Products</h4>{" "}
           <ul>
+            {" "}
             {PRODUCT_LINKS.map((label) => (
               <li key={label}>
-                <Link href="/products">{label}</Link>
+                {" "}
+                <Link href="/products">{label}</Link>{" "}
               </li>
-            ))}
-          </ul>
-        </nav>
-
+            ))}{" "}
+          </ul>{" "}
+        </nav>{" "}
         <nav className="site-footer__col" aria-label="Group">
-          <h4>Group</h4>
-
+          {" "}
+          <h4>Group</h4>{" "}
           <ul>
+            {" "}
             <li>
-              <Link href="/">Zeovus Group</Link>
-            </li>
-
-          </ul>
-        </nav>
-
+              {" "}
+              <Link href="/">Zeovus Group</Link>{" "}
+            </li>{" "}
+          </ul>{" "}
+        </nav>{" "}
         <nav className="site-footer__col" aria-label="Legal">
-          <h4>Legal</h4>
-
+          {" "}
+          <h4>Legal</h4>{" "}
           <ul>
+            {" "}
             <li>
-              <Link href="/privacy-policy">Privacy Policy</Link>
-            </li>
-
+              {" "}
+              <Link href="/privacy-policy">Privacy Policy</Link>{" "}
+            </li>{" "}
             <li>
-              <Link href="/terms-of-service">
-                Terms of Service
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
+              {" "}
+              <Link href="/terms-of-service"> Terms of Service </Link>{" "}
+            </li>{" "}
+          </ul>{" "}
+        </nav>{" "}
+      </div>{" "}
       <div className="site-footer__container site-footer__bottom">
+        {" "}
         <span>
-          © {new Date().getFullYear()} Zeovus Food. All rights
-          reserved.
-        </span>
-
+          {" "}
+          © {new Date().getFullYear()} Zeovus Food. All rights reserved.{" "}
+        </span>{" "}
         <div className="site-footer__socials">
+          {" "}
           {SOCIALS.map((social) => (
             <a
               key={social.name}
@@ -138,6 +131,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
+              {" "}
               <svg
                 viewBox="0 0 24 24"
                 width="18"
@@ -145,12 +139,13 @@ export default function Footer() {
                 fill="currentColor"
                 aria-hidden="true"
               >
-                <path d={social.path} />
-              </svg>
+                {" "}
+                <path d={social.path} />{" "}
+              </svg>{" "}
             </a>
-          ))}
-        </div>
-      </div>
+          ))}{" "}
+        </div>{" "}
+      </div>{" "}
     </footer>
   );
 }

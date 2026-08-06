@@ -114,9 +114,9 @@ export default function QualityPromiseSection() {
                 duration: 0.65,
                 delay: 0.1,
               }}
-              className="font-heading text-[24px] font-bold uppercase leading-tight tracking-[0.02em] text-[#fff9df] sm:text-[31px] lg:text-[38px]"
+              className="font-heading text-[24px] font-bold text-[#fff9df] sm:text-[31px] lg:text-[38px]"
             >
-              Quality is not a department at Zeovus
+              QUALITY IS NOT A DEPARTMENT AT ZEOVUS
             </motion.p>
 
             <motion.p
@@ -135,9 +135,9 @@ export default function QualityPromiseSection() {
                 duration: 0.6,
                 delay: 0.2,
               }}
-              className="mt-2 font-heading text-[27px] font-bold uppercase leading-none text-[#d5542e] sm:text-[34px] lg:text-[40px]"
+              className="font-heading text-[27px] font-bold leading-none text-[#d5542e] sm:text-[34px] lg:text-[40px]"
             >
-              It&apos;s our DNA.
+              IT&apos;S OUR DNA.
             </motion.p>
 
             <motion.div
@@ -156,7 +156,7 @@ export default function QualityPromiseSection() {
                 duration: 0.7,
                 delay: 0.3,
               }}
-              className="mt-8 max-w-[680px] sm:mt-12"
+              className="mt-4 max-w-[680px] sm:mt-6"
             >
               <p className="font-heading text-[18px] font-bold uppercase leading-[1.28] tracking-[0.02em] text-[#fff9df] sm:text-[22px] lg:text-[30px]">
                 Every product is verified through our proprietary ZQA framework
