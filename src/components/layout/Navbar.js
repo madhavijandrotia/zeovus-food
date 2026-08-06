@@ -13,7 +13,7 @@ const navItems = [
   { label: "MANUFACTURING", href: "/manufacturing" },
   { label: "PRODUCTS", href: "/products" },
   { label: "WORKING TOGETHER", href: "/working-together" },
-    { label: "BLOGS", href: "/blogs" },
+  { label: "BLOGS", href: "/blogs" },
 ];
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#181917]/85 backdrop-blur-xl">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-[#d8c8a8]/40 bg-[#f4e8cf]/75 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#f4e8cf]/70">
       <div className="mx-auto flex h-[82px] max-w-[1600px] items-center justify-between px-6 lg:px-10">
         {/* Logo */}
         <Link
@@ -37,8 +37,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Zeovus Food"
-            width={185}
-            height={90}
+            width={145}
+            height={60}
             priority
             className="h-auto w-[120px] lg:w-[135px]"
           />
@@ -53,10 +53,10 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`cursor-pointer rounded-md px-5 py-3 font-heading text-[13px] font-medium uppercase tracking-[1px] transition-all duration-300 ${
+                className={`rounded-md px-5 py-3 font-heading text-[13px] font-semibold uppercase tracking-[1px] transition-all duration-300 ${
                   active
-                    ? "bg-[#f6f2d5] text-[#1a1a1a]"
-                    : "text-white hover:bg-white/10"
+                    ? "bg-[#5b3a1f] text-[#f4e8cf]"
+                    : "text-[#5b3a1f] hover:bg-[#eadcc0]"
                 }`}
               >
                 {item.label}
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Mobile Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex h-11 w-11 cursor-pointer items-center justify-center text-white lg:hidden"
+          className="flex h-11 w-11 items-center justify-center text-[#5b3a1f] lg:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -77,11 +77,11 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden bg-[#181917]/95 transition-all duration-300 lg:hidden ${
+        className={`overflow-hidden bg-[#f4e8cf] transition-all duration-300 lg:hidden ${
           isMenuOpen ? "max-h-[600px]" : "max-h-0"
         }`}
       >
-        <div className="flex flex-col border-t border-white/10 py-4">
+        <div className="flex flex-col border-t border-[#d8c8a8] py-4">
           {navItems.map((item) => {
             const active = isActive(item.href);
 
@@ -90,10 +90,10 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`mx-4 my-1 cursor-pointer rounded-md px-5 py-4 font-heading text-[13px] font-medium uppercase tracking-[1px] transition ${
+                className={`mx-4 my-1 rounded-md px-5 py-4 font-heading text-[13px] font-medium uppercase tracking-[1px] transition-all duration-300 ${
                   active
-                    ? "bg-[#f6f2d5] text-[#1a1a1a]"
-                    : "text-white hover:bg-white/10"
+                    ? "bg-[#5b3a1f] text-[#f4e8cf]"
+                    : "text-[#5b3a1f] hover:bg-[#eadcc0]"
                 }`}
               >
                 {item.label}
