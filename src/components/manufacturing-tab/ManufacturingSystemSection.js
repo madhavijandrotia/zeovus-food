@@ -10,7 +10,7 @@ const sections = [
     title: "Sourcing",
     description:
       "The system starts long before a product reaches the manufacturing line. We verify where ingredients come from, how they perform and whether they can hold up to the standard the final product requires.",
-    image: "/images/sourcing-system.webp",
+    image: "/images/sourcing-system.png",
     theme: "cream",
     items: [
       {
@@ -37,7 +37,7 @@ const sections = [
     title: "Built Around The Product",
     description:
       "Every process is selected around what the product needs to preserve, improve or become, from stone milling and extrusion to freeze-drying, retort and cryogenic freezing.",
-    image: "/images/processing-system.webp",
+    image: "/images/processing-system.png",
     theme: "dark",
     items: [
       {
@@ -76,7 +76,7 @@ const sections = [
     title: "Protection After Production",
     description:
       "The final product is only as good as the system protecting it after it leaves the line. Every packaging format is chosen to defend against moisture, oxygen, light and tampering.",
-    image: "/images/packaging-system.webp",
+    image: "/images/packaging-system.png",
     theme: "cream",
     items: [
       {
@@ -107,7 +107,7 @@ const sections = [
     title: "Verified At Every Stage",
     description:
       "Quality is not a final inspection. It is a system applied from raw material approval through production, packaging and release.",
-    image: "/images/quality-system.webp",
+    image: "/images/quality-system.png",
     theme: "dark",
     items: [
       {
@@ -134,7 +134,7 @@ const sections = [
     title: "Ready To Grow With You",
     description:
       "The same system supports trial orders, commercial scale-up and international retail, without forcing brands to change partners as they grow.",
-    image: "/images/export-system.webp",
+    image: "/images/export-system.png",
     theme: "cream",
     items: [
       {

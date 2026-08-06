@@ -10,7 +10,7 @@ export default function HeroManufacturing() {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/innovation.mp4" type="video/mp4" />
+        <source src="/videos/innovation1.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}
