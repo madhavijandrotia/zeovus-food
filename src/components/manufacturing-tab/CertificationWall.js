@@ -16,7 +16,7 @@ const certifications = [
   },
   {
     title: "HACCP",
-    logo: "/logo/haccp.webp",
+    logo: "/logo/haccp.png",
   },
   {
     title: "ISO 22000",
@@ -31,12 +31,20 @@ const certifications = [
     logo: "/logo/brcgs.png",
   },
   {
-    title: "Halal & Kosher",
-    logo: "/logo/halal-kosher.png",
+    title: "Halal",
+    logo: "/logo/halal.png",
   },
   {
-    title: "Organic & Vegan",
-    logo: "/logo/organic-vegan.jpg",
+    title: "Kosher",
+    logo: "/logo/kosher.png",
+  },
+  {
+    title: "Organic",
+    logo: "/logo/organic.png",
+  },
+  {
+    title: "Vegan",
+    logo: "/logo/vegan.webp",
   },
 ];
 
@@ -81,7 +89,7 @@ export default function CertificationWall() {
           transition={{
             staggerChildren: 0.07,
           }}
-          className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4"
+          className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5"
         >
           {certifications.map((item) => (
             <motion.article
