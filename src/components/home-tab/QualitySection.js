@@ -9,7 +9,7 @@ const products = [
     title: "Chickpea & Soybean Spaghetti",
     image: "/products/chickpea-pasta1.png",
     background: "#d6dfa2",
-    accent: "#f7ead0    ",
+    accent: "#f7ead0",
     description: "Protein-rich pasta made for balanced, everyday meals.",
   },
   {
@@ -88,13 +88,11 @@ const cardVariants = {
 export default function QualitySection() {
   return (
     <section className="relative overflow-hidden bg-[#efe0c3] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
-      {/* Background decoration */}
       <div className="pointer-events-none absolute left-[-100px] top-[180px] h-[320px] w-[320px] rounded-full bg-[#d2b98d]/25 blur-[110px]" />
 
       <div className="pointer-events-none absolute bottom-[-100px] right-[-60px] h-[360px] w-[360px] rounded-full bg-[#789444]/15 blur-[120px]" />
 
       <div className="relative mx-auto max-w-[1380px]">
-        {/* Heading */}
         <motion.div
           initial={{
             opacity: 0,
@@ -119,7 +117,6 @@ export default function QualitySection() {
           </h2>
         </motion.div>
 
-        {/* Editorial product layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -128,7 +125,7 @@ export default function QualitySection() {
             once: true,
             amount: 0.12,
           }}
-          className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4"
+          className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
         >
           {products.map((product, index) => {
             const isFeatured = index === 0 || index === 1;
@@ -146,8 +143,8 @@ export default function QualitySection() {
                 }}
                 className={`group relative overflow-hidden rounded-[26px] shadow-[0_20px_55px_rgba(40,35,25,0.1)] ${
                   isFeatured
-                    ? "min-h-[380px] sm:col-span-2 xl:min-h-[430px]"
-                    : "min-h-[310px] sm:min-h-[340px]"
+                    ? "min-h-[380px] sm:col-span-2 lg:min-h-[430px]"
+                    : "min-h-[310px] sm:min-h-[340px] lg:min-h-[340px]"
                 }`}
                 style={{
                   backgroundColor: product.background,
@@ -157,10 +154,11 @@ export default function QualitySection() {
                   src={product.image}
                   alt={product.title}
                   fill
+                  priority={index < 2}
                   sizes={
                     isFeatured
-                      ? "(max-width: 640px) 100vw, 50vw"
-                      : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                      ? "(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 50vw"
+                      : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
                   }
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />
