@@ -149,8 +149,11 @@ export default function EnquirySection() {
               Get In Touch
             </p>
 
-            <h2 className="font-heading text-[38px] font-bold uppercase leading-[1.02] tracking-[-0.025em] text-[#294526] sm:text-[48px] lg:text-[52px] xl:text-[58px]">
-              Tell us what you&apos;re building. Fill out the enquiry form, and
+            <h2 className="font-heading text-[32px] font-bold uppercase leading-[1.02] tracking-[-0.025em] text-[#294526] sm:text-[42px] lg:text-[46px] xl:text-[52px]">
+              Tell us what you&apos;re building. 
+              <br />
+              <br />
+              Fill out the enquiry form, and
               we&apos;ll discuss the best path to bring your project to life.
             </h2>
           </div>

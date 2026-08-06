@@ -153,12 +153,6 @@ export default function WhyZeovusSection() {
             <br />
             Zeovus Food
           </h2>
-
-          <p className="max-w-[760px] text-[16px] leading-8 text-[#34422e]/75 sm:text-[18px]">
-            Tell us what you&apos;re building. Fill out the enquiry form below,
-            and we&apos;ll come back with a clear, competitive quote for your
-            project.
-          </p>
         </motion.div>
 
         {/* Top navigation */}
