@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const container = {
@@ -70,21 +71,25 @@ export default function HeroSection() {
           </h1>
 
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="rounded-full bg-[#f4f2d3] px-6 py-3 text-xs font-semibold tracking-widest text-[#191512] sm:px-8 sm:py-4 sm:text-sm"
-            >
-              EXPLORE PRODUCTS
-            </motion.button>
+            <Link href="/products">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-block cursor-pointer rounded-full bg-[#f4f2d3] px-6 py-3 text-xs font-semibold tracking-widest text-[#191512] sm:px-8 sm:py-4 sm:text-sm"
+              >
+                EXPLORE PRODUCTS
+              </motion.span>
+            </Link>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs font-semibold tracking-widest text-white backdrop-blur-md sm:px-8 sm:py-4 sm:text-sm"
-            >
-              OUR STORY
-            </motion.button>
+            <Link href="/our-story">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-block cursor-pointer rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs font-semibold tracking-widest text-white backdrop-blur-md sm:px-8 sm:py-4 sm:text-sm"
+              >
+                OUR STORY
+              </motion.span>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
