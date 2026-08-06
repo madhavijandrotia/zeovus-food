@@ -288,32 +288,6 @@ export default function QualitySection() {
                 {/* Moving glow on hover */}
                 <div className="pointer-events-none absolute inset-y-0 left-[-65%] z-10 w-[38%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 ease-out group-hover:left-[130%] group-hover:opacity-100" />
 
-                {/* Product index */}
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    scale: 0.7,
-                    rotate: -15,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                    rotate: 0,
-                  }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.5 + index * 0.08,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="absolute right-5 top-5 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/10 text-[9px] font-semibold tracking-[0.12em] backdrop-blur-md"
-                  style={{
-                    color: product.accent,
-                  }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </motion.div>
-
                 {/* Content */}
                 <motion.div
                   initial={{
