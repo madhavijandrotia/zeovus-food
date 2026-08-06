@@ -91,11 +91,11 @@ const products = [
     number: "06",
     title: "High-Protein Smoothies",
     description:
-      "High-Protein Smoothies made with real fruit. Delivers 9–10g protein and 5–8g fibre per serving. Just add 1 sachet (35g) to 150ml milk, shake well—no blender needed and enjoy in under 30 seconds. Available in Alphonso Mango, Strawberry, Apple Cinnamon, Banana Choco and Chickoo.",
+      "High-Protein Smoothies made with real fruit. Delivers 10g protein and 5–8g fibre per serving. Just add 1 sachet (35g) to 150ml milk, shake well—no blender needed and enjoy in under 30 seconds. Available in Alphonso Mango, Strawberry, Apple Cinnamon, Banana Choco and Chickoo.",
     image: "/products/instant-smoothie1.png",
     background: "#c9552f",
     textColor: "#fff4db",
-    tags: ["9–10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
+    tags: ["10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
     highlights: ["Real fruit", "No blender needed", "5 flavours"],
     href: "/products/instant-smoothies",
   },
