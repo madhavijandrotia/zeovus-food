@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion} from "motion/react";
+import { motion } from "motion/react";
 
 const products = [
   {
@@ -99,19 +99,15 @@ const gridVariants = {
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 100,
-    scale: 0.92,
-    rotateX: 10,
-    clipPath: "inset(16% 0% 16% 0% round 26px)",
+    y: 80,
+    scale: 0.94,
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    rotateX: 0,
-    clipPath: "inset(0% 0% 0% 0% round 26px)",
     transition: {
-      duration: 0.95,
+      duration: 0.85,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -127,9 +123,9 @@ export default function QualitySection() {
         once: true,
         amount: 0.08,
       }}
-      className="relative overflow-hidden bg-[#efe0c3] px-5 py-20 sm:px-8 lg:px-14 lg:py-28"
+      className="relative overflow-hidden bg-[#efe0c3] px-4 py-16 sm:px-6 md:px-8 md:py-20 lg:px-12 lg:py-24 xl:py-28"
     >
-      {/* Large opening wipe */}
+      {/* Opening wipe */}
       <motion.div
         initial={{ scaleY: 1 }}
         whileInView={{ scaleY: 0 }}
@@ -144,7 +140,7 @@ export default function QualitySection() {
         className="pointer-events-none absolute inset-0 z-50 bg-[#294526]"
       />
 
-      {/* Animated background glow */}
+      {/* Background decorations */}
       <motion.div
         initial={{
           opacity: 0,
@@ -185,40 +181,43 @@ export default function QualitySection() {
         className="pointer-events-none absolute bottom-[-100px] right-[-60px] h-[360px] w-[360px] rounded-full bg-[#789444]/20 blur-[120px]"
       />
 
-      {/* Fine grain texture */}
+      {/* Grain texture */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:radial-gradient(#294526_0.75px,transparent_0.75px)] [background-size:11px_11px]" />
 
       <div className="relative z-10 mx-auto max-w-[1380px]">
         {/* Heading */}
-        <div className="mx-auto mb-12 max-w-[760px] overflow-hidden text-center lg:mb-16">
+        <div className="mx-auto mb-10 max-w-[760px] overflow-hidden text-center md:mb-12 lg:mb-16">
           <motion.div variants={headingVariants}>
             <motion.span
-              initial={{ opacity: 0, letterSpacing: "0.7em" }}
-              whileInView={{ opacity: 0.65, letterSpacing: "0.35em" }}
+              initial={{
+                opacity: 0,
+                letterSpacing: "0.7em",
+              }}
+              whileInView={{
+                opacity: 0.65,
+                letterSpacing: "0.35em",
+              }}
               viewport={{ once: true }}
               transition={{
                 duration: 1,
                 delay: 0.35,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mb-4 block text-[10px] font-semibold uppercase text-[#52643a] sm:text-xs"
+              className="mb-3 block text-[8px] font-semibold uppercase text-[#52643a] sm:text-[10px] lg:mb-4 lg:text-xs"
             >
               Better nutrition, beautifully made
             </motion.span>
 
-            <h2 className="font-heading text-[44px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[68px]">
+            <h2 className="font-heading text-[38px] font-bold uppercase leading-[0.92] tracking-[-0.03em] text-[#294526] sm:text-[46px] md:text-[52px] lg:text-[60px] xl:text-[68px]">
               Food That Does More
             </h2>
           </motion.div>
         </div>
 
-        {/* Same card arrangement */}
+        {/* Product grid */}
         <motion.div
           variants={gridVariants}
-          className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4"
-          style={{
-            perspective: "1200px",
-          }}
+          className="mx-auto grid max-w-[1240px] grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4 md:gap-3 lg:gap-4 xl:gap-5"
         >
           {products.map((product, index) => {
             const isFeatured = index === 0 || index === 1;
@@ -228,90 +227,51 @@ export default function QualitySection() {
                 key={product.id}
                 variants={cardVariants}
                 whileHover={{
-                  y: -12,
-                  scale: 1.012,
-                  rotateX: 1.2,
+                  y: -8,
+                  scale: 1.01,
                   transition: {
-                    duration: 0.35,
-                    ease: [0.22, 1, 0.36, 1],
+                    duration: 0.3,
+                    ease: "easeOut",
                   },
                 }}
-                className={`group relative isolate overflow-hidden rounded-[26px] shadow-[0_20px_55px_rgba(40,35,25,0.1)] transition-shadow duration-500 hover:shadow-[0_30px_90px_rgba(40,35,25,0.2)] ${
+                className={`group relative isolate overflow-hidden rounded-[18px] shadow-[0_20px_55px_rgba(40,35,25,0.1)] transition-shadow duration-500 hover:shadow-[0_30px_90px_rgba(40,35,25,0.2)] lg:rounded-[22px] xl:rounded-[26px] ${
                   isFeatured
-                    ? "min-h-[380px] sm:col-span-2 lg:min-h-[430px]"
-                    : "min-h-[310px] sm:min-h-[340px] lg:min-h-[340px]"
+                    ? "h-[300px] sm:col-span-2 sm:h-[330px] md:col-span-2 md:h-[220px] lg:h-[260px] xl:h-[300px]"
+                    : "h-[280px] sm:h-[300px] md:h-[175px] lg:h-[205px] xl:h-[235px]"
                 }`}
                 style={{
                   backgroundColor: product.background,
-                  transformStyle: "preserve-3d",
                 }}
               >
-                {/* Image reveal and hover zoom */}
-                <motion.div
-                  className="absolute inset-0"
-                  initial={{
-                    scale: 1.16,
-                    filter: "blur(8px)",
-                  }}
-                  whileInView={{
-                    scale: 1,
-                    filter: "blur(0px)",
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.3,
-                  }}
-                  transition={{
-                    duration: 1.15,
-                    delay: 0.12 + index * 0.07,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                >
+                {/* Image */}
+                <div className="absolute inset-0">
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
+                    priority={index < 2}
                     sizes={
                       isFeatured
-                        ? "(max-width: 640px) 100vw, 50vw"
-                        : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                        ? "(max-width: 639px) 100vw, (max-width: 767px) 100vw, 50vw"
+                        : "(max-width: 639px) 100vw, (max-width: 767px) 50vw, 25vw"
                     }
-                    className="object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.08]"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   />
-                </motion.div>
+                </div>
 
-                {/* Cinematic overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/5" />
+                {/* Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent opacity-60" />
 
-                {/* Moving glow on hover */}
+                {/* Hover shine */}
                 <div className="pointer-events-none absolute inset-y-0 left-[-65%] z-10 w-[38%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 ease-out group-hover:left-[130%] group-hover:opacity-100" />
 
-                {/* Content */}
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 35,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.4,
-                  }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.42 + index * 0.08,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="absolute inset-x-0 bottom-0 z-20 p-5 sm:p-6"
-                >
-                  <div className="mb-3 flex items-center gap-3">
+                {/* Text */}
+                <div className="absolute inset-x-0 bottom-0 z-20 p-4 lg:p-5 xl:p-6">
+                  <div className="mb-2 flex items-center gap-2 lg:mb-3 lg:gap-3">
                     <span
-                      className="block text-[10px] font-semibold uppercase tracking-[0.25em] opacity-80"
+                      className="block text-[7px] font-semibold uppercase tracking-[0.18em] opacity-80 lg:text-[9px] xl:text-[10px] xl:tracking-[0.25em]"
                       style={{
                         color: product.accent,
                       }}
@@ -320,7 +280,7 @@ export default function QualitySection() {
                     </span>
 
                     <span
-                      className="h-px w-0 opacity-50 transition-all duration-500 group-hover:w-10"
+                      className="h-px w-0 opacity-50 transition-all duration-500 group-hover:w-8"
                       style={{
                         backgroundColor: product.accent,
                       }}
@@ -328,10 +288,10 @@ export default function QualitySection() {
                   </div>
 
                   <h3
-                    className={`max-w-[480px] font-heading font-bold leading-[1.02] tracking-[-0.02em] ${
+                    className={`max-w-[480px] font-heading font-bold uppercase leading-[1] tracking-[-0.02em] ${
                       isFeatured
-                        ? "text-[30px] sm:text-[36px] lg:text-[42px]"
-                        : "text-[23px] sm:text-[26px]"
+                        ? "text-[28px] sm:text-[32px] md:text-[23px] lg:text-[30px] xl:text-[36px]"
+                        : "text-[22px] sm:text-[24px] md:text-[15px] lg:text-[19px] xl:text-[23px]"
                     }`}
                     style={{
                       color: product.accent,
@@ -341,25 +301,19 @@ export default function QualitySection() {
                   </h3>
 
                   {isFeatured && (
-                    <div className="grid grid-rows-[0fr] transition-all duration-500 ease-out group-hover:mt-3 group-hover:grid-rows-[1fr]">
-                      <div className="overflow-hidden">
-                        <p
-                          className="max-w-[430px] translate-y-4 text-sm leading-6 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-80"
-                          style={{
-                            color: product.accent,
-                          }}
-                        >
-                          {product.description}
-                        </p>
-                      </div>
-                    </div>
+                    <p
+                      className="mt-2 hidden max-w-[430px] text-[10px] leading-4 opacity-75 lg:block xl:text-sm xl:leading-6"
+                      style={{
+                        color: product.accent,
+                      }}
+                    >
+                      {product.description}
+                    </p>
                   )}
-                </motion.div>
+                </div>
 
-                {/* Premium border */}
-                <div className="pointer-events-none absolute inset-0 z-30 rounded-[26px] border border-white/15 transition-colors duration-500 group-hover:border-white/40" />
-
-                <div className="pointer-events-none absolute inset-[1px] z-30 rounded-[25px] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]" />
+                {/* Border */}
+                <div className="pointer-events-none absolute inset-0 z-30 rounded-[18px] border border-white/15 transition-colors duration-500 group-hover:border-white/40 lg:rounded-[22px] xl:rounded-[26px]" />
               </motion.article>
             );
           })}
