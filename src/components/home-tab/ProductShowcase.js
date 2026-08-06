@@ -61,15 +61,15 @@ export default function ProductShowcase() {
         <h2 className="max-w-[360px] font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#5b6c2e] sm:text-[72px] lg:text-[88px]">
           <span className="block">Discover</span>
           <span className="block">The good</span>
-          <span className="block">Side of</span>
         </h2>
       </div>
 
       {/* Right text */}
       <div className="pointer-events-none absolute bottom-12 right-6 z-10 sm:right-10 lg:right-16">
-        <p className="font-heading text-[54px] font-bold uppercase leading-none text-[#5b6c2e] sm:text-[68px] lg:text-[84px]">
-          Produce
-        </p>
+        <h2 className="font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#5b6c2e] sm:text-[68px] lg:text-[84px]">
+          <span className="block">Side of</span>
+          <span className="block">Produce</span>
+        </h2>
       </div>
     </section>
   );
