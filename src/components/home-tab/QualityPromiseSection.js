@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const certifications = [
   {
     name: "Organic",
-    image: "/logo/organic.jpg",
+    image: "/logo/organic.png",
   },
   {
     name: "Vegan",
@@ -31,7 +32,7 @@ const certifications = [
   },
   {
     name: "Halal",
-    image: "/logo/halal.jpg",
+    image: "/logo/halal.png",
   },
   {
     name: "Kosher",
@@ -69,11 +70,87 @@ function CertificationItems({ duplicate = false }) {
   );
 }
 
-export default function QualityPromiseSection() {
+function ScrollContent({ scrollProgress }) {
+  /*
+   * Text stays fully visible first.
+   * After a small scroll, the text fades out and the seal appears.
+   */
+
+  const frameworkOpacity = useTransform(
+    scrollProgress,
+    [0, 0.18, 0.32, 0.45],
+    [1, 1, 1, 0],
+  );
+
+  const frameworkY = useTransform(scrollProgress, [0.28, 0.45], [0, -24]);
+
+  const frameworkScale = useTransform(scrollProgress, [0.28, 0.45], [1, 0.97]);
+
+  const sealOpacity = useTransform(
+    scrollProgress,
+    [0.3, 0.44, 0.58],
+    [0, 1, 1],
+  );
+
+  const sealScale = useTransform(scrollProgress, [0.3, 0.46], [0.7, 1]);
+
+  const sealY = useTransform(scrollProgress, [0.3, 0.46], [45, 0]);
+
   return (
-    <section className="relative -mt-px overflow-hidden bg-[#eeddbc]">
+    <>
+      {/* Framework text */}
+      <motion.div
+        style={{
+          opacity: frameworkOpacity,
+          y: frameworkY,
+          scale: frameworkScale,
+        }}
+        className="mt-4 max-w-[680px] sm:mt-6"
+      >
+        <p className="font-heading text-[18px] font-bold uppercase leading-[1.28] tracking-[0.02em] text-[#fff9df] sm:text-[22px] lg:text-[30px]">
+          Every product is verified through our proprietary ZQA framework with
+          12 steps, 825 tested parameters and triple-layer checks from raw
+          material to finished goods.
+        </p>
+      </motion.div>
+
+      {/* Center seal */}
+      <motion.div
+        style={{
+          opacity: sealOpacity,
+          scale: sealScale,
+          y: sealY,
+        }}
+        className="pointer-events-none absolute left-1/2 top-[57%] z-20 h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 sm:h-[250px] sm:w-[250px] lg:top-[59%] lg:h-[320px] lg:w-[320px]"
+      >
+        <Image
+          src="/seal1.png"
+          alt="Zeovus quality approved seal"
+          fill
+          priority
+          sizes="(max-width: 639px) 200px, (max-width: 1023px) 250px, 320px"
+          className="object-contain"
+        />
+      </motion.div>
+    </>
+  );
+}
+
+export default function QualityPromiseSection() {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 80%", "end 30%"],
+  });
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative -mt-px overflow-hidden bg-[#eeddbc]"
+    >
       {/* Main circular area */}
-      <div className="relative mx-auto flex min-h-[670px] max-w-[1600px] justify-center overflow-hidden px-5 sm:px-8 lg:min-h-[740px]">
+      <div className="relative mx-auto flex min-h-[760px] max-w-[1600px] justify-center overflow-hidden px-5 sm:min-h-[820px] sm:px-8 lg:min-h-[900px]">
         <motion.div
           initial={{
             opacity: 0,
@@ -93,10 +170,10 @@ export default function QualityPromiseSection() {
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="absolute left-1/2 top-[-100px] h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-[#151812] sm:h-[720px] sm:w-[720px] lg:top-[-150px] lg:h-[880px] lg:w-[880px]"
+          className="absolute left-1/2 top-[-70px] h-[680px] w-[680px] -translate-x-1/2 rounded-full bg-[#151812] sm:top-[-100px] sm:h-[790px] sm:w-[790px] lg:top-[-130px] lg:h-[980px] lg:w-[980px]"
         >
           {/* Circle content */}
-          <div className="relative flex h-full flex-col items-center px-8 pt-[145px] text-center sm:px-16 sm:pt-[180px] lg:px-24 lg:pt-[195px]">
+          <div className="relative flex h-full flex-col items-center px-8 pt-[145px] text-center sm:px-16 sm:pt-[190px] lg:px-24 lg:pt-[210px]">
             <motion.p
               initial={{
                 opacity: 0,
@@ -140,72 +217,13 @@ export default function QualityPromiseSection() {
               IT&apos;S OUR DNA.
             </motion.p>
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.7,
-                delay: 0.3,
-              }}
-              className="mt-4 max-w-[680px] sm:mt-6"
-            >
-              <p className="font-heading text-[18px] font-bold uppercase leading-[1.28] tracking-[0.02em] text-[#fff9df] sm:text-[22px] lg:text-[30px]">
-                Every product is verified through our proprietary ZQA framework
-                with 12 steps, 825 tested parameters and triple-layer checks
-                from raw material to finished goods.
-              </p>
-            </motion.div>
-
-            {/* Stamp */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 2.2,
-                rotate: -28,
-                y: -60,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-                rotate: -8,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.8,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 240,
-                damping: 15,
-                mass: 0.8,
-                delay: 0.55,
-              }}
-              className="absolute bottom-[100px] right-[70px] hidden h-[125px] w-[125px] sm:block lg:bottom-[170px] lg:right-[120px] lg:h-[160px] lg:w-[160px]"
-            >
-              <Image
-                src="/seal1.png"
-                alt="Zeovus quality approved seal"
-                fill
-                sizes="160px"
-                className="object-contain opacity-90"
-              />
-            </motion.div>
+            <ScrollContent scrollProgress={scrollYProgress} />
           </div>
         </motion.div>
       </div>
 
       {/* Certification marquee */}
-      <div className="relative z-10 -mt-[210px] overflow-hidden py-5 sm:-mt-[185px] lg:-mt-[155px]">
+      <div className="relative z-10 -mt-[230px] overflow-hidden py-5 sm:-mt-[210px] lg:-mt-[190px]">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-gradient-to-r from-[#eeddbc] to-transparent sm:w-32" />
 
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-[#eeddbc] to-transparent sm:w-32" />
@@ -263,9 +281,7 @@ export default function QualityPromiseSection() {
           display: flex;
           width: max-content;
           min-width: max-content;
-
           animation: certification-marquee-scroll 28s linear infinite;
-
           transform: translate3d(0, 0, 0);
           backface-visibility: hidden;
           will-change: transform;
