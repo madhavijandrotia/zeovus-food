@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 
 const products = [
   {
@@ -238,6 +239,25 @@ export default function ProductInnovationShowcase() {
             problem our research team was handed, and built the answer to, from
             the ground up.”
           </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: .2 }}
+          className="flex justify-center"
+        >
+          <Link
+            href="/working-together#enquiry"
+            className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#294526] px-8 py-4 font-heading text-[18px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition hover:bg-[#3b5b33]"
+          >
+            Bring Us Your Next Brief
+
+            <ArrowRight
+              size={18}
+              className="transition group-hover:translate-x-1"
+            />
+          </Link>
         </motion.div>
       </div>
     </section>
