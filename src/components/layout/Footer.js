@@ -14,7 +14,7 @@ const PRODUCT_LINKS = [
   "Ready-to-Eat & Instant Foods",
   "Condiments & Sauces",
   "Healthy Snacking",
-  "Bevereges",
+  "Bevereges & Smoothies",
 ];
 const SOCIALS = [
   {

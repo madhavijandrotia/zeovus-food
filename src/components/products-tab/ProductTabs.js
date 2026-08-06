@@ -23,7 +23,7 @@ const categories = [
   },
   {
     id: "beverages",
-    label: "Beverages & Drinks",
+    label: "Beverages & Smoothies",
   },
 ];
 
