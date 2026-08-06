@@ -1,30 +1,21 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
 import "./Footer.css";
-
 const COMPANY_LINKS = [
   { label: "Our Story", href: "/our-story" },
   { label: "Innovation", href: "/innovation" },
-  {
-    label: "Manufacturing & Capabilities",
-    href: "/manufacturing",
-  },
+  { label: "Manufacturing & Capabilities", href: "/manufacturing" },
   { label: "Partner With Us", href: "/working-together" },
   { label: "Contact Us", href: "/contact" },
 ];
-
 const PRODUCT_LINKS = [
   "Staples & Dry Groceries",
   "Spices & Seasonings",
   "Ready-to-Eat & Instant Foods",
   "Condiments & Sauces",
   "Healthy Snacking",
-  "Beverages",
+  "Bevereges",
 ];
-
 const SOCIALS = [
   {
     name: "Facebook",
@@ -47,315 +38,114 @@ const SOCIALS = [
     path: "M6.94 8.5H4.56V19h2.38V8.5ZM5.75 4.5a1.38 1.38 0 1 0 0 2.76 1.38 1.38 0 0 0 0-2.76ZM19.5 12.9c0-2.6-1.4-3.8-3.26-3.8-1.5 0-2.17.83-2.55 1.4V8.5H11.3c.03.7 0 10.5 0 10.5h2.4v-5.87c0-.31.02-.62.12-.85.24-.62.8-1.26 1.75-1.26 1.24 0 1.73.94 1.73 2.32V19h2.4v-6.1Z",
   },
 ];
-
-const footerVariants = {
-  hidden: {
-    opacity: 0,
-    y: 70,
-    scaleY: 0.96,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scaleY: 1,
-    transition: {
-      duration: 0.95,
-      ease: [0.22, 1, 0.36, 1],
-      when: "beforeChildren",
-      staggerChildren: 0.1,
-      delayChildren: 0.12,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
-
-const columnVariants = {
-  hidden: {
-    opacity: 0,
-    y: 24,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.65,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
-
 export default function Footer() {
   return (
-    <div className="site-footer-shell">
-      <motion.footer
-        className="site-footer"
-        variants={footerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{
-          once: true,
-          amount: 0.08,
-        }}
-      >
-        <motion.div
-          className="site-footer__decoration site-footer__decoration--left"
-          initial={{
-            opacity: 0,
-            scale: 0.55,
-            x: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-            x: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.4,
-            delay: 0.2,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        />
-
-        <motion.div
-          className="site-footer__decoration site-footer__decoration--right"
-          initial={{
-            opacity: 0,
-            scale: 0.55,
-            x: 100,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-            x: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.4,
-            delay: 0.3,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        />
-
-        <div className="site-footer__container site-footer__grid">
-          <motion.div
-            className="site-footer__brand"
-            variants={itemVariants}
-          >
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.88,
-                y: 12,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-                y: 0,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: 0.2,
-                ease: [0.22, 1, 0.36, 1],
-              }}
+    <footer className="site-footer">
+      {" "}
+      <div className="site-footer__container site-footer__grid">
+        {" "}
+        <div className="site-footer__brand">
+          {" "}
+          <Link href="/" className="site-footer__logo-link">
+            {" "}
+            <Image
+              src="/logo.png"
+              alt="Zeovus Food"
+              width={180}
+              height={90}
+              className="site-footer__logo"
+            />{" "}
+          </Link>{" "}
+          <p>
+            {" "}
+            Zeovus Food (India) Pvt. Ltd. <br /> India{" "}
+          </p>{" "}
+          <a href="mailto:connect@zeovus.com"> connect@zeovus.com </a>{" "}
+        </div>{" "}
+        <nav className="site-footer__col" aria-label="Company">
+          {" "}
+          <h4>Company</h4>{" "}
+          <ul>
+            {" "}
+            {COMPANY_LINKS.map((link) => (
+              <li key={link.href}>
+                {" "}
+                <Link href={link.href}>{link.label}</Link>{" "}
+              </li>
+            ))}{" "}
+          </ul>{" "}
+        </nav>{" "}
+        <nav className="site-footer__col" aria-label="Products">
+          {" "}
+          <h4>Products</h4>{" "}
+          <ul>
+            {" "}
+            {PRODUCT_LINKS.map((label) => (
+              <li key={label}>
+                {" "}
+                <Link href="/products">{label}</Link>{" "}
+              </li>
+            ))}{" "}
+          </ul>{" "}
+        </nav>{" "}
+        <nav className="site-footer__col" aria-label="Group">
+          {" "}
+          <h4>Group</h4>{" "}
+          <ul>
+            {" "}
+            <li>
+              {" "}
+              <Link href="/">Zeovus Group</Link>{" "}
+            </li>{" "}
+          </ul>{" "}
+        </nav>{" "}
+        <nav className="site-footer__col" aria-label="Legal">
+          {" "}
+          <h4>Legal</h4>{" "}
+          <ul>
+            {" "}
+            <li>
+              {" "}
+              <Link href="/privacy-policy">Privacy Policy</Link>{" "}
+            </li>{" "}
+            <li>
+              {" "}
+              <Link href="/terms-of-service"> Terms of Service </Link>{" "}
+            </li>{" "}
+          </ul>{" "}
+        </nav>{" "}
+      </div>{" "}
+      <div className="site-footer__container site-footer__bottom">
+        {" "}
+        <span>
+          {" "}
+          © {new Date().getFullYear()} Zeovus Food. All rights reserved.{" "}
+        </span>{" "}
+        <div className="site-footer__socials">
+          {" "}
+          {SOCIALS.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              aria-label={social.name}
+              target="_blank"
+              rel="noreferrer"
             >
-              <Link href="/" className="site-footer__logo-link">
-                <Image
-                  src="/logo.png"
-                  alt="Zeovus Food"
-                  width={180}
-                  height={90}
-                  className="site-footer__logo"
-                />
-              </Link>
-            </motion.div>
-
-            <p>
-              Zeovus Food (India) Pvt. Ltd.
-              <br />
-              India
-            </p>
-
-            <a href="mailto:connect@zeovus.com">connect@zeovus.com</a>
-          </motion.div>
-
-          <motion.nav
-            className="site-footer__col"
-            aria-label="Company"
-            variants={columnVariants}
-          >
-            <h4>Company</h4>
-
-            <ul>
-              {COMPANY_LINKS.map((link, index) => (
-                <motion.li
-                  key={link.href}
-                  initial={{ opacity: 0, x: -12 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.28 + index * 0.05,
-                  }}
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.nav>
-
-          <motion.nav
-            className="site-footer__col"
-            aria-label="Products"
-            variants={columnVariants}
-          >
-            <h4>Products</h4>
-
-            <ul>
-              {PRODUCT_LINKS.map((label, index) => (
-                <motion.li
-                  key={label}
-                  initial={{ opacity: 0, x: -12 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.33 + index * 0.05,
-                  }}
-                >
-                  <Link href="/products">{label}</Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.nav>
-
-          <motion.nav
-            className="site-footer__col"
-            aria-label="Group"
-            variants={columnVariants}
-          >
-            <h4>Group</h4>
-
-            <ul>
-              <motion.li
-                initial={{ opacity: 0, x: -12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.38,
-                }}
+              {" "}
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                <Link href="/">Zeovus Group</Link>
-              </motion.li>
-            </ul>
-          </motion.nav>
-
-          <motion.nav
-            className="site-footer__col"
-            aria-label="Legal"
-            variants={columnVariants}
-          >
-            <h4>Legal</h4>
-
-            <ul>
-              <motion.li
-                initial={{ opacity: 0, x: -12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.43,
-                }}
-              >
-                <Link href="/privacy-policy">Privacy Policy</Link>
-              </motion.li>
-
-              <motion.li
-                initial={{ opacity: 0, x: -12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.48,
-                }}
-              >
-                <Link href="/terms-of-service">Terms of Service</Link>
-              </motion.li>
-            </ul>
-          </motion.nav>
-        </div>
-
-        <motion.div
-          className="site-footer__container site-footer__bottom"
-          variants={itemVariants}
-        >
-          <span>
-            © {new Date().getFullYear()} Zeovus Food. All rights reserved.
-          </span>
-
-          <div className="site-footer__socials">
-            {SOCIALS.map((social, index) => (
-              <motion.a
-                key={social.name}
-                href={social.href}
-                aria-label={social.name}
-                target="_blank"
-                rel="noreferrer"
-                initial={{
-                  opacity: 0,
-                  scale: 0.65,
-                  rotate: -10,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                  rotate: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.45,
-                  delay: 0.4 + index * 0.07,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                whileHover={{
-                  y: -4,
-                  scale: 1.08,
-                  rotate: 5,
-                }}
-                whileTap={{
-                  scale: 0.92,
-                }}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="17"
-                  height="17"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d={social.path} />
-                </svg>
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-      </motion.footer>
-    </div>
+                {" "}
+                <path d={social.path} />{" "}
+              </svg>{" "}
+            </a>
+          ))}{" "}
+        </div>{" "}
+      </div>{" "}
+    </footer>
   );
 }
