@@ -8,7 +8,7 @@ const CATEGORIES = [
   {
     key: "staples",
     name: "Staples & Dry Groceries",
-    src: "/categories/staples.webp",
+    src: "/categories/staples.png",
     packshotSrc: "/categories/staplesub.webp",
     tagline: "Rice, flours & pantry essentials, done right.",
     photo: "#6b4a2a",
@@ -18,7 +18,7 @@ const CATEGORIES = [
   {
     key: "spices",
     name: "Spices & Seasonings",
-    src: "/categories/spices.webp",
+    src: "/categories/spices.png",
     packshotSrc: "/categories/spicessub.webp",
     tagline: "Guntur chillies, aged spice, blended for depth.",
     photo: "#8f2d13",
@@ -28,7 +28,7 @@ const CATEGORIES = [
   {
     key: "instant",
     name: "Ready-to-Eat & Instant Foods",
-    src: "/categories/instant-foods.webp",
+    src: "/categories/instant-foods.png",
     packshotSrc: "/categories/ChickpeaSoyabeanSpagetiProduct.webp",
     tagline: "Restaurant flavour, ready in minutes.",
     photo: "#c4400d",
@@ -38,7 +38,7 @@ const CATEGORIES = [
   {
     key: "condiments",
     name: "Condiments & Sauces",
-    src: "/categories/sauces.webp",
+    src: "/categories/sauces.png",
     packshotSrc: "/categories/Sauceessub.webp",
     tagline: "The finishing touch for every plate.",
     photo: "#7d6a0f",
@@ -48,7 +48,7 @@ const CATEGORIES = [
   {
     key: "snacking",
     name: "Healthy Snacking",
-    src: "/categories/healthy-snacking.webp",
+    src: "/categories/healthy-snacking.png",
     packshotSrc: "/categories/frozensub.jpg",
     tagline: "Guilt-free bites, full of flavour.",
     photo: "#3f5c1c",
@@ -59,7 +59,7 @@ const CATEGORIES = [
     key: "beverages",
     name: "Beverages & Smoothies",
     src: "/categories/beverages.jpeg",
-    packshotSrc: "/categories/Juicesub.webp",
+    packshotSrc: "/products/instant-smoothies.png",
     tagline: "Brews, blends & refreshers worth pouring.",
     photo: "#1d5566",
     bg: "#1d5566",
