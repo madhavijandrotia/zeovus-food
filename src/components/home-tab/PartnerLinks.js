@@ -12,7 +12,7 @@ const PAGES = [
     description:
       "Bring us a brief. Or bring us a problem nobody's solved yet. Either way, our formulation team builds it with you.",
     photo: "#c35531",
-    src: "/images/CustomFormulationLong.webp",
+    src: "/images/CustomFormulationLong.png",
     href: "/working-together",
   },
   {
@@ -27,7 +27,7 @@ const PAGES = [
     description:
       "Launch under your name, built on our formulation and manufacturing standard from the first batch to the last.",
     photo: "#b2bd77",
-    src: "/images/PrivateLabelling.webp",
+    src: "/images/PrivateLabelling.png",
     href: "/working-together",
   },
   {
@@ -42,7 +42,7 @@ const PAGES = [
     description:
       "Take Zeovus Food formulations into markets we haven't reached yet, together.",
     photo: "#2a3c22",
-    src: "/images/DistributionPartnershipsLong.webp",
+    src: "/images/DistributionPartnershipsLong.png",
     href: "/working-together",
   },
   {
@@ -57,7 +57,7 @@ const PAGES = [
     description:
       "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line needs.",
     photo: "#f69520",
-    src: "/images/NewCategoryLong.webp",
+    src: "/images/NewCategoryLong.png",
     href: "/working-together",
   },
 ];

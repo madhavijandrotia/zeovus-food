@@ -121,7 +121,7 @@
   object-fit: cover;
 }
 
-.partner-links__media::after {
+/* .partner-links__media::after {
   content: "";
 
   position: absolute;
@@ -136,7 +136,7 @@
       rgba(7, 9, 5, 0.94) 78%,
       rgba(7, 9, 5, 1) 100%
     );
-}
+} */
 
 /*
   Every card uses the same four-row structure:
