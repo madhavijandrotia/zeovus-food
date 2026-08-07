@@ -146,12 +146,10 @@ export default function WhyZeovusSection() {
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mb-12 grid grid-cols-1 gap-7 border-b border-[#294526]/15 pb-12 lg:mb-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20"
+          className="mb-12 gap-7 border-b border-[#294526]/15 pb-12 lg:mb-16"
         >
           <h2 className="font-heading text-[42px] font-bold uppercase leading-[0.94] tracking-[-0.03em] text-[#294526] sm:text-[54px] lg:text-[64px]">
-            Why Choose
-            <br />
-            Zeovus Food
+            Why Choose Zeovus Food?
           </h2>
         </motion.div>
 
