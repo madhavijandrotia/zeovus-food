@@ -219,14 +219,6 @@ export default function CategoryCarousel() {
                 </svg>
               </span>
             </div>
-
-            <div className="category-carousel__counter">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-
-              <span className="category-carousel__counter-divider">/</span>
-
-              <span>{String(CATEGORY_COUNT).padStart(2, "0")}</span>
-            </div>
           </article>
         ))}
       </div>
