@@ -26,21 +26,22 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-[#d8c8a8]/40 bg-[#f4e8cf]/75 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#f4e8cf]/70">
-      <div className="mx-auto flex h-[82px] max-w-[1600px] items-center justify-between px-6 lg:px-10">
+    <header className="w-full bg-[#f4e8cf]">
+      {/* Main Navbar */}
+      <div className="mx-auto flex h-[90px] max-w-[1500px] items-center justify-between px-5 sm:px-8 lg:px-12">
         {/* Logo */}
         <Link
           href="/"
           onClick={() => setIsMenuOpen(false)}
-          className="flex shrink-0 items-center"
+          className="flex shrink-0 items-center lg:translate-y-[10px]"
         >
           <Image
             src="/logo.png"
             alt="Zeovus Food"
-            width={145}
+            width={160}
             height={60}
             priority
-            className="h-auto w-[120px] lg:w-[135px]"
+            className="h-auto w-[140px] object-contain lg:w-[160px]"
           />
         </Link>
 
@@ -67,6 +68,7 @@ export default function Navbar() {
 
         {/* Mobile Button */}
         <button
+          type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex h-11 w-11 items-center justify-center text-[#5b3a1f] lg:hidden"
           aria-label="Toggle menu"
