@@ -170,7 +170,7 @@ export default function QualityPromiseSection() {
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="absolute left-1/2 top-[-70px] h-[680px] w-[680px] -translate-x-1/2 rounded-full bg-[#151812] sm:top-[-100px] sm:h-[790px] sm:w-[790px] lg:top-[-130px] lg:h-[980px] lg:w-[980px]"
+          className="absolute left-1/2 top-[-70px] h-[680px] w-[680px] -translate-x-1/2 rounded-full bg-black sm:top-[-100px] sm:h-[790px] sm:w-[790px] lg:top-[-130px] lg:h-[980px] lg:w-[980px]"
         >
           {/* Circle content */}
           <div className="relative flex h-full flex-col items-center px-8 pt-[145px] text-center sm:px-16 sm:pt-[190px] lg:px-24 lg:pt-[210px]">
