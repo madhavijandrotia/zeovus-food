@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full bg-[#f4e8cf]">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-[#5b3a1f]/10 bg-[#f4e8cf]/75 backdrop-blur-lg">
       {/* Main Navbar */}
       <div className="mx-auto flex h-[90px] max-w-[1500px] items-center justify-between px-5 sm:px-8 lg:px-12">
         {/* Logo */}
@@ -57,7 +57,7 @@ export default function Navbar() {
                 className={`rounded-md px-5 py-3 font-heading text-[13px] font-semibold uppercase tracking-[1px] transition-all duration-300 ${
                   active
                     ? "bg-[#5b3a1f] text-[#f4e8cf]"
-                    : "text-[#5b3a1f] hover:bg-[#eadcc0]"
+                    : "text-[#5b3a1f] hover:bg-[#eadcc0]/70"
                 }`}
               >
                 {item.label}
@@ -79,11 +79,11 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden bg-[#f4e8cf] transition-all duration-300 lg:hidden ${
+        className={`overflow-hidden bg-[#f4e8cf]/95 backdrop-blur-md transition-all duration-300 lg:hidden ${
           isMenuOpen ? "max-h-[600px]" : "max-h-0"
         }`}
       >
-        <div className="flex flex-col border-t border-[#d8c8a8] py-4">
+        <div className="flex flex-col border-t border-[#d8c8a8]/60 py-4">
           {navItems.map((item) => {
             const active = isActive(item.href);
 
