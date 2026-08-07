@@ -97,7 +97,7 @@ export default function GlobalStandardsSection() {
               className="relative h-full w-full"
             >
               <Image
-                src="/seal1.png"
+                src="/seal4.png"
                 alt="Zeovus Quality Assurance approved seal"
                 fill
                 priority
