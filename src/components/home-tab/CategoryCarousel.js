@@ -58,7 +58,7 @@ const CATEGORIES = [
   {
     key: "beverages",
     name: "Beverages & Smoothies",
-    src: "/categories/beverages.webp",
+    src: "/categories/beverages.jpeg",
     packshotSrc: "/categories/Juicesub.webp",
     tagline: "Brews, blends & refreshers worth pouring.",
     photo: "#1d5566",
