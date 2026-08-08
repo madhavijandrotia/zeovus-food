@@ -82,14 +82,35 @@ export default function HeroInnovation() {
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
         <div className="max-w-[980px]">
           {/* Headline */}
+          {/* Headline */}
           <h1 className="font-heading text-[42px] font-black uppercase leading-[0.92] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
-            The Unthinkable,
+            <span
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
+              }}
+            >
+              The Unthinkable,
+            </span>
+
             <br />
-            <span className="text-[#f89b21]">Made Edible.</span>
+
+            <span
+              className="text-[#f89b21]"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.35)",
+              }}
+            >
+              Made Edible.
+            </span>
           </h1>
 
           {/* Description */}
-          <p className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
+          <p
+            className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]"
+            style={{
+              textShadow: "0 1px 3px rgba(0, 0, 0, 0.42)",
+            }}
+          >
             Zeovus Food doesn&apos;t start by asking what format you want, it
             starts by asking what problem you&apos;re solving, then builds
             toward that goal in whatever format it takes. Flour or freeze-dried,

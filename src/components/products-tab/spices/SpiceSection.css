@@ -66,19 +66,21 @@
 .spices__eyebrow {
   margin: 0 0 1rem;
 
-  color: #f4e8cf;
+  color: #f89b21;
 
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .spices__heading {
   max-width: 900px;
   margin: 0;
 
-  color: #f4e8cf;
+  color: #fffde6;
 
   font-family: var(--font-oswald);
   font-size: clamp(3rem, 6vw, 6.5rem);
@@ -87,16 +89,20 @@
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.38);
 }
 
 .spices__description {
   max-width: 680px;
   margin: 1.75rem 0 0;
 
-  color: #f4e8cf;
+  color: #fffde6;
 
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.8;
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42);
 }
 
 .spices__sections {

@@ -94,6 +94,19 @@ export default function StaplesSection() {
           </article>
         ))}
       </div>
+      <style jsx>{`
+        .staples__eyebrow {
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+        }
+
+        .staples__heading {
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.38);
+        }
+
+        .staples__description {
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42);
+        }
+      `}</style>
     </div>
   );
 }

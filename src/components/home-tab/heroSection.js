@@ -130,7 +130,7 @@ export default function HeroSection() {
 
             <motion.span
               variants={item}
-              className="block text-[#FFF4B7]"
+              className="block text-[#f89b21]"
               style={{
                 textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
               }}
@@ -147,7 +147,7 @@ export default function HeroSection() {
             >
               Into Every{" "}
               <span
-                className="text-[#FFF4B7]"
+                className="text-[#f89b21]"
                 style={{
                   textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
                 }}

@@ -29,9 +29,7 @@ export default function HeroManufacturing() {
     const activeVideo = MANUFACTURING_VIDEOS[currentVideo];
 
     const timer = window.setTimeout(() => {
-      setCurrentVideo(
-        (current) => (current + 1) % MANUFACTURING_VIDEOS.length
-      );
+      setCurrentVideo((current) => (current + 1) % MANUFACTURING_VIDEOS.length);
     }, activeVideo.duration * 1000);
 
     return () => {
@@ -84,28 +82,48 @@ export default function HeroManufacturing() {
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
         <div className="max-w-[900px]">
           <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] text-[#FDFFDE] sm:text-[58px] md:text-[72px] lg:text-[88px]">
-            <span className="block text-[#FDFFDE]">
+            <span
+              className="block text-[#FDFFDE]"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
+              }}
+            >
               CAPABILITY
             </span>
 
-            <span className="block">
+            <span
+              className="block"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
+              }}
+            >
               BUILT FOR{" "}
-              <span className="text-[#F69520]">
+              <span
+                className="text-[#F69520]"
+                style={{
+                  textShadow: "0 2px 4px rgba(0, 0, 0, 0.35)",
+                }}
+              >
                 SCALE
               </span>
             </span>
           </h1>
 
-          <p className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]">
+          <p
+            className="mt-8 max-w-[760px] text-justify text-[17px] leading-8 text-[#fffde6]/82 sm:text-[19px] lg:text-[20px]"
+            style={{
+              textShadow: "0 1px 3px rgba(0, 0, 0, 0.42)",
+            }}
+          >
             Zeovus Food manufactures plant-based staples and functional foods
-            across every major format on the market today, from atta and
-            protein flour blends to high-protein pasta, spaghetti and
-            fettuccine; from instant sachets and retort-packed ready-to-eat
-            meals to gourmet hummus and wholesome soups, inside FSSAI-licensed,
-            GMP and HACCP-certified, allergen-controlled facilities, with
-            flexible MOQs, custom formulation R&amp;D, and capacity that scales
-            from first sample to full commercial and export-ready volume
-            without ever changing partners.
+            across every major format on the market today, from atta and protein
+            flour blends to high-protein pasta, spaghetti and fettuccine; from
+            instant sachets and retort-packed ready-to-eat meals to gourmet
+            hummus and wholesome soups, inside FSSAI-licensed, GMP and
+            HACCP-certified, allergen-controlled facilities, with flexible MOQs,
+            custom formulation R&amp;D, and capacity that scales from first
+            sample to full commercial and export-ready volume without ever
+            changing partners.
           </p>
         </div>
       </div>
