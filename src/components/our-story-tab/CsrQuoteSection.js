@@ -48,7 +48,7 @@ export default function CsrQuoteSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-[#c35531]">
+            <p className="text-[30px] font-bold uppercase tracking-[0.32em] text-[#c35531]">
               Beyond Manufacturing
             </p>
 
