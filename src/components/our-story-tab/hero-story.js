@@ -33,9 +33,7 @@ export default function HeroStory() {
     const activeVideo = STORY_VIDEOS[currentVideo];
 
     const timer = window.setTimeout(() => {
-      setCurrentVideo(
-        (current) => (current + 1) % STORY_VIDEOS.length
-      );
+      setCurrentVideo((current) => (current + 1) % STORY_VIDEOS.length);
     }, activeVideo.duration * 1000);
 
     return () => {
@@ -45,7 +43,6 @@ export default function HeroStory() {
 
   return (
     <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
-
       {/* Background Videos */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="sync">
@@ -88,18 +85,38 @@ export default function HeroStory() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
         <div className="max-w-[900px]">
-          <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
-            <span className="block">
+          <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] sm:text-[58px] md:text-[72px] lg:text-[88px]">
+            <span
+              className="block text-[#fffde6]"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
+              }}
+            >
               Delivering
             </span>
 
-            <span className="block text-[#b8c77d]">
+            <span
+              className="block text-[#b8c77d]"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.32)",
+              }}
+            >
               Natures best
             </span>
 
-            <span className="block">
+            <span
+              className="block text-[#fffde6]"
+              style={{
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
+              }}
+            >
               With Absolute{" "}
-              <span className="text-[#f89b21]">
+              <span
+                className="text-[#f89b21]"
+                style={{
+                  textShadow: "0 2px 4px rgba(0, 0, 0, 0.35)",
+                }}
+              >
                 Trust
               </span>
             </span>
