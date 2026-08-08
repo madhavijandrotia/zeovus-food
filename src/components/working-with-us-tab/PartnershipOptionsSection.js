@@ -142,11 +142,6 @@ export default function PartnershipOptionsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#151812]/95 via-[#151812]/65 via-45% to-[#151812]/20" />
               </div>
 
-              {/* Number */}
-              <span className="absolute right-5 top-5 z-10 rounded-full border border-white/20 bg-black/15 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-white backdrop-blur-md">
-                {option.number}
-              </span>
-
               {/* Content */}
               <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8">
                 <span
