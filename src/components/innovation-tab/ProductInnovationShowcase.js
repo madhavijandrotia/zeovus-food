@@ -64,45 +64,45 @@ const products = [
     image: "/products/high-protein-pasta1.png",
     background: "#c9552f",
     textColor: "#fff4db",
-    tags: ["32g Protein / 100g", "Gluten Free", "No Maida"],
+    tags: ["31g Protein / 100g", "Gluten Free", "No Maida"],
     href: "/products/high-protein-pasta",
     nutrition: {
       serving: "Amount Per 100 gms",
       values: [
         { label: "Calories", value: "364.10kcal" },
-        { label: "Total Fats", value: "0.96g" },
         { label: "Total Carbohydrates", value: "57.65g" },
-        { label: "Protein", value: "31.23g" },
-        { label: "Total Sugar", value: "3.50g" },
         { label: "Dietary Fiber", value: "44.71g" },
+        { label: "Protein", value: "31.23g" },
+        { label: "Total Fats", value: "0.96g" },
+        { label: "Total Sugar", value: "3.50g" },
       ],
     },
   },
   {
-  id: 4,
-  number: "04",
-  title: "Protein Whole Wheat Flour",
-  description:
-    "Made with whole wheat and brown rice protein, delivering complete protein (all amino acids) with 32g protein per 100g. High in fibre, naturally sourced and designed to support muscle health while remaining light and easy to digest.",
-  image: "/products/whole-wheat-flour11.png",
-  background: "#ead8b6",
-  textColor: "#294526",
-  tags: ["32g Protein / 100g", "Complete Protein", "High Fibre"],
-  href: "/products/protein-whole-wheat-flour",
+    id: 4,
+    number: "04",
+    title: "Protein Whole Wheat Flour",
+    description:
+      "Made with whole wheat and brown rice protein, delivering complete protein (all amino acids) with 32g protein per 100g. High in fibre, naturally sourced and designed to support muscle health while remaining light and easy to digest.",
+    image: "/products/whole-wheat-flour11.png",
+    background: "#ead8b6",
+    textColor: "#294526",
+    tags: ["32g Protein / 100g", "Complete Protein", "High Fibre"],
+    href: "/products/protein-whole-wheat-flour",
 
-  nutrition: {
-    serving: "Amount Per 100g",
-    values: [
-      { label: "Calories", value: "378 kcal" },
-      { label: "Total Fat", value: "2.28g" },
-      { label: "Cholesterol", value: "0mg" },
-      { label: "Sodium", value: "15.50mg" },
-      { label: "Total Carbohydrate", value: "62.12g" },
-      { label: "Dietary Fiber", value: "7.98g" },
-      { label: "Protein", value: "32g" },
-    ],
+    nutrition: {
+      serving: "Amount Per 100g",
+      values: [
+        { label: "Calories", value: "378 kcal" },
+        { label: "Total Carbohydrate", value: "62.12g" },
+        { label: "Dietary Fiber", value: "7.98g" },
+        { label: "Protein", value: "32g" },
+        { label: "Total Fat", value: "2.28g" },
+        { label: "Cholesterol", value: "0mg" },
+        { label: "Sodium", value: "15.50mg" },
+      ],
+    },
   },
-},
   {
     id: 5,
     number: "05",
@@ -115,12 +115,12 @@ const products = [
     tags: ["54g Protein / 100g", "12g Fibre / 100g", "Plant Based"],
     href: "/products/protein-flour-concentrate",
     nutrition: {
-    serving: "Amount Per 100g",
-    values: [
-      { label: "Protein", value: "54g" },
-      { label: "Dietary Fiber", value: "12g" },
-    ],
-  },
+      serving: "Amount Per 100g",
+      values: [
+        { label: "Protein", value: "54g" },
+        { label: "Dietary Fiber", value: "12g" },
+      ],
+    },
   },
   {
     id: 6,
@@ -134,12 +134,12 @@ const products = [
     tags: ["10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
     href: "/products/instant-smoothies",
     nutrition: {
-    serving: "Amount Per 100g",
-    values: [
-      { label: "Protein", value: "10g" },
-      // { label: "Dietary Fiber", value: "12g" },
-    ],
-  },
+      serving: "Amount Per 100g",
+      values: [
+        { label: "Protein", value: "10g" },
+        // { label: "Dietary Fiber", value: "12g" },
+      ],
+    },
   },
 ];
 
