@@ -50,7 +50,7 @@ export const INSTANT_FOOD_SECTIONS = [
   {
     id: "noodles-pasta",
     label: "Noodles & Pasta",
-    image: "/products/instant-foods/noodles-pasta.jpg",
+    image: "/products/instant-foods/noodles-pasta.png",
     imagePosition: "left",
     groups: [
       {

@@ -40,7 +40,7 @@ export const SPICES_SECTIONS = [
   {
     id: "ground-spices",
     label: "Ground Spices",
-    image: "/products/spices/ground-spices.png",
+    image: "/categories/spices.png",
     imagePosition: "left",
     groups: [
       {
