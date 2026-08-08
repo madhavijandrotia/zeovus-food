@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { CONDIMENTS_SECTIONS } from "./condimentsData";
 import "./CondimentsSection.css";
@@ -6,18 +7,32 @@ export default function CondimentsSection() {
   return (
     <div className="condiments">
       <header className="condiments__intro">
-        <p className="condiments__eyebrow">Condiments &amp; Sauces</p>
+        <Image
+          src="/products/condiments/hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="condiments__intro-image"
+          aria-hidden="true"
+        />
 
-        <h1 className="condiments__heading">
-          The finishing touch
-          <br />
-          for every plate.
-        </h1>
+        <div className="condiments__intro-overlay" />
 
-        <p className="condiments__description">
-          Jams, spreads, pickles, chutneys and curry pastes developed with
-          ingredients, bold flavour and consistent performance.
-        </p>
+        <div className="condiments__intro-content">
+          <p className="condiments__eyebrow">Condiments & Sauces</p>
+
+          <h1 className="condiments__heading">
+            The finishing touch
+            <br />
+            for every plate.
+          </h1>
+
+          <p className="condiments__description">
+            Jams, spreads, pickles, chutneys and curry pastes developed with
+            ingredients, bold flavour and consistent performance.
+          </p>
+        </div>
       </header>
 
       <div className="condiments__sections">

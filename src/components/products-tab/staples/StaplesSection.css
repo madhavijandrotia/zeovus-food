@@ -4,15 +4,53 @@
 }
 
 .staples__intro {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  min-height: 720px;
+
+  padding: 0;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #294526;
+}
+
+/* Background hero image */
+.staples__intro-image {
+  z-index: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark overlay so text remains readable */
+.staples__intro-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.staples__intro-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
   max-width: 1280px;
+
   margin-inline: auto;
-  padding: 6rem 2rem 4rem;
+  padding: 6rem 2rem;
 }
 
 .staples__eyebrow {
   margin: 0 0 1rem;
 
-  color: #c35531;
+  color: #f4e8cf;
 
   font-size: 0.75rem;
   font-weight: 700;
@@ -24,7 +62,7 @@
   max-width: 850px;
   margin: 0;
 
-  color: #294526;
+  color: #f4e8cf;
 
   font-family: var(--font-oswald);
   font-size: clamp(3rem, 6vw, 6.5rem);
@@ -39,7 +77,7 @@
   max-width: 650px;
   margin: 1.75rem 0 0;
 
-  color: rgba(39, 51, 33, 0.72);
+  color: #f4e8cf;
 
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.8;

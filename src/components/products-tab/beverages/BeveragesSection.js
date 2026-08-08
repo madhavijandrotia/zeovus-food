@@ -6,18 +6,31 @@ export default function BeveragesSection() {
   return (
     <div className="beverages">
       <header className="beverages__intro">
-        <p className="beverages__eyebrow">Beverages &amp; Smoothies</p>
+        <Image
+          src="/products/beverages/hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="condiments__intro-image"
+          aria-hidden="true"
+        />
+        <div className="condiments__intro-overlay" />
 
-        <h1 className="beverages__heading">
-          Nutrition made
-          <br />
-          easy to enjoy.
-        </h1>
+        <div className="condiments__intro-content">
+          <p className="beverages__eyebrow">Beverages &amp; Smoothies</p>
 
-        <p className="beverages__description">
-          High-protein smoothie blends made with real fruit, functional
-          ingredients and everyday convenience.
-        </p>
+          <h1 className="beverages__heading">
+            Nutrition made
+            <br />
+            easy to enjoy.
+          </h1>
+
+          <p className="beverages__description">
+            High-protein smoothie blends made with real fruit, functional
+            ingredients and everyday convenience.
+          </p>
+        </div>
       </header>
 
       <div className="beverages__sections">

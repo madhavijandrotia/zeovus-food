@@ -47,6 +47,7 @@ export const INSTANT_FOOD_SECTIONS = [
       },
     ],
   },
+
   {
     id: "noodles-pasta",
     label: "Noodles & Pasta",
@@ -54,7 +55,7 @@ export const INSTANT_FOOD_SECTIONS = [
     imagePosition: "left",
     groups: [
       {
-        title: "Noodles/Pasta",
+        title: null,
         items: [
           "Ragi (Finger Millet) Noodles/Pasta",
           "Whole-Wheat Pasta/Noodles",
@@ -65,8 +66,17 @@ export const INSTANT_FOOD_SECTIONS = [
           "Black Bean Noodles",
         ],
       },
+    ],
+  },
+
+  {
+    id: "gourmet-healthy",
+    label: "Gourmet & Healthy",
+    image: "/products/green-dal-pasta2.png",
+    imagePosition: "right",
+    groups: [
       {
-        title: "Gourmet & Healthy",
+        title: null,
         items: [
           "Red Lentil Pasta",
           "Chickpea Pasta",

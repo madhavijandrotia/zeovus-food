@@ -4,14 +4,66 @@
 }
 
 .condiments__intro {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  min-height: 720px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #294526;
+}
+
+.condiments__intro-image {
+  z-index: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.condiments__intro-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  /* background:
+    linear-gradient(
+      90deg,
+      rgba(20, 35, 18, 0.8) 0%,
+      rgba(20, 35, 18, 0.5) 42%,
+      rgba(20, 35, 18, 0.12) 75%,
+      rgba(20, 35, 18, 0.04) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(15, 25, 13, 0.45) 0%,
+      transparent 55%
+    ); */
+}
+
+.condiments__intro-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
   max-width: 1280px;
+
   margin-inline: auto;
-  padding: 6rem 2rem 4rem;
+  padding: 6rem 2rem;
 }
 
 .condiments__eyebrow {
   margin: 0 0 1rem;
-  color: #c35531;
+  color: #f4e8cf;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -21,7 +73,7 @@
 .condiments__heading {
   max-width: 920px;
   margin: 0;
-  color: #294526;
+  color: #f4e8cf;
   font-family: var(--font-oswald);
   font-size: clamp(3rem, 6vw, 6.5rem);
   font-weight: 700;
@@ -33,7 +85,7 @@
 .condiments__description {
   max-width: 700px;
   margin: 1.75rem 0 0;
-  color: rgba(39, 51, 33, 0.72);
+  color: #f4e8cf;
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.8;
 }

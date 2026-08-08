@@ -6,18 +6,32 @@ export default function StaplesSection() {
   return (
     <div className="staples">
       <header className="staples__intro">
-        <p className="staples__eyebrow">Staples & Dry Groceries</p>
+        <Image
+          src="/products/staples/staples-hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="staples__intro-image"
+          aria-hidden="true"
+        />
 
-        <h1 className="staples__heading">
-          Everyday essentials,
-          <br />
-          sourced with intent.
-        </h1>
+        <div className="staples__intro-overlay" />
 
-        <p className="staples__description">
-          Flours, rice, millets, lentils and pulses selected for quality,
-          consistent performance and everyday use.
-        </p>
+        <div className="staples__intro-content">
+          <p className="staples__eyebrow">Staples & Dry Groceries</p>
+
+          <h1 className="staples__heading">
+            Everyday essentials,
+            <br />
+            sourced with intent.
+          </h1>
+
+          <p className="staples__description">
+            Flours, rice, millets, lentils and pulses selected for quality,
+            consistent performance and everyday use.
+          </p>
+        </div>
       </header>
 
       <div className="staples__sections">

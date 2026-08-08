@@ -7,18 +7,31 @@ export default function InstantFoodsSection() {
     <div className="instant-foods">
       <header className="instant-foods__intro">
         <p className="instant-foods__eyebrow">Ready-to-Eat & Instant Foods</p>
+        <Image
+          src="/products/instant-foods/hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="staples__intro-image"
+          aria-hidden="true"
+        />
 
-        <h1 className="instant-foods__heading">
-          Built for speed.
-          <br />
-          Made without shortcuts.
-        </h1>
+        <div className="staples__intro-overlay" />
 
-        <p className="instant-foods__description">
-          Retort meals, instant rice, noodles and better-for-you pasta designed
-          for convenience without compromising flavour, nutrition or
-          consistency.
-        </p>
+        <div className="staples__intro-content">
+          <h1 className="instant-foods__heading">
+            Built for speed.
+            <br />
+            Made without shortcuts.
+          </h1>
+
+          <p className="instant-foods__description">
+            Retort meals, instant rice, noodles and better-for-you pasta
+            designed for convenience without compromising flavour, nutrition or
+            consistency.
+          </p>
+        </div>
       </header>
 
       <div className="instant-foods__sections">

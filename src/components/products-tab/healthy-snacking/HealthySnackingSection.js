@@ -6,19 +6,32 @@ export default function HealthySnackingSection() {
   return (
     <div className="condiments">
       <header className="condiments__intro">
-        <p className="condiments__eyebrow">Healthy Snacking</p>
+        <Image
+          src="/products/healthy-snacking/hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="condiments__intro-image"
+          aria-hidden="true"
+        />
 
-        <h1 className="condiments__heading">
-          Better snacks.
-          <br />
-          Smarter choices.
-        </h1>
+        <div className="condiments__intro-overlay" />
 
-        <p className="condiments__description">
-          From premium dry fruits and freeze-dried fruits to wholesome snacks
-          and speciality vinegars, every product is selected for quality,
-          consistency and everyday enjoyment.
-        </p>
+        <div className="condiments__intro-content">
+          <p className="condiments__eyebrow">Healthy Snacking</p>
+
+          <h1 className="condiments__heading">
+            Better snacking,
+            <br />
+            Smarter choices.
+          </h1>
+
+          <p className="condiments__description">
+            Dry fruits, healthy snacks, vinegars and freeze-dried fruits
+            selected for quality, flavour and everyday convenience.
+          </p>
+        </div>
       </header>
 
       <div className="condiments__sections">

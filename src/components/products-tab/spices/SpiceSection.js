@@ -6,18 +6,32 @@ export default function SpicesSection() {
   return (
     <div className="spices">
       <header className="spices__intro">
-        <p className="spices__eyebrow">Spices & Seasonings</p>
+        <Image
+          src="/products/spices/spices-hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="spices__intro-image"
+          aria-hidden="true"
+        />
 
-        <h1 className="spices__heading">
-          Flavour built
-          <br />
-          from the source.
-        </h1>
+        <div className="spices__intro-overlay" />
 
-        <p className="spices__description">
-          Whole spices, ground spices, blended masalas and specialist seasonings
-          developed for flavour, colour and consistency.
-        </p>
+        <div className="spices__intro-content">
+          <p className="spices__eyebrow">Spices & Seasonings</p>
+
+          <h1 className="spices__heading">
+            Flavour built
+            <br />
+            from the source.
+          </h1>
+
+          <p className="spices__description">
+            Whole spices, ground spices, blended masalas and specialist
+            seasonings developed for flavour, colour and consistency.
+          </p>
+        </div>
       </header>
 
       <div className="spices__sections">
