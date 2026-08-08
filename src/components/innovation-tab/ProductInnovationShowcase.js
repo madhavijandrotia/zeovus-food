@@ -16,12 +16,19 @@ const products = [
     background: "#ead8b6",
     textColor: "#294526",
     tags: ["42g Protein / 100g", "18g Fibre / 100g", "Gluten Free"],
-    highlights: [
-      "100% Chickpea & Soybean",
-      "No Wheat / No Maida",
-      "Easy to Cook",
-    ],
     href: "/products/chickpea-soybean-spaghetti",
+    nutrition: {
+      serving: "Amount Per 100g",
+      values: [
+        { label: "Calories", value: "369 kcal" },
+        { label: "Total Carbohydrate", value: "33g" },
+        { label: "Dietary Fiber", value: "16g" },
+        { label: "Protein", value: "51g" },
+        { label: "Total Fat", value: "4g" },
+        { label: "Cholesterol", value: "0mg" },
+        { label: "Sodium", value: "392mg" },
+      ],
+    },
   },
   {
     id: 2,
@@ -33,12 +40,20 @@ const products = [
     background: "#294526",
     textColor: "#f5e8c9",
     tags: ["51g Protein / 100g", "16g Fibre / 100g", "Gluten Free"],
-    highlights: [
-      "100% Green Dal & Edamame",
-      "No Wheat / No Maida",
-      "Easy to Cook",
-    ],
     href: "/products/green-dal-edamame-spaghetti",
+
+    nutrition: {
+      serving: "Amount Per 100g",
+      values: [
+        { label: "Calories", value: "369 kcal" },
+        { label: "Total Carbohydrate", value: "33g" },
+        { label: "Dietary Fiber", value: "16g" },
+        { label: "Protein", value: "51g" },
+        { label: "Total Fat", value: "4g" },
+        { label: "Cholesterol", value: "0mg" },
+        { label: "Sodium", value: "392mg" },
+      ],
+    },
   },
   {
     id: 3,
@@ -50,26 +65,44 @@ const products = [
     background: "#c9552f",
     textColor: "#fff4db",
     tags: ["32g Protein / 100g", "Gluten Free", "No Maida"],
-    highlights: ["Real Ingredients", "No Preservatives", "Seed Based"],
     href: "/products/high-protein-pasta",
+    nutrition: {
+      serving: "Amount Per 100 gms",
+      values: [
+        { label: "Calories", value: "364.10" },
+        { label: "Total Fats", value: "0.96" },
+        { label: "Total Carbohydrates", value: "57.65" },
+        { label: "Protein", value: "31.23" },
+        { label: "Total Sugar", value: "3.50" },
+        { label: "Dietary Fiber", value: "44.71" },
+      ],
+    },
   },
   {
-    id: 4,
-    number: "04",
-    title: "Protein Whole Wheat Flour",
-    description:
-      "Made with whole wheat and brown rice protein, delivering complete protein (all amino acids) with 32g protein per 100g. High in fibre, naturally sourced and designed to support muscle health while remaining light and easy to digest.",
-    image: "/products/whole-wheat-flour11.png",
-    background: "#ead8b6",
-    textColor: "#294526",
-    tags: ["32g Protein / 100g", "Complete Protein", "High Fibre"],
-    highlights: [
-      "Whole Wheat + Brown Rice Protein",
-      "Light & Easy to Digest",
-      "No Added Sugar",
+  id: 4,
+  number: "04",
+  title: "Protein Whole Wheat Flour",
+  description:
+    "Made with whole wheat and brown rice protein, delivering complete protein (all amino acids) with 32g protein per 100g. High in fibre, naturally sourced and designed to support muscle health while remaining light and easy to digest.",
+  image: "/products/whole-wheat-flour11.png",
+  background: "#ead8b6",
+  textColor: "#294526",
+  tags: ["32g Protein / 100g", "Complete Protein", "High Fibre"],
+  href: "/products/protein-whole-wheat-flour",
+
+  nutrition: {
+    serving: "Amount Per 100g",
+    values: [
+      { label: "Calories", value: "378 kcal" },
+      { label: "Total Fat", value: "2.28g" },
+      { label: "Cholesterol", value: "0mg" },
+      { label: "Sodium", value: "15.50mg" },
+      { label: "Total Carbohydrate", value: "62.12g" },
+      { label: "Dietary Fiber", value: "7.98g" },
+      { label: "Protein", value: "32g" },
     ],
-    href: "/products/protein-whole-wheat-flour",
   },
+},
   {
     id: 5,
     number: "05",
@@ -80,12 +113,14 @@ const products = [
     background: "#294526",
     textColor: "#f5e8c9",
     tags: ["54g Protein / 100g", "12g Fibre / 100g", "Plant Based"],
-    highlights: [
-      "No Preservatives",
-      "No Artificial Flavors",
-      "Mix with any flour",
-    ],
     href: "/products/protein-flour-concentrate",
+    nutrition: {
+    serving: "Amount Per 100g",
+    values: [
+      { label: "Protein", value: "54g" },
+      { label: "Dietary Fiber", value: "12g" },
+    ],
+  },
   },
   {
     id: 6,
@@ -97,8 +132,14 @@ const products = [
     background: "#c9552f",
     textColor: "#fff4db",
     tags: ["10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
-    highlights: ["Real fruit", "No blender needed", "5 flavours"],
     href: "/products/instant-smoothies",
+    nutrition: {
+    serving: "Amount Per 100g",
+    values: [
+      { label: "Protein", value: "10g" },
+      // { label: "Dietary Fiber", value: "12g" },
+    ],
+  },
   },
 ];
 
@@ -169,20 +210,36 @@ export default function ProductInnovationShowcase() {
                   <p className="mt-6 max-w-[560px] text-[16px] leading-8 opacity-78 sm:text-[18px]">
                     {product.description}
                   </p>
-                </div>
 
-                {/* Highlight chips */}
-                <div className="relative z-10 mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                  {product.highlights.map((highlight) => (
-                    <div
-                      key={highlight}
-                      className="rounded-[18px] border border-current/15 bg-white/[0.06] px-4 py-4 backdrop-blur-sm"
-                    >
-                      <span className="text-[11px] font-bold uppercase tracking-[0.12em] opacity-75">
-                        {highlight}
-                      </span>
+                  {/* Nutrition table */}
+                  {product.nutrition && (
+                    <div className="mt-8 max-w-[520px]">
+                      <div className="border-b-[4px] border-current pb-3">
+                        <h4 className="font-heading text-[30px] font-bold leading-none sm:text-[36px]">
+                          Nutrition Facts
+                        </h4>
+
+                        <p className="mt-2 text-[15px] font-medium sm:text-[17px]">
+                          {product.nutrition.serving}
+                        </p>
+                      </div>
+
+                      <div className="mt-1">
+                        {product.nutrition.values.map((item) => (
+                          <div
+                            key={item.label}
+                            className="flex items-center justify-between gap-6 border-b border-current/50 py-2.5 text-[15px] sm:text-[17px]"
+                          >
+                            <span>{item.label}</span>
+
+                            <span className="font-medium tabular-nums">
+                              {item.value}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
+                  )}
                 </div>
 
                 {/* Bottom CTA */}
@@ -244,7 +301,7 @@ export default function ProductInnovationShowcase() {
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: .2 }}
+          transition={{ delay: 0.2 }}
           className="flex justify-center"
         >
           <Link
@@ -252,7 +309,6 @@ export default function ProductInnovationShowcase() {
             className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#294526] px-8 py-4 font-heading text-[18px] font-bold uppercase tracking-[0.08em] text-[#fff9df] transition hover:bg-[#3b5b33]"
           >
             Bring Us Your Next Brief
-
             <ArrowRight
               size={18}
               className="transition group-hover:translate-x-1"
