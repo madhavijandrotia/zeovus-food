@@ -114,13 +114,19 @@ const products = [
     textColor: "#f5e8c9",
     tags: ["54g Protein / 100g", "12g Fibre / 100g", "Plant Based"],
     href: "/products/protein-flour-concentrate",
-    nutrition: {
-      serving: "Amount Per 100g",
-      values: [
-        { label: "Protein", value: "54g" },
-        { label: "Dietary Fiber", value: "12g" },
-      ],
-    },
+
+    ingredients: [
+      "Pea Protein Isolate",
+      "Rice Protein Isolate",
+      "Chana Sattu",
+      "Psyllium Husk",
+      "Inulin",
+      "Oat Flour",
+      "Methi Powder",
+      "Ajwain Powder",
+      "Himalayan Pink Salt",
+      "Ascorbic Acid (Vit C)",
+    ],
   },
   {
     id: 6,
@@ -211,8 +217,30 @@ export default function ProductInnovationShowcase() {
                     {product.description}
                   </p>
 
-                  {/* Nutrition table */}
-                  {product.nutrition && (
+                  {/* Ingredients / Contains */}
+                  {product.ingredients && (
+                    <div className="mt-8 max-w-[560px]">
+                      <div className="border-b-[4px] border-current pb-3">
+                        <h4 className="font-heading text-[30px] font-bold leading-none sm:text-[36px]">
+                          Contains
+                        </h4>
+                      </div>
+
+                      <div className="mt-5 flex flex-wrap gap-2.5">
+                        {product.ingredients.map((ingredient) => (
+                          <span
+                            key={ingredient}
+                            className="rounded-full border border-current/30 px-4 py-2 text-[14px] font-medium leading-tight sm:text-[16px]"
+                          >
+                            {ingredient}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Nutrition Facts */}
+                  {!product.ingredients && product.nutrition && (
                     <div className="mt-8 max-w-[520px]">
                       <div className="border-b-[4px] border-current pb-3">
                         <h4 className="font-heading text-[30px] font-bold leading-none sm:text-[36px]">
@@ -242,29 +270,6 @@ export default function ProductInnovationShowcase() {
                   )}
                 </div>
 
-                {/* Bottom CTA */}
-                {/* <div className="relative z-10 mt-auto flex items-end justify-end gap-5 pt-2">
-                  <Link
-                    href={product.href}
-                    aria-label={`View ${product.title}`}
-                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-current/30 bg-current/10 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                      aria-hidden="true"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="m13 5 7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div> */}
-
                 {/* Decorative glow */}
                 <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-white/[0.08] blur-[70px] transition-transform duration-700 group-hover:scale-125" />
               </div>
@@ -272,6 +277,7 @@ export default function ProductInnovationShowcase() {
           );
         })}
 
+        {/* Quote */}
         <motion.div
           initial={{
             opacity: 0,
@@ -297,6 +303,8 @@ export default function ProductInnovationShowcase() {
             the ground up.”
           </p>
         </motion.div>
+
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
