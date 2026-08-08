@@ -10,7 +10,7 @@ export default function HeroWorking() {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/partnerwithus.mp4" type="video/mp4" />
+        <source src="/videos/hero-working.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

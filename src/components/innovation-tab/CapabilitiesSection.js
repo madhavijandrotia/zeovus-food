@@ -94,7 +94,7 @@ export default function CapabilitiesSection() {
           className="pb-12 lg:pb-16"
         >
           <div className="max-w-[980px]">
-            <h2 className="font-heading text-[46px] font-bold uppercase leading-[0.9] tracking-[-0.035em] text-[#c35531] sm:text-[58px] lg:text-[72px]">
+            <h2 className="font-heading text-[36px] font-bold uppercase leading-[0.9] tracking-[-0.035em] text-[#c35531] sm:text-[48px] lg:text-[62px]">
               Built To Serve
             </h2>
 
