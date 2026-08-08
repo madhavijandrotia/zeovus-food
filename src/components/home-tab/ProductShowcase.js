@@ -58,7 +58,7 @@ export default function ProductShowcase() {
 
       {/* Left text */}
       <div className="pointer-events-none absolute left-6 top-16 z-10 sm:left-10 sm:top-20 lg:left-16 lg:top-14">
-        <h2 className="max-w-[360px] font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#f4e8cf] sm:text-[72px] lg:text-[88px]">
+        <h2 className="max-w-[360px] font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#AE445A] sm:text-[72px] lg:text-[88px]">
           <span className="block">Discover</span>
           <span className="block">The good</span>
         </h2>
@@ -66,7 +66,7 @@ export default function ProductShowcase() {
 
       {/* Right text */}
       <div className="pointer-events-none absolute bottom-12 right-6 z-10 sm:right-10 lg:right-16">
-        <h2 className="font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#f4e8cf] sm:text-[68px] lg:text-[84px]">
+        <h2 className="font-heading text-[54px] font-bold uppercase leading-[0.9] tracking-[-0.03em] text-[#AE445A] sm:text-[68px] lg:text-[84px]">
           <span className="block">Side of</span>
           <span className="block">Produce</span>
         </h2>

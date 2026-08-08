@@ -15,10 +15,14 @@ const HERO_VIDEOS = [
   },
   {
     src: "/videos/home3.mp4",
-    duration: 2,
+    duration: 3,
   },
   {
     src: "/videos/home4.mp4",
+    duration: 2,
+  },
+  {
+    src: "/videos/home5.mp4",
     duration: 2,
   },
 ];
@@ -113,17 +117,17 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] text-[#fffde6] sm:text-[58px] md:text-[72px] lg:text-[88px]">
+          <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] text-[#255F38] sm:text-[58px] md:text-[72px] lg:text-[88px]">
             <motion.span variants={item} className="block">
               Bringing
             </motion.span>
 
-            <motion.span variants={item} className="block text-[#b8c77d]">
+            <motion.span variants={item} className="block text-[#FFF4B7]">
               The World's Finest
             </motion.span>
 
             <motion.span variants={item} className="block">
-              Into Every <span className="text-[#f89b21]">Home</span>
+              Into Every <span className="text-[#FFF4B7]">Home</span>
             </motion.span>
           </h1>
 
