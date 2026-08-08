@@ -4,78 +4,89 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const STORY_VIDEOS = [
-  {
-    src: "/videos/story1.mp4",
-    duration: 5,
-  },
-  {
-    src: "/videos/story2.mp4",
-    duration: 5,
-  },
-  {
-    src: "/videos/story3.mp4",
-    duration: 5,
-  },
-  {
-    src: "/videos/story4.mp4",
-    duration: 5,
-  },
-  {
-    src: "/videos/story5.mp4",
-    duration: 5,
-  },
+  { src: "/videos/story1.mp4", duration: 3 },
+  { src: "/videos/story2.mp4", duration: 3 },
+  { src: "/videos/story3.mp4", duration: 3 },
+  { src: "/videos/story4.mp4", duration: 3 },
+  { src: "/videos/story5.mp4", duration: 3 },
 ];
 
 export default function HeroStory() {
   const [currentVideo, setCurrentVideo] = useState(0);
+  // Blob-URL cache: index -> object URL. Empty until each is preloaded.
+  const [cachedSrcs, setCachedSrcs] = useState([]);
 
+  // Fetch every video exactly ONCE on mount, convert to an in-memory blob URL.
+  // After this, rotating videos never triggers another network request, and
+  // since the src is already fully in memory the crossfade below never has
+  // to wait on the network mid-transition (which is what caused stutter).
+  // (No ref-based "already loaded" guard here on purpose — it breaks under
+  // React Strict Mode's mount->cleanup->mount cycle. The `cancelled` flag
+  // alone is enough to prevent races.)
   useEffect(() => {
-    const activeVideo = STORY_VIDEOS[currentVideo];
+    let cancelled = false;
+    const objectUrls = [];
 
+    (async () => {
+      const results = await Promise.all(
+        STORY_VIDEOS.map(async (video) => {
+          const res = await fetch(video.src);
+          const blob = await res.blob();
+          return URL.createObjectURL(blob);
+        })
+      );
+
+      if (cancelled) {
+        results.forEach((url) => URL.revokeObjectURL(url));
+        return;
+      }
+
+      objectUrls.push(...results);
+      setCachedSrcs(results);
+    })();
+
+    return () => {
+      cancelled = true;
+      objectUrls.forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, []);
+
+  // Rotation only starts once videos are cached, and never re-fetches.
+  useEffect(() => {
+    if (cachedSrcs.length === 0) return;
+
+    const activeVideo = STORY_VIDEOS[currentVideo];
     const timer = window.setTimeout(() => {
       setCurrentVideo((current) => (current + 1) % STORY_VIDEOS.length);
     }, activeVideo.duration * 1000);
 
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [currentVideo]);
+    return () => window.clearTimeout(timer);
+  }, [currentVideo, cachedSrcs]);
+
+  const activeSrc = cachedSrcs[currentVideo];
 
   return (
     <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
       {/* Background Videos */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="sync">
-          <motion.video
-            key={STORY_VIDEOS[currentVideo].src}
-            src={STORY_VIDEOS[currentVideo].src}
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            initial={{
-              opacity: 0,
-              scale: 1.01,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-            }}
-            transition={{
-              opacity: {
-                duration: 1.5,
-                ease: [0.4, 0, 0.2, 1],
-              },
-              scale: {
-                duration: 2.5,
-                ease: [0.22, 1, 0.36, 1],
-              },
-            }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          {activeSrc && (
+            <motion.video
+              key={activeSrc}
+              src={activeSrc}
+              autoPlay
+              muted
+              playsInline
+              initial={{ opacity: 0, scale: 1.01 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                opacity: { duration: 1.5, ease: [0.4, 0, 0.2, 1] },
+                scale: { duration: 2.5, ease: [0.22, 1, 0.36, 1] },
+              }}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          )}
         </AnimatePresence>
       </div>
 
@@ -88,34 +99,26 @@ export default function HeroStory() {
           <h1 className="font-heading text-[42px] font-black uppercase leading-[0.9] tracking-[-2px] sm:text-[58px] md:text-[72px] lg:text-[88px]">
             <span
               className="block text-[#fffde6]"
-              style={{
-                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
-              }}
+              style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)" }}
             >
               Delivering
             </span>
 
             <span
               className="block text-[#b8c77d]"
-              style={{
-                textShadow: "0 2px 4px rgba(0, 0, 0, 0.32)",
-              }}
+              style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.32)" }}
             >
               Natures best
             </span>
 
             <span
               className="block text-[#fffde6]"
-              style={{
-                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
-              }}
+              style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)" }}
             >
               With Absolute{" "}
               <span
                 className="text-[#f89b21]"
-                style={{
-                  textShadow: "0 2px 4px rgba(0, 0, 0, 0.35)",
-                }}
+                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.35)" }}
               >
                 Trust
               </span>
