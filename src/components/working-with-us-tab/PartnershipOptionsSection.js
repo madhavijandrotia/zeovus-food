@@ -10,7 +10,7 @@ const options = [
     title: "Co-Development & Formulation Innovation",
     description:
       "Bring us a brief. Or bring us a problem nobody's solved yet. Either way, our formulation team builds it with you.",
-    image: "/images/CustomFormulationLong.png",
+    image: "/images/CustomFormulationLong.webp",
     accent: "#c9552f",
   },
   {

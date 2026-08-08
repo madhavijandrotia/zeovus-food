@@ -12,7 +12,7 @@ const PAGES = [
     description:
       "Bring us a brief. Or bring us a problem nobody's solved yet. Either way, our formulation team builds it with you.",
     photo: "#c35531",
-    src: "/images/CustomFormulationLong.png",
+    src: "/images/CustomFormulationLong.webp",
     href: "/working-together",
   },
   {
