@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import "./CategoryCarousel.css";
+import Link from "next/link";
 
 const CATEGORIES = [
   {
@@ -26,7 +27,7 @@ const CATEGORIES = [
     fg: "#ffe3d5",
   },
   {
-    key: "instant",
+    key: "instant-foods",
     name: "Ready-to-Eat & Instant Foods",
     src: "/categories/instant-foods.jpeg",
     packshotSrc: "/categories/ChickpeaSoyabeanSpagetiProduct.webp",
@@ -205,19 +206,23 @@ export default function CategoryCarousel() {
                 <p className="category-carousel__tagline">{category.tagline}</p>
               </span>
 
-              <span className="category-carousel__arrow" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m13 6 6 6-6 6" />
-                </svg>
-              </span>
+              <Link
+  href={`/products?category=${category.key}`}
+  className="category-carousel__arrow"
+  aria-label={`View ${category.name}`}
+>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M5 12h14" />
+    <path d="m13 6 6 6-6 6" />
+  </svg>
+</Link>
             </div>
           </article>
         ))}
