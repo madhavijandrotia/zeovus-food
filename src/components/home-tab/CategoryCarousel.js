@@ -28,7 +28,7 @@ const CATEGORIES = [
   {
     key: "instant",
     name: "Ready-to-Eat & Instant Foods",
-    src: "/categories/instant-foods.png",
+    src: "/categories/instant-foods.jpeg",
     packshotSrc: "/categories/ChickpeaSoyabeanSpagetiProduct.webp",
     tagline: "Restaurant flavour, ready in minutes.",
     photo: "#c4400d",
