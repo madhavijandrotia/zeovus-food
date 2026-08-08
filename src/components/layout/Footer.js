@@ -3,10 +3,10 @@ import Link from "next/link";
 import "./Footer.css";
 const COMPANY_LINKS = [
   { label: "Our Story", href: "/our-story" },
-  { label: "Innovation", href: "/innovation" },
+  { label: "Formulation", href: "/formulation" },
   { label: "Manufacturing & Capabilities", href: "/manufacturing" },
   { label: "Partner With Us", href: "/working-together" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Blogs", href: "/blogs" },
 ];
 const PRODUCT_LINKS = [
   "Staples & Dry Groceries",
