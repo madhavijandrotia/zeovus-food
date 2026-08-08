@@ -15,12 +15,6 @@ html {
   box-sizing: border-box;
 }
 
-html,
-body,
-* {
-  cursor: url("/cursor.png") 20 20, auto;
-}
-
 *,
 *::before,
 *::after {
