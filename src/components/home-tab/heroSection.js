@@ -1,7 +1,27 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+
+const HERO_VIDEOS = [
+  {
+    src: "/videos/home1.mp4",
+    duration: 3,
+  },
+  {
+    src: "/videos/home2.mp4",
+    duration: 3,
+  },
+  {
+    src: "/videos/home3.mp4",
+    duration: 2,
+  },
+  {
+    src: "/videos/home4.mp4",
+    duration: 2,
+  },
+];
 
 const container = {
   hidden: {},
@@ -29,24 +49,61 @@ const item = {
 };
 
 export default function HeroSection() {
-  return (
-    <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-12 pt-28 sm:px-8 sm:pb-16 sm:pt-32 lg:px-14 lg:pb-14 lg:pt-36">
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
-      </video>
+  const [currentVideo, setCurrentVideo] = useState(0);
 
-      {/* Overlays */}
-      {/* <div className="absolute inset-0 bg-black/35" /> */}
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-black/10" /> */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
+  useEffect(() => {
+    const activeVideo = HERO_VIDEOS[currentVideo];
+
+    const timer = window.setTimeout(() => {
+      setCurrentVideo((current) => (current + 1) % HERO_VIDEOS.length);
+    }, activeVideo.duration * 1000);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [currentVideo]);
+
+  return (
+    <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
+      {/* Background Videos */}
+      {/* Background Videos */}
+<div className="absolute inset-0 z-0 overflow-hidden">
+  <AnimatePresence mode="sync">
+    <motion.video
+      key={HERO_VIDEOS[currentVideo].src}
+      src={HERO_VIDEOS[currentVideo].src}
+      autoPlay
+      muted
+      playsInline
+      preload="auto"
+      initial={{
+        opacity: 0,
+        scale: 1.01,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
+      exit={{
+        opacity: 0,
+      }}
+      transition={{
+        opacity: {
+          duration: 1.5,
+          ease: [0.4, 0, 0.2, 1],
+        },
+        scale: {
+          duration: 2.5,
+          ease: [0.22, 1, 0.36, 1],
+        },
+      }}
+      className="absolute inset-0 h-full w-full object-cover"
+    />
+  </AnimatePresence>
+</div>
+
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/75 via-transparent to-black/20" /> */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
@@ -73,8 +130,12 @@ export default function HeroSection() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
             <Link href="/products">
               <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
                 className="inline-block cursor-pointer rounded-full bg-[#f4f2d3] px-6 py-3 text-xs font-semibold tracking-widest text-[#191512] sm:px-8 sm:py-4 sm:text-sm"
               >
                 EXPLORE PRODUCTS
@@ -83,8 +144,12 @@ export default function HeroSection() {
 
             <Link href="/our-story">
               <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
                 className="inline-block cursor-pointer rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs font-semibold tracking-widest text-white backdrop-blur-md sm:px-8 sm:py-4 sm:text-sm"
               >
                 OUR STORY
