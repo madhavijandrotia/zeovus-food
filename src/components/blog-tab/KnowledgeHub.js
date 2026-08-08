@@ -21,7 +21,7 @@ const articles = [
       "How ingredient origin influences flavour, consistency, traceability and long-term product quality.",
     category: "Ingredient Spotlight",
     readTime: "6 min read",
-    image: "/images/blog/origin-matters.webp",
+    image: "/images/origin-matters.png",
     slug: "why-origin-still-matters",
   },
   {
@@ -31,7 +31,7 @@ const articles = [
       "A closer look at formulation, validation and production decisions behind nutrition-led everyday foods.",
     category: "Formulation & Nutrition Insights",
     readTime: "8 min read",
-    image: "/images/blog/functional-staples.webp",
+    image: "/images/functional-staples.png",
     slug: "functional-staples-concept-to-shelf",
   },
   {
@@ -41,7 +41,7 @@ const articles = [
       "Why nutritional claims, ingredient declarations and compliance requirements must be considered early.",
     category: "Regulatory & Compliance",
     readTime: "7 min read",
-    image: "/images/blog/food-labelling.webp",
+    image: "/images/food-labelling.png",
     slug: "food-labels-export-markets",
   },
   {
@@ -51,7 +51,7 @@ const articles = [
       "Traceability, flexible production and verified quality are becoming standard expectations across markets.",
     category: "Industry & Trade News",
     readTime: "5 min read",
-    image: "/images/blog/global-buyers.webp",
+    image: "/images/global-buyers.png",
     slug: "global-buyer-expectations",
   },
   {
@@ -61,7 +61,7 @@ const articles = [
       "Protein content matters, but texture, taste, solubility and process behaviour decide whether a formula works.",
     category: "Formulation & Nutrition Insights",
     readTime: "9 min read",
-    image: "/images/blog/protein-isolates.webp",
+    image: "/images/protein-isolates.png",
     slug: "protein-isolate-performance",
   },
   {
@@ -71,7 +71,7 @@ const articles = [
       "Modern buyers increasingly expect visibility from raw-material source through production and shipment.",
     category: "Regulatory & Compliance",
     readTime: "6 min read",
-    image: "/images/blog/batch-traceability.webp",
+    image: "/images/batch-traceability.png",
     slug: "batch-traceability-retail",
   },
 ];
@@ -141,38 +141,53 @@ export default function KnowledgeHub() {
   return (
     <main className="bg-[#f7f4ed]">
       {/* Hero */}
-      <section className="relative overflow-hidden px-5 pb-14 pt-32 sm:px-8 lg:px-14 lg:pb-20 lg:pt-40">
-        <div className="pointer-events-none absolute left-[-120px] top-[-80px] h-[360px] w-[360px] rounded-full bg-[#789444]/10 blur-[125px]" />
+      {/* Hero */}
+      <section className="relative flex min-h-[720px] items-end overflow-hidden lg:min-h-[820px]">
+        {/* Hero Image */}
+        <Image
+          src="/images/knowledge-hub-hero.png"
+          alt="Blog hero image"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          aria-hidden="true"
+        />
 
-        <div className="pointer-events-none absolute right-[-100px] top-[100px] h-[320px] w-[320px] rounded-full bg-[#c35531]/[0.07] blur-[120px]" />
+        {/* Image Overlay */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" /> */}
 
+        {/* Optional left-side darkening for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-transparent to-transparent" />
+
+        {/* Content */}
         <motion.div
           initial={{
             opacity: 0,
-            y: 30,
+            y: 35,
           }}
           animate={{
             opacity: 1,
             y: 0,
           }}
           transition={{
-            duration: 0.75,
+            duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative mx-auto max-w-[1380px]"
+          className="relative z-10 mx-auto w-full max-w-[1380px] px-5 pb-16 sm:px-8 sm:pb-20 lg:px-14 lg:pb-24"
         >
-          <h1 className="mt-5 max-w-[950px] font-heading text-[48px] font-black uppercase leading-[0.9] tracking-[-0.035em] text-[#294526] sm:text-[66px] lg:text-[88px]">
+          <h1 className="max-w-[950px] font-heading text-[48px] font-black uppercase leading-[0.9] tracking-[-0.035em] text-[#fff9df] sm:text-[66px] lg:text-[88px]">
             The Knowledge Hub.
           </h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] leading-8 text-[#34422e]/72 sm:text-[19px]">
+          <p className="mt-6 max-w-[620px] text-[17px] leading-8 text-[#fff9df]/85 sm:text-[19px] lg:text-[21px]">
             Nutrition science, sourcing insight, and industry updates.
           </p>
         </motion.div>
       </section>
 
       {/* Topic tabs and articles */}
-      <section className="px-5 pb-20 sm:px-8 lg:px-14 lg:pb-28">
+      <section className="px-5 mt-10 pb-20 sm:px-8 lg:px-14 lg:pb-28">
         <div className="mx-auto max-w-[1380px]">
           {/* Topic tabs */}
           <div className="flex gap-3 overflow-x-auto pb-3 scrollbar-none">
