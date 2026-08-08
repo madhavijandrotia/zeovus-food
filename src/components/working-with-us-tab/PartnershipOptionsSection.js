@@ -18,7 +18,7 @@ const options = [
     title: "Private Label & White Label",
     description:
       "Launch under your name, built on our formulation and manufacturing standard from the first batch to the last.",
-    image: "/images/PrivateLabelling.webp",
+    image: "/images/PrivateLabelling.png",
     accent: "#789444",
   },
   {
@@ -26,7 +26,7 @@ const options = [
     title: "Distribution & Regional Partnership",
     description:
       "Take Zeovus Food formulations into markets we haven't reached yet, together.",
-    image: "/images/DistributionPartnershipsLong.webp",
+    image: "/images/DistributionPartnershipsLong.png",
     accent: "#294526",
   },
   {
@@ -34,7 +34,7 @@ const options = [
     title: "Bulk Ingredient & Raw Material Supply",
     description:
       "Staples, flours, proteins and functional ingredients, sourced and supplied at the volume your production line needs.",
-    image: "/images/NewCategoryLong.webp",
+    image: "/images/NewCategoryLong.png",
     accent: "#f39a22",
   },
 ];
@@ -139,7 +139,7 @@ export default function PartnershipOptionsSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#151812]/95 via-[#151812]/65 via-45% to-[#151812]/20" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#151812]/95 via-[#151812]/65 via-45% to-[#151812]/20" /> */}
               </div>
 
               {/* Content */}
@@ -151,18 +151,33 @@ export default function PartnershipOptionsSection() {
                   }}
                 />
 
-                <h3 className="max-w-[560px] font-heading text-[28px] font-bold uppercase leading-[1.02] text-[#fff9df] sm:text-[34px]">
+                <h3
+                  className="max-w-[560px] font-heading text-[28px] font-bold uppercase leading-[1.02] text-[#FFF4D6] sm:text-[34px]"
+                  style={{
+                    textShadow:
+                      "0 2px 3px rgba(0, 0, 0, 0.85), 0 4px 10px rgba(0, 0, 0, 0.35)",
+                  }}
+                >
                   {option.title}
                 </h3>
 
-                <p className="mt-4 max-w-[580px] text-[15px] leading-7 text-[#fff9df]/78 sm:text-[16px]">
+                <p
+                  className="mt-4 max-w-[580px] text-[15px] font-medium leading-7 text-[#FFF4D6] sm:text-[16px]"
+                  style={{
+                    textShadow:
+                      "0 1px 2px rgba(0, 0, 0, 0.9), 0 3px 8px rgba(0, 0, 0, 0.4)",
+                  }}
+                >
                   {option.description}
                 </p>
 
                 <Link
-                href="/working-together#enquiry"
+                  href="/working-together#enquiry"
                   aria-label={`Learn more about ${option.title}`}
-                  className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#fff9df]/35 text-[#fff9df] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#fff9df] group-hover:text-[#151812]"
+                  className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#FFF4D6]/70 text-[#FFF4D6] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#FFF4D6] group-hover:text-[#151812]"
+                  style={{
+                    filter: "drop-shadow(0 2px 3px rgba(0, 0, 0, 0.55))",
+                  }}
                 >
                   <svg
                     viewBox="0 0 24 24"
