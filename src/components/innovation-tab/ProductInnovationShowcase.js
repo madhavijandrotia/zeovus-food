@@ -133,19 +133,20 @@ const products = [
     number: "06",
     title: "High-Protein Smoothies",
     description:
-      "High-Protein Smoothies made with real fruit. Delivers 10g protein and 5–8g fibre per serving. Just add 1 sachet (35g) to 150ml milk, shake well—no blender needed and enjoy in under 30 seconds. Available in Alphonso Mango, Strawberry, Apple Cinnamon, Banana Choco and Chickoo.",
+      "High-Protein Smoothies made with real fruit. Delivers 10g protein and 5–8g fibre per serving. Just add 1 sachet (35g) to 150ml milk, shake well—no blender needed and enjoy in under 30 seconds.",
     image: "/products/instant-smoothie1.png",
     background: "#c9552f",
     textColor: "#fff4db",
     tags: ["10g Protein", "5–8g Fibre", "Ready in 30 seconds"],
-    href: "/products/instant-smoothies",
-    nutrition: {
-      serving: "Amount Per 100g",
-      values: [
-        { label: "Protein", value: "10g" },
-        // { label: "Dietary Fiber", value: "12g" },
-      ],
-    },
+    href: "/products?category=beverages",
+
+    flavours: [
+      "Alphonso Mango",
+      "Strawberry",
+      "Apple Cinnamon",
+      "Banana Choco",
+      "Chickoo",
+    ],
   },
 ];
 
@@ -264,6 +265,38 @@ export default function ProductInnovationShowcase() {
                               {item.value}
                             </span>
                           </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Smoothie Flavours */}
+                  {product.flavours && (
+                    <div className="mt-8 max-w-[560px]">
+                      {/* Heading + Arrow */}
+                      <div className="flex items-center justify-between border-b-[4px] border-current pb-3">
+                        <h4 className="font-heading text-[30px] font-bold leading-none sm:text-[36px]">
+                          Flavours
+                        </h4>
+
+                        <Link
+                          href={product.href}
+                          aria-label={`View ${product.title}`}
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-current/40 transition hover:translate-x-1"
+                        >
+                          <ArrowRight size={20} />
+                        </Link>
+                      </div>
+
+                      {/* Flavours */}
+                      <div className="mt-5 flex flex-wrap gap-2.5">
+                        {product.flavours.map((flavour) => (
+                          <span
+                            key={flavour}
+                            className="rounded-full border border-current/30 px-4 py-2 text-[14px] font-medium leading-tight sm:text-[16px]"
+                          >
+                            {flavour}
+                          </span>
                         ))}
                       </div>
                     </div>
