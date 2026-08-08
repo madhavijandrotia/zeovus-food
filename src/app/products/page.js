@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import ProductTabs from "@/components/products-tab/ProductTabs";
@@ -23,7 +23,7 @@ const VALID_CATEGORIES = [
   "beverages",
 ];
 
-export default function ProductsPage() {
+function ProductsPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -76,5 +76,13 @@ export default function ProductsPage() {
 
       {activeCategory === "beverages" && <BeveragesSection />}
     </main>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={null}>
+      <ProductsPageContent />
+    </Suspense>
   );
 }
