@@ -5,26 +5,11 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 const HERO_VIDEOS = [
-  {
-    src: "/videos/home1.mp4",
-    duration: 3,
-  },
-  {
-    src: "/videos/home2.mp4",
-    duration: 3,
-  },
-  {
-    src: "/videos/home3.mp4",
-    duration: 3,
-  },
-  {
-    src: "/videos/home4.mp4",
-    duration: 2,
-  },
-  {
-    src: "/videos/home5.mp4",
-    duration: 2,
-  },
+  { src: "/videos/home1.mp4", duration: 3 },
+  { src: "/videos/home2.mp4", duration: 3 },
+  { src: "/videos/home3.mp4", duration: 3 },
+  { src: "/videos/home4.mp4", duration: 2 },
+  { src: "/videos/home5.mp4", duration: 2 },
 ];
 
 const container = {
@@ -38,76 +23,92 @@ const container = {
 };
 
 const item = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
 export default function HeroSection() {
   const [currentVideo, setCurrentVideo] = useState(0);
+  // Blob-URL cache: index -> object URL. Empty until each is preloaded.
+  const [cachedSrcs, setCachedSrcs] = useState([]);
 
+  // Fetch every video exactly ONCE on mount, convert to an in-memory blob URL.
+  // After this, rotating videos never triggers another network request.
+  // (No ref-based "already loaded" guard here on purpose — it breaks under
+  // React Strict Mode's mount->cleanup->mount cycle: the guard would skip
+  // the second real fetch, while the first fetch's result gets discarded
+  // by the `cancelled` flag from the simulated cleanup, leaving cachedSrcs
+  // empty forever. The cancelled flag alone is enough to prevent races.)
   useEffect(() => {
-    const activeVideo = HERO_VIDEOS[currentVideo];
+    let cancelled = false;
+    const objectUrls= [];
 
+    (async () => {
+      const results = await Promise.all(
+        HERO_VIDEOS.map(async (video) => {
+          const res = await fetch(video.src);
+          const blob = await res.blob();
+          return URL.createObjectURL(blob);
+        })
+      );
+
+      if (cancelled) {
+        results.forEach((url) => URL.revokeObjectURL(url));
+        return;
+      }
+
+      objectUrls.push(...results);
+      setCachedSrcs(results);
+    })();
+
+    return () => {
+      cancelled = true;
+      objectUrls.forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, []);
+
+  // Rotation only starts once videos are cached, and never re-fetches.
+  useEffect(() => {
+    if (cachedSrcs.length === 0) return;
+
+    const activeVideo = HERO_VIDEOS[currentVideo];
     const timer = window.setTimeout(() => {
       setCurrentVideo((current) => (current + 1) % HERO_VIDEOS.length);
     }, activeVideo.duration * 1000);
 
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [currentVideo]);
+    return () => window.clearTimeout(timer);
+  }, [currentVideo, cachedSrcs]);
+
+  const activeSrc = cachedSrcs[currentVideo];
 
   return (
     <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20">
       {/* Background Videos */}
-      {/* Background Videos */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="sync">
-          <motion.video
-            key={HERO_VIDEOS[currentVideo].src}
-            src={HERO_VIDEOS[currentVideo].src}
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            initial={{
-              opacity: 0,
-              scale: 1.01,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-            }}
-            transition={{
-              opacity: {
-                duration: 1.5,
-                ease: [0.4, 0, 0.2, 1],
-              },
-              scale: {
-                duration: 2.5,
-                ease: [0.22, 1, 0.36, 1],
-              },
-            }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          {activeSrc && (
+            <motion.video
+              key={activeSrc}
+              src={activeSrc}
+              autoPlay
+              muted
+              playsInline
+              initial={{ opacity: 0, scale: 1.01 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                opacity: { duration: 1.5, ease: [0.4, 0, 0.2, 1] },
+                scale: { duration: 2.5, ease: [0.22, 1, 0.36, 1] },
+              }}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          )}
         </AnimatePresence>
       </div>
-
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/75 via-transparent to-black/20" /> */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1800px]">
@@ -121,9 +122,7 @@ export default function HeroSection() {
             <motion.span
               variants={item}
               className="block text-[#255F38]"
-              style={{
-                textShadow: "0 1px 3px rgba(255, 244, 183, 0.35)",
-              }}
+              style={{ textShadow: "0 1px 3px rgba(255, 244, 183, 0.35)" }}
             >
               Bringing
             </motion.span>
@@ -131,9 +130,7 @@ export default function HeroSection() {
             <motion.span
               variants={item}
               className="block text-[#f89b21]"
-              style={{
-                textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
-              }}
+              style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)" }}
             >
               The World's Finest
             </motion.span>
@@ -141,16 +138,12 @@ export default function HeroSection() {
             <motion.span
               variants={item}
               className="block text-[#255F38]"
-              style={{
-                textShadow: "0 1px 3px rgba(255, 244, 183, 0.35)",
-              }}
+              style={{ textShadow: "0 1px 3px rgba(255, 244, 183, 0.35)" }}
             >
               Into Every{" "}
               <span
                 className="text-[#f89b21]"
-                style={{
-                  textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)",
-                }}
+                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.38)" }}
               >
                 Home
               </span>
@@ -160,12 +153,8 @@ export default function HeroSection() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
             <Link href="/products">
               <motion.span
-                whileHover={{
-                  scale: 1.05,
-                }}
-                whileTap={{
-                  scale: 0.97,
-                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
                 className="inline-block cursor-pointer rounded-full bg-[#f4f2d3] px-6 py-3 text-xs font-semibold tracking-widest text-[#191512] sm:px-8 sm:py-4 sm:text-sm"
               >
                 EXPLORE PRODUCTS
@@ -174,12 +163,8 @@ export default function HeroSection() {
 
             <Link href="/our-story">
               <motion.span
-                whileHover={{
-                  scale: 1.05,
-                }}
-                whileTap={{
-                  scale: 0.97,
-                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
                 className="inline-block cursor-pointer rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs font-semibold tracking-widest text-white backdrop-blur-md sm:px-8 sm:py-4 sm:text-sm"
               >
                 OUR STORY
